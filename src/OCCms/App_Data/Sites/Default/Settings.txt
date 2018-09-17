@@ -1,0 +1,8 @@
+Default:
+  RequestUrlHost: &636347709 ~
+  RequestUrlPrefix: ~
+  DatabaseProvider: SqlConnection
+  TablePrefix: ~
+  ConnectionString: Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=occmsdev;Integrated Security=True;
+  State: Running
+...
