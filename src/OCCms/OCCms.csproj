@@ -6,17 +6,127 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Content Remove="wwwroot\404.html" />
+    <Content Remove="wwwroot\css\modern-business.css" />
+    <Content Remove="wwwroot\js\contact_me.js" />
+    <Content Remove="wwwroot\js\jqBootstrapValidation.js" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap.css" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.js" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Remove="wwwroot\vendor\jquery\jquery.js" />
+    <Content Remove="wwwroot\vendor\jquery\jquery.min.js" />
+    <Content Remove="wwwroot\vendor\jquery\jquery.min.map" />
+    <Content Remove="wwwroot\vendor\jquery\jquery.slim.js" />
+    <Content Remove="wwwroot\vendor\jquery\jquery.slim.min.js" />
+    <Content Remove="wwwroot\vendor\jquery\jquery.slim.min.map" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68393" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68393" />
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68393" />
+    <EmbeddedResource Include="wwwroot\404.html">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\css\modern-business.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\js\contact_me.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\js\jqBootstrapValidation.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.min.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap-reboot.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap-reboot.min.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap.css.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap.min.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\css\bootstrap.min.css.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.bundle.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.bundle.js.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.js.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.min.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\bootstrap\js\bootstrap.min.js.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\jquery\jquery.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\jquery\jquery.min.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\jquery\jquery.min.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\jquery\jquery.slim.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\jquery\jquery.slim.min.js">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\vendor\jquery\jquery.slim.min.map">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="OrchardCore.Demo" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Diagnostics.Elm" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68487" />
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="OrchardCore.MiniProfiler" Version="1.0.0-beta3-68487" />
   </ItemGroup>
   
   <ItemGroup>

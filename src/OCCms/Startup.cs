@@ -18,8 +18,7 @@ namespace OCCms
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseStaticFiles();
+            
             app.UseOrchardCore();
         }
     }

@@ -6,9 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-68457" />
-    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68457" />
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68457" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Diagnostics" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Lucene" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68487" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68487" />
   </ItemGroup>
 
 </Project>
