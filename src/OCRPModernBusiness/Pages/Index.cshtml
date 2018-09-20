@@ -50,6 +50,13 @@
 }
 
 <h1 class="my-4">Welcome to Modern Business</h1>
+@{var projects = await Orchard.QueryContentItemsAsync(e => e.Where(f => f.ContentType == "Project").Skip(1).Take(5));
+
+    foreach (var proj in projects)
+    {
+        @Html.Raw(proj.ContentItem.DisplayText);
+    }
+}
 
 <!-- Marketing Icons Section -->
 <div class="row">

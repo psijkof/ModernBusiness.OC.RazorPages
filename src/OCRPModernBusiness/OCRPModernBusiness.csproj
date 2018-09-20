@@ -1,17 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
     <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-68487" />
-    <PackageReference Include="OrchardCore.Diagnostics" Version="1.0.0-beta3-68487" />
-    <PackageReference Include="OrchardCore.Lucene" Version="1.0.0-beta3-68487" />
     <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68487" />
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68487" />
   </ItemGroup>
 
-</Project>
+  </Project>
