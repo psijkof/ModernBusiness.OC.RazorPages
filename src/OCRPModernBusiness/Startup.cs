@@ -27,23 +27,11 @@ namespace OCRPModernBusiness
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<RazorPagesOptions>(options =>
-            {
-                options.Conventions.AddModularPageRoute("/OCRPModernBusiness/Pages/Index", "Index");
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IRouteBuilder route)
         {
-            route.MapAreaRoute(
-               name: "Home",
-               areaName: "OCRPModernBusiness",
-               template: "Pages/Index",
-               defaults: new { page = "Index" }
-                );
-
-            
         }
     }
 }
