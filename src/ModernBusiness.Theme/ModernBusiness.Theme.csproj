@@ -15,4 +15,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>
