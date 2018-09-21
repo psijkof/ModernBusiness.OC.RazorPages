@@ -2579,11 +2579,6 @@
                 },
                 "TitlePart": {
                   "Title": "Look at this Moon!"
-                },
-                "LayerMetadata": {
-                  "Position": 1.0,
-                  "Zone": "Header",
-                  "Layer": "Always"
                 }
               },
               {
@@ -2602,19 +2597,9 @@
                 },
                 "TitlePart": {
                   "Title": "Look it works!"
-                },
-                "LayerMetadata": {
-                  "Position": 1.0,
-                  "Zone": "Header",
-                  "Layer": "Always"
                 }
               }
             ]
-          },
-          "LayerMetadata": {
-            "Position": 1.0,
-            "Zone": "Header",
-            "Layer": "Homepage"
           }
         },
         {
@@ -2936,13 +2921,6 @@
             "Content": {
               "Html": "[file:text('Snippets/Footer.html')]"
             }
-          },
-          "LayerMetadata": {
-            "Title": "Footer",
-            "Position": 1.0,
-            "Zone": "Footer",
-            "Layer": "Always",
-            "RenderTitle": false
           }
         },
         {
@@ -2958,13 +2936,6 @@
           "Author": "admin",
           "LiquidPart": {
             "Liquid": "{% assign path = \"slug:\" + Request.Path  %}\r\n{% assign currentItem = Content[path]  %}\r\n\r\n<div class=\"container\">\r\n            <h1 class=\"mt-4 mb-3\">\r\n                {{ currentItem.Content.TitlePart.Title }}\r\n                <small>{{ currentItem.Content.SubtitlePart.Subtitle.Text }}</small>\r\n            </h1>\r\n            <ol class=\"breadcrumb\">\r\n                <li class=\"breadcrumb-item\">\r\n                   <a href=\"{{ \"~/\" | href }}\">Home</a>\r\n                </li>\r\n              {% assign breadcrumb = currentItem.Content.AutoroutePart.Path | split: \"/\" %}\r\n              {% assign allItems = breadcrumb | size - 1 %}\r\n              \r\n              {% for i in (0..allItems) %}\r\n              \r\n              \t{% if i == allItems %}\r\n              \r\n              \t\t<li class=\"breadcrumb-item active\">{{ breadcrumb[i]  | capitalize }}</li>\r\n              \t{% else %}\r\n              \t\t{% assign baseUrl = \"~/\" + breadcrumb[i] %}\r\n              \t\t<li class=\"breadcrumb-item\"><a href=\"{{ baseUrl | href }}\">{{ breadcrumb[i] | capitalize }}</a></li> \r\n              \t{% endif %}\r\n              \r\n              {% endfor %}\r\n            </ol>\r\n        </div>\r\n<hr />"
-          },
-          "LayerMetadata": {
-            "Title": "PageHeader",
-            "Position": 2.0,
-            "Zone": "Header",
-            "Layer": "NotHomepage",
-            "RenderTitle": false
           }
         },
         {
