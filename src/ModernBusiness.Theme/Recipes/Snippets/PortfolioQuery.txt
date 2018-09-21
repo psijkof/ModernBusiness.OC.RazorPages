@@ -1,0 +1,7 @@
+﻿{
+  "query": {
+    "term" : { "Content.ContentItem.ContentType" : "Project" } 
+  },
+  "sort": { "Content.ContentItem.CreatedUtc": { "order": "desc" } },
+  "size": 6
+}

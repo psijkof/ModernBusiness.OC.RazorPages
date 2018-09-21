@@ -1,0 +1,22 @@
+﻿{% assign servicesParent = Content["alias:services"] %}
+{% assign services = Queries.ServicesSummaryQuery | query %}
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="my-4">{{ servicesParent.Content.TitlePart.Title }}</h1>
+    </div>
+
+    {% for item in services %}
+    <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+            <h4 class="card-header">{{ item.Content.TitlePart.Title }}</h4>
+            <div class="card-body">
+                <p class="card-text">{{ item.Content.HtmlBodyPart.Html | raw }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ item.Content.Service.Link.Url }}" class="btn btn-primary">{{ item.Content.Service.Link.Text }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
