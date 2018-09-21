@@ -1,0 +1,21 @@
+﻿{% assign portfolio = Content["alias:portfolio"] %}
+{% assign projects = Queries.PortfolioSummaryQuery | query %}
+
+<h2>{{ portfolio.Content.TitlePart.Title}}</h2>
+
+<div class="row">
+    {% for item in projects %}
+    <div class="col-lg-4 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="{{ item.Content.Project.Image.Paths[0] | asset_url }}" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">{{ item.Content.TitlePart.Title }}</a>
+                </h4>
+                <p class="card-text">{{ item.Content.HtmlBodyPart.Html | raw }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
