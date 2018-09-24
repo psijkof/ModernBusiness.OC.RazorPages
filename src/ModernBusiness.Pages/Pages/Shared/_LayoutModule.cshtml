@@ -1,0 +1,15 @@
+﻿@{
+    // use theme layout for css/js assets
+    Layout = "_Layout";
+}
+@section Header  {
+    <partial name="NavbarPart" />
+    @RenderSection("Header", required: false)
+}
+@section Messages {
+    @RenderSection("Messages", required: false)
+}
+@RenderBody()
+@section Footer {
+    @RenderSection("Footer", required: false)
+}

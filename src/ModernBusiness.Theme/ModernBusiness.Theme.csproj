@@ -1,14 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta3-68540" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-68540" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68540" />
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68540" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta3-68586" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-68586" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68586" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68586" />
   </ItemGroup>
 
   <ItemGroup>

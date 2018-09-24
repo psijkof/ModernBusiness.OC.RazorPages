@@ -1,0 +1,10 @@
+&792033465 bla:
+  RequestUrlHost: &53500890 ~
+  RequestUrlPrefix: bla
+  DatabaseProvider: Sqlite
+  TablePrefix: ~
+  ConnectionString: ~
+  State: Running
+  Secret: ca651ff0-4909-42ce-aacc-7d900a21dc0a
+  RecipeName: ModernBusiness.Theme
+...
