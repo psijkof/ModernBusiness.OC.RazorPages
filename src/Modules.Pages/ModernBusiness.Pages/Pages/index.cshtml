@@ -13,7 +13,7 @@
     var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service").OrderByDescending(o => o.PublishedUtc));
     var service = services.First();
     var carousel = carousels.Single();
-   // var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
+    var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
 }
 
 
@@ -34,5 +34,5 @@
 
 <h3>@service.Content</h3>
 @carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
-@*welcomeContent.Content*@
+@welcomeContent.Content
 @*@(welcomeContent ?? welcomeContent.Content ?? "no welcome")*@

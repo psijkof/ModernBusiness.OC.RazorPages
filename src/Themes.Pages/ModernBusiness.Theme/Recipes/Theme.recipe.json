@@ -3880,7 +3880,7 @@
             "Alias": "welcome"
           },
           "HtmlBodyPart": {
-            "Html": "<p>The Modern Business template by Start Bootstrap includes:</p>\r\n\r\n\r\n\r\n                <ul>\r\n\r\n\r\n\r\n                    <li>\r\n\r\n\r\n\r\n                        <strong>Bootstrap v4</strong>\r\n\r\n\r\n\r\n                    </li>\r\n\r\n\r\n\r\n                    <li>jQuery</li>\r\n\r\n\r\n\r\n                    <li>Font Awesome</li>\r\n\r\n\r\n\r\n                    <li>Working contact form with validation</li>\r\n\r\n\r\n\r\n                    <li>Unstyled page elements for easy customization</li>\r\n\r\n\r\n\r\n                </ul>\r\n\r\n\r\n\r\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>\r\n\r\n\r\n\r\n"
+            "Html": "</p>\r\n<ul>\r\n<li>\r\n<strong>Bootstrap v4</strong>\r\n</li>\r\n<li>jQuery</li>\r\n<li>Font Awesome</li>\r\n<li>Working contact form with validation</li>\r\n<li>Unstyled page elements for easy customization</li>\r\n</ul>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>"
           },
           "MarkdownBodyPart": {
             "Markdown": null
