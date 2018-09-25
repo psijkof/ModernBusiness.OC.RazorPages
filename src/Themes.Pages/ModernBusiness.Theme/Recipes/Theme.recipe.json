@@ -2254,53 +2254,6 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "Carousel",
-          "Latest": true,
-          "Published": true,
-          "Carousel": {},
-          "BagPart": {
-            "ContentItems": [
-              {
-                "Id": 0,
-                "ContentItemId": "[js: uuid()]",
-                "ContentType": "Slide",
-                "Slide": {
-                  "Description": {
-                    "Text": "Moon"
-                  },
-                  "Image": {
-                    "Paths": [
-                      "b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg"
-                    ]
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Look at this Moon!"
-                }
-              },
-              {
-                "Id": 0,
-                "ContentItemId": "[js: uuid()]",
-                "ContentType": "Slide",
-                "Slide": {
-                  "Description": {
-                    "Text": "Business"
-                  },
-                  "Image": {
-                    "Paths": [
-                      "modern.jpg"
-                    ]
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Upgrade your business!"
-                }
-              }
-            ]
-          }
-        },
-        {
           "ContentItemId": "[js: variables('portfolioContentItemId')]",
           "ContentItemVersionId": "[js: uuid()]",
           "ContentType": "Portfolio",
