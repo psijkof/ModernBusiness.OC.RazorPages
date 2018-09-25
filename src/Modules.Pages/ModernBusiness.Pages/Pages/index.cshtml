@@ -11,20 +11,20 @@
     var project = portfolio.First();
     var carousels = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Carousel"));
     var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service").OrderByDescending(o => o.PublishedUtc));
-    var service=services.First();
+    var service = services.First();
     var carousel = carousels.Single();
-    var welcomeContent = await Orchard.GetContentItemByAliasAsync("welcome", latest: true);
+   // var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
 }
 
+
 @section Header {
-    <h2>this should appear in the header section </h2>
+    <partial name="Carousel" />
 }
+
 @section Messages {
-    <h3>this is for the messages section</h3>
 }
 
 @section Footer {
-    <h4>For the footer section!</h4>
 }
 <h1>The body: <br />This is the razor page with a value for test: @test</h1>
 
@@ -34,4 +34,5 @@
 
 <h3>@service.Content</h3>
 @carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
+@*welcomeContent.Content*@
 @*@(welcomeContent ?? welcomeContent.Content ?? "no welcome")*@

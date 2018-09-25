@@ -2,8 +2,11 @@
     // use theme layout for css/js assets
     Layout = "_Layout";
 }
-@section Header  {
+@section Nav {
     <partial name="NavbarPart" />
+    @RenderSection("Nav", required: false)
+}
+@section Header  {
     @RenderSection("Header", required: false)
 }
 @section Messages {

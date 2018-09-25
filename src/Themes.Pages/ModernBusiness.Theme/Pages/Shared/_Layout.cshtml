@@ -22,14 +22,12 @@
 </head>
 
 <body dir="@Orchard.CultureDir()">
+    @RenderSection("Nav", required: false)
     <header>
         @RenderSection("Header", required: false)
-        header in theme layout
     </header>
-    
     <main role="main" class="container">
         @RenderSection("Messages", required: false)
-        main/body in theme layout
         @RenderBody()
     </main>
     <footer>
@@ -38,7 +36,6 @@
         <!-- Bootstrap core JavaScript from theme layout-->
         <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
         <script src="/ModernBusiness.Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        footer in theme layout
     </footer>
 </body>
 </html>
