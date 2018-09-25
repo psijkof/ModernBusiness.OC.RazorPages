@@ -1298,6 +1298,108 @@
               }
             }
           ]
+        },
+        {
+          "Name": "RawContent",
+          "DisplayName": "RawContent",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "False",
+            "Securable": "True",
+            "Stereotype": null
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "RawContent",
+              "Name": "RawContent",
+              "Settings": {
+                "Position": "3"
+              }
+            },
+            {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "Position": "2"
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "Position": "4",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": "Wysiwyg",
+                "HtmlBodyPartSettings": {},
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "MarkdownBodyPart",
+              "Name": "MarkdownBodyPart",
+              "Settings": {
+                "Position": "5",
+                "DisplayName": null,
+                "Description": null,
+                "Editor": "Wysiwyg",
+                "ContentIndexSettings": {},
+                "MarkdownBodyPartSettings": {}
+              }
+            },
+            {
+              "PartName": "SubtitlePart",
+              "Name": "SubtitlePart",
+              "Settings": {
+                "Position": "1"
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ExtraContent",
+          "DisplayName": "ExtraContent",
+          "Settings": {
+            "Creatable": "True",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "True",
+            "Securable": "True",
+            "Stereotype": null
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "ExtraContent",
+              "Name": "ExtraContent",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "ListPart",
+              "Name": "ListPart",
+              "Settings": {
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "PageSize": "10",
+                "ContainedContentTypes": [
+                  "RawContent"
+                ],
+                "ContentIndexSettings": {},
+                "Position": "1"
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -2198,1546 +2300,1652 @@
             ]
           }
         },
-          {
-            "ContentItemId": "[js: variables('portfolioContentItemId')]",
-            "ContentItemVersionId": "[js: uuid()]",
-            "ContentType": "Portfolio",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-04T16:23:01.8141153Z",
-            "PublishedUtc": "2018-09-04T16:23:01.850052Z",
-            "CreatedUtc": "2018-09-04T16:17:45.9569065Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Portfolio": {},
-            "TitlePart": {
-              "Title": "Portfolio"
-            },
-            "AliasPart": {
-              "Alias": "portfolio"
-            },
-            "ListPart": {}
+        {
+          "ContentItemId": "[js: variables('portfolioContentItemId')]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Portfolio",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-04T16:23:01.8141153Z",
+          "PublishedUtc": "2018-09-04T16:23:01.850052Z",
+          "CreatedUtc": "2018-09-04T16:17:45.9569065Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Portfolio": {},
+          "TitlePart": {
+            "Title": "Portfolio"
           },
-          {
-            "Id": 0,
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": null,
-            "ContentType": "Project",
-            "Latest": false,
-            "Published": false,
-            "ModifiedUtc": "2018-09-04T16:23:01.8148799Z",
-            "PublishedUtc": null,
-            "CreatedUtc": "2018-09-01T16:23:01.850052Z",
-            "Owner": null,
-            "Author": "admin",
-            "Project": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              },
-              "Subtitle": {
-                "Text": null
-              },
-              "Link": {
-                "Url": null,
-                "Text": null
-              }
+          "AliasPart": {
+            "Alias": "portfolio"
+          },
+          "ListPart": {}
+        },
+        {
+          "Id": 0,
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": null,
+          "ContentType": "Project",
+          "Latest": false,
+          "Published": false,
+          "ModifiedUtc": "2018-09-04T16:23:01.8148799Z",
+          "PublishedUtc": null,
+          "CreatedUtc": "2018-09-01T16:23:01.850052Z",
+          "Owner": null,
+          "Author": "admin",
+          "Project": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
             },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
+            "Subtitle": {
+              "Text": null
             },
-            "TitlePart": {
-              "Title": "Project One"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('portfolioContentItemId')]",
-              "Order": 0
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Project One subheading"
-              }
-            },
-            "AutoroutePart": {
-              "Path": "portfolio/project-one",
-              "SetHomepage": false
+            "Link": {
+              "Url": null,
+              "Text": null
             }
           },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": null,
-            "ContentType": "Project",
-            "Latest": false,
-            "Published": true,
-            "CreatedUtc": "2018-09-02T16:23:01.850052Z",
-            "Project": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              },
-              "Subtitle": {
-                "Text": null
-              },
-              "Link": {
-                "Url": null,
-                "Text": null
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."
-            },
-            "TitlePart": {
-              "Title": "Project Two "
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('portfolioContentItemId')]",
-              "Order": 1
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Project Two subheading"
-              }
-            },
-            "AutoroutePart": {
-              "Path": "portfolio/project-two",
-              "SetHomepage": false
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
+          },
+          "TitlePart": {
+            "Title": "Project One"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "Order": 0
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project One subheading"
             }
           },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": null,
-            "ContentType": "Project",
-            "Latest": false,
-            "Published": true,
-            "CreatedUtc": "2018-09-03T16:23:01.850052Z",
-            "Author": "admin",
-            "Project": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              },
-              "Subtitle": {
-                "Text": null
-              },
-              "Link": {
-                "Url": null,
-                "Text": null
-              }
+          "AutoroutePart": {
+            "Path": "portfolio/project-one",
+            "SetHomepage": false
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": null,
+          "ContentType": "Project",
+          "Latest": false,
+          "Published": true,
+          "CreatedUtc": "2018-09-02T16:23:01.850052Z",
+          "Project": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
             },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!"
+            "Subtitle": {
+              "Text": null
             },
-            "TitlePart": {
-              "Title": "Project Three"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('portfolioContentItemId')]",
-              "Order": 2
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Project Three subheading"
-              }
-            },
-            "AutoroutePart": {
-              "Path": "portfolio/project-three",
-              "SetHomepage": false
+            "Link": {
+              "Url": null,
+              "Text": null
             }
           },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": null,
-            "ContentType": "Project",
-            "Latest": true,
-            "Published": true,
-            "CreatedUtc": "2018-09-04T16:23:01.850052Z",
-            "Author": "admin",
-            "Project": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              },
-              "Subtitle": {
-                "Text": null
-              },
-              "Link": {
-                "Url": null,
-                "Text": null
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!"
-            },
-            "TitlePart": {
-              "Title": "Project Four"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('portfolioContentItemId')]",
-              "Order": 3
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Project Four subheading"
-              }
-            },
-            "AutoroutePart": {
-              "Path": "portfolio/project-four",
-              "SetHomepage": false
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."
+          },
+          "TitlePart": {
+            "Title": "Project Two "
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "Order": 1
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Two subheading"
             }
           },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": null,
-            "ContentType": "Project",
-            "Latest": true,
-            "Published": true,
-            "CreatedUtc": "2018-09-05T16:23:01.850052Z",
-            "Author": "admin",
-            "Project": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              },
-              "Subtitle": {
-                "Text": null
-              },
-              "Link": {
-                "Url": null,
-                "Text": null
-              }
+          "AutoroutePart": {
+            "Path": "portfolio/project-two",
+            "SetHomepage": false
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": null,
+          "ContentType": "Project",
+          "Latest": false,
+          "Published": true,
+          "CreatedUtc": "2018-09-03T16:23:01.850052Z",
+          "Author": "admin",
+          "Project": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
             },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
+            "Subtitle": {
+              "Text": null
             },
-            "TitlePart": {
-              "Title": "Project Five"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('portfolioContentItemId')]",
-              "Order": 4
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Project Five subheading"
-              }
-            },
-            "AutoroutePart": {
-              "Path": "portfolio/project-five",
-              "SetHomepage": false
+            "Link": {
+              "Url": null,
+              "Text": null
             }
           },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": null,
-            "ContentType": "Project",
-            "Latest": true,
-            "Published": true,
-            "CreatedUtc": "2018-09-06T16:23:01.850052Z",
-            "Author": "admin",
-            "Project": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              },
-              "Subtitle": {
-                "Text": null
-              },
-              "Link": {
-                "Url": null,
-                "Text": null
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
-            },
-            "TitlePart": {
-              "Title": "Project Six"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('portfolioContentItemId')]",
-              "Order": 5
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Project Six subheading"
-              }
-            },
-            "AutoroutePart": {
-              "Path": "portfolio/project-six",
-              "SetHomepage": false
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!"
+          },
+          "TitlePart": {
+            "Title": "Project Three"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "Order": 2
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Three subheading"
             }
           },
-          {
-            "ContentItemId": "[js: variables('servicesContentItemId')]",
-            "ContentItemVersionId": "4wn1acj3tg7f7wbfa6cv14w2cb",
-            "ContentType": "Services",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T13:41:50.1846147Z",
-            "PublishedUtc": "2018-09-10T13:41:50.1896861Z",
-            "CreatedUtc": "2018-09-10T13:13:21.9209066Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Services": {
-              "Image": {
-                "Paths": [
-                  "1200x300.png"
-                ]
-              },
-              "Subheading": {
-                "Text": "Subheading"
-              }
+          "AutoroutePart": {
+            "Path": "portfolio/project-three",
+            "SetHomepage": false
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": null,
+          "ContentType": "Project",
+          "Latest": true,
+          "Published": true,
+          "CreatedUtc": "2018-09-04T16:23:01.850052Z",
+          "Author": "admin",
+          "Project": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
             },
-            "TitlePart": {
-              "Title": "Welcome to Modern Business"
+            "Subtitle": {
+              "Text": null
             },
-            "AliasPart": {
-              "Alias": "services"
-            },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
+            "Link": {
+              "Url": null,
+              "Text": null
             }
           },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": "[js: uuid()]",
-            "ContentType": "Service",
-            "Latest": true,
-            "Published": true,
-            "Owner": "admin",
-            "Author": "admin",
-            "Service": {
-              "Link": {
-                "Url": null,
-                "Text": "Learn More"
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "this should be first!"
-            },
-            "TitlePart": {
-              "Title": "Lastest Service"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('servicesContentItemId')]",
-              "Order": 0
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!"
+          },
+          "TitlePart": {
+            "Title": "Project Four"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "Order": 3
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Four subheading"
             }
           },
-          {
-            "ContentItemId": "4rgzvfzn50f6vvvstyfpgyj852",
-            "ContentItemVersionId": "4gxgdn56s69g037g21knxwn650",
-            "ContentType": "Service",
-            "Latest": true,
-            "Published": true,
-            "Owner": "admin",
-            "Author": "admin",
-            "Service": {
-              "Link": {
-                "Url": null,
-                "Text": "Learn More"
-              }
+          "AutoroutePart": {
+            "Path": "portfolio/project-four",
+            "SetHomepage": false
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": null,
+          "ContentType": "Project",
+          "Latest": true,
+          "Published": true,
+          "CreatedUtc": "2018-09-05T16:23:01.850052Z",
+          "Author": "admin",
+          "Project": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
             },
-            "HtmlBodyPart": {
-              "Html": "iuupii!"
+            "Subtitle": {
+              "Text": null
             },
-            "TitlePart": {
-              "Title": "Some service"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('servicesContentItemId')]",
-              "Order": 0
+            "Link": {
+              "Url": null,
+              "Text": null
             }
           },
-          {
-            "ContentItemId": "4exzswmzx27qr4fc4r18qqd5d4",
-            "ContentItemVersionId": "4kp2yswp4vgh500nwz69jr7pcc",
-            "ContentType": "Service",
-            "Latest": true,
-            "Published": true,
-            "Owner": "admin",
-            "Author": "admin",
-            "Service": {
-              "Link": {
-                "Url": null,
-                "Text": "Learn More"
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "yes!"
-            },
-            "TitlePart": {
-              "Title": "One more"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('servicesContentItemId')]",
-              "Order": 0
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
+          },
+          "TitlePart": {
+            "Title": "Project Five"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "Order": 4
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Five subheading"
             }
           },
-          {
-            "ContentItemId": "4sh49dn2q77xq0s8xtkwhbvhcx",
-            "ContentItemVersionId": "4dhssbftvzah657f3kj3npp1xx",
-            "ContentType": "Service",
-            "Latest": true,
-            "Published": true,
-            "Owner": "admin",
-            "Author": "admin",
-            "Service": {
-              "Link": {
-                "Url": null,
-                "Text": "Learn More"
-              }
+          "AutoroutePart": {
+            "Path": "portfolio/project-five",
+            "SetHomepage": false
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": null,
+          "ContentType": "Project",
+          "Latest": true,
+          "Published": true,
+          "CreatedUtc": "2018-09-06T16:23:01.850052Z",
+          "Author": "admin",
+          "Project": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
             },
-            "HtmlBodyPart": {
-              "Html": "wow!"
+            "Subtitle": {
+              "Text": null
             },
-            "TitlePart": {
-              "Title": "Another Service"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "[js: variables('servicesContentItemId')]",
-              "Order": 0
+            "Link": {
+              "Url": null,
+              "Text": null
             }
           },
-          {
-            "ContentItemId": "42chwzdcjdteg5n18grf8g1nwd",
-            "ContentItemVersionId": "4d55vq15am4966wwjjndrzz1dm",
-            "ContentType": "TeamMember",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:11:31.3595342Z",
-            "PublishedUtc": "2018-09-10T10:11:31.3628998Z",
-            "CreatedUtc": "2018-09-10T10:11:31.3628998Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "TeamMember": {
-              "Position": {
-                "Text": "Position"
-              },
-              "Email": {
-                "Text": "email@example.com"
-              },
-              "Photo": {
-                "Paths": [
-                  "700x450.png"
-                ]
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
-            },
-            "TitlePart": {
-              "Title": "Team Member"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
-              "Order": 0
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
+          },
+          "TitlePart": {
+            "Title": "Project Six"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "Order": 5
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Six subheading"
             }
           },
-          {
-            "ContentItemId": "45yycck3nac60xzfcp303jv0d3",
-            "ContentItemVersionId": "4y5adg9bqy88r6mp0v59y6w7dc",
-            "ContentType": "TeamMember",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:12:24.4558303Z",
-            "PublishedUtc": "2018-09-10T10:12:24.4577698Z",
-            "CreatedUtc": "2018-09-10T10:12:24.4577698Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "TeamMember": {
-              "Position": {
-                "Text": "Position"
-              },
-              "Email": {
-                "Text": "name@example.com"
-              },
-              "Photo": {
-                "Paths": [
-                  "700x450.png"
-                ]
-              }
+          "AutoroutePart": {
+            "Path": "portfolio/project-six",
+            "SetHomepage": false
+          }
+        },
+        {
+          "ContentItemId": "[js: variables('servicesContentItemId')]",
+          "ContentItemVersionId": "4wn1acj3tg7f7wbfa6cv14w2cb",
+          "ContentType": "Services",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T13:41:50.1846147Z",
+          "PublishedUtc": "2018-09-10T13:41:50.1896861Z",
+          "CreatedUtc": "2018-09-10T13:13:21.9209066Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Services": {
+            "Image": {
+              "Paths": [
+                "1200x300.png"
+              ]
             },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
-            },
-            "TitlePart": {
-              "Title": "Team Member 2"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
-              "Order": 0
+            "Subheading": {
+              "Text": "Subheading"
             }
           },
-          {
-            "ContentItemId": "4tgsszveajv7zw8c8s7te64gc8",
-            "ContentItemVersionId": "4vs6mk4rnga7mtkzj92x182bx7",
-            "ContentType": "TeamMember",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:12:55.889782Z",
-            "PublishedUtc": "2018-09-10T10:12:55.8918047Z",
-            "CreatedUtc": "2018-09-10T10:12:55.8918047Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "TeamMember": {
-              "Position": {
-                "Text": "Position"
-              },
-              "Email": {
-                "Text": "name@example.com"
-              },
-              "Photo": {
-                "Paths": [
-                  "700x450.png"
-                ]
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
-            },
-            "TitlePart": {
-              "Title": "Team Member"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
-              "Order": 0
+          "TitlePart": {
+            "Title": "Welcome to Modern Business"
+          },
+          "AliasPart": {
+            "Alias": "services"
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Service",
+          "Latest": true,
+          "Published": true,
+          "Owner": "admin",
+          "Author": "admin",
+          "Service": {
+            "Link": {
+              "Url": null,
+              "Text": "Learn More"
             }
           },
-          {
-            "ContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-            "ContentItemVersionId": "42c1tqw93x5g85nrf8nfjg155v",
-            "ContentType": "Customers",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:13:17.8559885Z",
-            "PublishedUtc": "2018-09-10T10:13:17.8579794Z",
-            "CreatedUtc": "2018-09-10T10:13:17.8579794Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customers": {},
-            "AliasPart": {
-              "Alias": "customers"
-            },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
-            },
-            "TitlePart": {
-              "Title": "Our Customers"
+          "HtmlBodyPart": {
+            "Html": "this should be first!"
+          },
+          "TitlePart": {
+            "Title": "Lastest Service"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('servicesContentItemId')]",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4rgzvfzn50f6vvvstyfpgyj852",
+          "ContentItemVersionId": "4gxgdn56s69g037g21knxwn650",
+          "ContentType": "Service",
+          "Latest": true,
+          "Published": true,
+          "Owner": "admin",
+          "Author": "admin",
+          "Service": {
+            "Link": {
+              "Url": null,
+              "Text": "Learn More"
             }
           },
-          {
-            "ContentItemId": "4gj7z1dcqypsnr1fnnnx0j7fmx",
-            "ContentItemVersionId": "4vz9egxf843e7s3t6nenwbexmy",
-            "ContentType": "Customer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:14:34.2066904Z",
-            "PublishedUtc": "2018-09-10T10:14:34.2086471Z",
-            "CreatedUtc": "2018-09-10T10:14:34.2086471Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customer": {
-              "Logo": {
-                "Paths": [
-                  "500x300.png"
-                ]
-              }
-            },
-            "TitlePart": {
-              "Title": "Customer One"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-              "Order": 0
+          "HtmlBodyPart": {
+            "Html": "iuupii!"
+          },
+          "TitlePart": {
+            "Title": "Some service"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('servicesContentItemId')]",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4exzswmzx27qr4fc4r18qqd5d4",
+          "ContentItemVersionId": "4kp2yswp4vgh500nwz69jr7pcc",
+          "ContentType": "Service",
+          "Latest": true,
+          "Published": true,
+          "Owner": "admin",
+          "Author": "admin",
+          "Service": {
+            "Link": {
+              "Url": null,
+              "Text": "Learn More"
             }
           },
-          {
-            "ContentItemId": "4jqn9g5teavrg2tbzh32cn42d2",
-            "ContentItemVersionId": "4640xkwazkvx50nxr9xav63emh",
-            "ContentType": "Customer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:14:50.254898Z",
-            "PublishedUtc": "2018-09-10T10:14:50.2568511Z",
-            "CreatedUtc": "2018-09-10T10:14:50.2568511Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customer": {
-              "Logo": {
-                "Paths": [
-                  "500x300.png"
-                ]
-              }
-            },
-            "TitlePart": {
-              "Title": "Customer Two"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-              "Order": 0
+          "HtmlBodyPart": {
+            "Html": "yes!"
+          },
+          "TitlePart": {
+            "Title": "One more"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('servicesContentItemId')]",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4sh49dn2q77xq0s8xtkwhbvhcx",
+          "ContentItemVersionId": "4dhssbftvzah657f3kj3npp1xx",
+          "ContentType": "Service",
+          "Latest": true,
+          "Published": true,
+          "Owner": "admin",
+          "Author": "admin",
+          "Service": {
+            "Link": {
+              "Url": null,
+              "Text": "Learn More"
             }
           },
-          {
-            "ContentItemId": "4rmdnk7cg1t4bxzan3gadn9ydk",
-            "ContentItemVersionId": "48vnas3cw40rxywd33shga6wn9",
-            "ContentType": "Customer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:15:04.0224225Z",
-            "PublishedUtc": "2018-09-10T10:15:04.0244693Z",
-            "CreatedUtc": "2018-09-10T10:15:04.0244693Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customer": {
-              "Logo": {
-                "Paths": [
-                  "500x300.png"
-                ]
-              }
-            },
-            "TitlePart": {
-              "Title": "Customer Three"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-              "Order": 0
-            }
+          "HtmlBodyPart": {
+            "Html": "wow!"
           },
-          {
-            "ContentItemId": "4n3ag53mn2kaasjy7pbk3xaxm9",
-            "ContentItemVersionId": "4rxa2wv7x07fe2batkvh0rbede",
-            "ContentType": "Customer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:15:15.0872294Z",
-            "PublishedUtc": "2018-09-10T10:15:15.0894015Z",
-            "CreatedUtc": "2018-09-10T10:15:15.0894015Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customer": {
-              "Logo": {
-                "Paths": [
-                  "500x300.png"
-                ]
-              }
-            },
-            "TitlePart": {
-              "Title": "Customer Four"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-              "Order": 0
-            }
+          "TitlePart": {
+            "Title": "Another Service"
           },
-          {
-            "ContentItemId": "44cw9gp3y5ny06zg31hm06gemd",
-            "ContentItemVersionId": "4jbgtzwdqyhq551h5z0p58fsdt",
-            "ContentType": "Customer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:15:26.823744Z",
-            "PublishedUtc": "2018-09-10T10:15:26.8256396Z",
-            "CreatedUtc": "2018-09-10T10:15:26.8256396Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customer": {
-              "Logo": {
-                "Paths": [
-                  "500x300.png"
-                ]
-              }
-            },
-            "TitlePart": {
-              "Title": "Customer Five"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4d4n06hgb5r5t3ewkfymyyfgx1",
-            "ContentItemVersionId": "4v61z7x224nd5wqkbpbvhdxdcn",
-            "ContentType": "Customer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:15:37.6449151Z",
-            "PublishedUtc": "2018-09-10T10:15:37.6467648Z",
-            "CreatedUtc": "2018-09-10T10:15:37.6467648Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Customer": {
-              "Logo": {
-                "Paths": [
-                  "500x300.png"
-                ]
-              }
-            },
-            "TitlePart": {
-              "Title": "Customer Six"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
-            "ContentItemVersionId": "4m2qwpnwb76ra5tx01vw007gmn",
-            "ContentType": "Team",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-10T10:16:51.6748971Z",
-            "PublishedUtc": "2018-09-10T10:16:51.6802006Z",
-            "CreatedUtc": "2018-09-10T10:09:48.7999198Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Team": {},
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
-            },
-            "TitlePart": {
-              "Title": "Our Team"
-            },
-            "AliasPart": {
-              "Alias": "team"
-            }
-          },
-          {
-            "ContentItemId": "[js: uuid()]",
-            "ContentItemVersionId": "4cbv2rk3tjyg26ndn5jzt9y0wv",
-            "ContentType": "RawHtml",
-            "Latest": true,
-            "Published": true,
-            "Owner": "admin",
-            "Author": "admin",
-            "RawHtml": {
-              "Content": {
-                "Html": "[file:text('Snippets/Footer.html')]"
-              }
-            }
-          },
-          {
-            "ContentItemId": "42dh17qbn2dqgsdz407b2gfxw7",
-            "ContentItemVersionId": "4ndgmb04w2xrx7kgjqrnn2gd59",
-            "ContentType": "LiquidWidget",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-12T08:17:14.6043209Z",
-            "PublishedUtc": "2018-09-12T08:17:14.7391357Z",
-            "CreatedUtc": "2018-09-11T15:23:13.2958814Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "LiquidPart": {
-              "Liquid": "{% assign path = \"slug:\" + Request.Path  %}\r\n{% assign currentItem = Content[path]  %}\r\n\r\n<div class=\"container\">\r\n            <h1 class=\"mt-4 mb-3\">\r\n                {{ currentItem.Content.TitlePart.Title }}\r\n                <small>{{ currentItem.Content.SubtitlePart.Subtitle.Text }}</small>\r\n            </h1>\r\n            <ol class=\"breadcrumb\">\r\n                <li class=\"breadcrumb-item\">\r\n                   <a href=\"{{ \"~/\" | href }}\">Home</a>\r\n                </li>\r\n              {% assign breadcrumb = currentItem.Content.AutoroutePart.Path | split: \"/\" %}\r\n              {% assign allItems = breadcrumb | size - 1 %}\r\n              \r\n              {% for i in (0..allItems) %}\r\n              \r\n              \t{% if i == allItems %}\r\n              \r\n              \t\t<li class=\"breadcrumb-item active\">{{ breadcrumb[i]  | capitalize }}</li>\r\n              \t{% else %}\r\n              \t\t{% assign baseUrl = \"~/\" + breadcrumb[i] %}\r\n              \t\t<li class=\"breadcrumb-item\"><a href=\"{{ baseUrl | href }}\">{{ breadcrumb[i] | capitalize }}</a></li> \r\n              \t{% endif %}\r\n              \r\n              {% endfor %}\r\n            </ol>\r\n        </div>\r\n<hr />"
-            }
-          },
-          {
-            "ContentItemId": "496vne7hycbz5zaab80yww5ynf",
-            "ContentItemVersionId": "4jyvw7nhg4yw1th4mdcfvxaa54",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:43:27.4760739Z",
-            "PublishedUtc": "2018-09-14T16:43:27.481613Z",
-            "CreatedUtc": "2018-09-14T16:43:27.481613Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Cras justo odio"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4cdfz86xb1g7vywv43jq9sz4w5",
-            "ContentItemVersionId": "43331cefjfavw4wgmpf3b2mad8",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:43:39.3062614Z",
-            "PublishedUtc": "2018-09-14T16:43:39.3104065Z",
-            "CreatedUtc": "2018-09-14T16:43:39.3104065Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Dapibus ac facilisis in"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "49bjw7a8hwdds4htaygseevtm0",
-            "ContentItemVersionId": "4q7gs21z62yqrwhe8xr4d7tt5a",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:43:51.5458012Z",
-            "PublishedUtc": "2018-09-14T16:43:51.5526691Z",
-            "CreatedUtc": "2018-09-14T16:43:51.5526691Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Vestibulum at eros"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4q1err7nf589ywggzfvqady755",
-            "ContentItemVersionId": "4f1hyw268vpcj73354811kxfmp",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:44:35.3152626Z",
-            "PublishedUtc": "2018-09-14T16:44:35.3191015Z",
-            "CreatedUtc": "2018-09-14T16:44:35.3191015Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Cras justo odio"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "48dckmcswsrar5xzc6ygbtnb5e",
-            "ContentItemVersionId": "48n0hg3tvpfa4x34he4d94jbng",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:44:55.3067041Z",
-            "PublishedUtc": "2018-09-14T16:44:55.3112144Z",
-            "CreatedUtc": "2018-09-14T16:44:55.3112144Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Dapibus ac facilisis in"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4p7mjkys9m4abvntqrg0hhn1x0",
-            "ContentItemVersionId": "4z1etvj8hwjs024r70hamedjcy",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:45:11.5544589Z",
-            "PublishedUtc": "2018-09-14T16:45:11.5580444Z",
-            "CreatedUtc": "2018-09-14T16:45:11.5580444Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Vestibulum at eros"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4ccde44jqk2413y089qw03ncmb",
-            "ContentItemVersionId": "49qzq13r2b7vdrsqn9b7fzyqd5",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:45:37.0910739Z",
-            "PublishedUtc": "2018-09-14T16:45:37.0991679Z",
-            "CreatedUtc": "2018-09-14T16:45:37.0991679Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Cras justo odio"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "46gqq36x7qch2r9fvya147bfx1",
-            "ContentItemVersionId": "43cpn6f4yv5q82kybvzv6hn950",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:45:49.0917211Z",
-            "PublishedUtc": "2018-09-14T16:45:49.0952943Z",
-            "CreatedUtc": "2018-09-14T16:45:49.0952943Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Dapibus ac facilisis in"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4nf6388qb0rmmsh6r1y9ws9847",
-            "ContentItemVersionId": "4y1b5dqbw8cte4z6ms596pvtxv",
-            "ContentType": "Features",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:45:58.5401256Z",
-            "PublishedUtc": "2018-09-14T16:45:58.5454911Z",
-            "CreatedUtc": "2018-09-14T16:45:58.5454911Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Features": {},
-            "TitlePart": {
-              "Title": "Vestibulum at eros"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-              "Order": 0
-            }
-          },
-          {
-            "ContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-            "ContentItemVersionId": "4r6e5r44fsbhtrbdp6fmhphkxq",
-            "ContentType": "Pricing",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T16:46:32.9212922Z",
-            "PublishedUtc": "2018-09-14T16:46:32.9302369Z",
-            "CreatedUtc": "2018-09-14T16:34:39.241972Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Pricing": {},
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "Subheading pricing"
-              }
-            },
-            "TitlePart": {
-              "Title": "Pricing"
-            },
-            "AliasPart": {
-              "Alias": "pricing"
-            }
-          },
-          {
-            "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-            "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
-            "ContentType": "PricePlan",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
-            "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
-            "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "PricePlan": {
-              "Price": {
-                "Text": "$159.99"
-              }
-            },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
-            },
-            "TitlePart": {
-              "Title": "Ultra"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-              "Order": 0
-            },
-            "BagPart": {
-              "ContentItems": [
-                {
-                  "Id": 0,
-                  "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "Something"
+          "ContainedPart": {
+            "ListContentItemId": "[js: variables('servicesContentItemId')]",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Carousel",
+          "Latest": true,
+          "Published": true,
+          "Carousel": {},
+          "BagPart": {
+            "ContentItems": [
+              {
+                "Id": 0,
+                "ContentItemId": "[js: uuid()]",
+                "ContentType": "Slide",
+                "Slide": {
+                  "Description": {
+                    "Text": "Moon"
                   },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
+                  "Image": {
+                    "Paths": [
+                      "b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg"
+                    ]
                   }
                 },
-                {
-                  "Id": 0,
-                  "ContentItemId": "440m59re7qx636870txmfhj6x8",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "Bla bla"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                },
-                {
-                  "Id": 0,
-                  "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "foo"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
+                "TitlePart": {
+                  "Title": "Look at this Moon!"
                 }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "[js: uuid()]",
+                "ContentType": "Slide",
+                "Slide": {
+                  "Description": {
+                    "Text": "Business"
+                  },
+                  "Image": {
+                    "Paths": [
+                      "modern.jpg"
+                    ]
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Look it works!"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ContentItemId": "42chwzdcjdteg5n18grf8g1nwd",
+          "ContentItemVersionId": "4d55vq15am4966wwjjndrzz1dm",
+          "ContentType": "TeamMember",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:11:31.3595342Z",
+          "PublishedUtc": "2018-09-10T10:11:31.3628998Z",
+          "CreatedUtc": "2018-09-10T10:11:31.3628998Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "TeamMember": {
+            "Position": {
+              "Text": "Position"
+            },
+            "Email": {
+              "Text": "email@example.com"
+            },
+            "Photo": {
+              "Paths": [
+                "700x450.png"
               ]
             }
           },
-          {
-            "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
-            "ContentItemVersionId": "4a03sp6vq03dw73v8w835m6fwp",
-            "ContentType": "PricePlan",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T17:22:29.406972Z",
-            "PublishedUtc": "2018-09-14T17:22:29.4191243Z",
-            "CreatedUtc": "2018-09-14T16:44:27.3145451Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "PricePlan": {
-              "Price": {
-                "Text": "$39.99"
-              }
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
+          },
+          "TitlePart": {
+            "Title": "Team Member"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "45yycck3nac60xzfcp303jv0d3",
+          "ContentItemVersionId": "4y5adg9bqy88r6mp0v59y6w7dc",
+          "ContentType": "TeamMember",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:12:24.4558303Z",
+          "PublishedUtc": "2018-09-10T10:12:24.4577698Z",
+          "CreatedUtc": "2018-09-10T10:12:24.4577698Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "TeamMember": {
+            "Position": {
+              "Text": "Position"
             },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
+            "Email": {
+              "Text": "name@example.com"
             },
-            "TitlePart": {
-              "Title": "Plus"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-              "Order": 0
-            },
-            "BagPart": {
-              "ContentItems": [
-                {
-                  "Id": 0,
-                  "ContentItemId": "4nqfwj6zkzefh35jg8yy6xfcxy",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:22:29.4121293Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "wow"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                },
-                {
-                  "Id": 0,
-                  "ContentItemId": "42gtcfqswcnc829z0bq313bj5k",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:22:29.4140812Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "amazing"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                },
-                {
-                  "Id": 0,
-                  "ContentItemId": "4gnckn7vhnky6t14jqrqc4174h",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:22:29.4161238Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "wee"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                }
+            "Photo": {
+              "Paths": [
+                "700x450.png"
               ]
             }
           },
-          {
-            "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
-            "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
-            "ContentType": "PricePlan",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-14T17:30:38.9627564Z",
-            "PublishedUtc": "2018-09-14T17:30:38.9741722Z",
-            "CreatedUtc": "2018-09-14T16:42:55.2876489Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "PricePlan": {
-              "Price": {
-                "Text": "$19.99"
-              }
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
+          },
+          "TitlePart": {
+            "Title": "Team Member 2"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4tgsszveajv7zw8c8s7te64gc8",
+          "ContentItemVersionId": "4vs6mk4rnga7mtkzj92x182bx7",
+          "ContentType": "TeamMember",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:12:55.889782Z",
+          "PublishedUtc": "2018-09-10T10:12:55.8918047Z",
+          "CreatedUtc": "2018-09-10T10:12:55.8918047Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "TeamMember": {
+            "Position": {
+              "Text": "Position"
             },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
+            "Email": {
+              "Text": "name@example.com"
             },
-            "TitlePart": {
-              "Title": "Basic"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-              "Order": 0
-            },
-            "BagPart": {
-              "ContentItems": [
-                {
-                  "Id": 0,
-                  "ContentItemId": "4haed1cn6fq9c686493v00jbn3",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:30:38.9673719Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "Feature 1"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                },
-                {
-                  "Id": 0,
-                  "ContentItemId": "4y1k71s9pfaqd0dta8agwhhgcq",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:30:38.9694275Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "Feature 2"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                },
-                {
-                  "Id": 0,
-                  "ContentItemId": "48hezb5vkxcf4rkrwehmxzxedm",
-                  "ContentItemVersionId": null,
-                  "ContentType": "Features",
-                  "Latest": false,
-                  "Published": false,
-                  "ModifiedUtc": "2018-09-14T17:30:38.9710097Z",
-                  "PublishedUtc": null,
-                  "CreatedUtc": null,
-                  "Owner": null,
-                  "Author": "admin",
-                  "Features": {},
-                  "TitlePart": {
-                    "Title": "Feature 3"
-                  },
-                  "ContainedPart": {
-                    "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
-                    "Order": 0
-                  }
-                }
+            "Photo": {
+              "Paths": [
+                "700x450.png"
               ]
             }
           },
-          {
-            "ContentItemId": "4tncgpgvs9xfeyy4qtcgh8tbmp",
-            "ContentItemVersionId": "4g359aehhs3gjrv9913bnyrzdn",
-            "ContentType": "QuestionAnswer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-18T08:59:08.1490725Z",
-            "PublishedUtc": "2018-09-18T08:59:08.1549112Z",
-            "CreatedUtc": "2018-09-18T08:59:08.1549112Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "QuestionAnswer": {},
-            "HtmlBodyPart": {
-              "Html": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. "
-            },
-            "TitlePart": {
-              "Title": "Collapsible Group Item #1"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
-              "Order": 0
+          "HtmlBodyPart": {
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
+          },
+          "TitlePart": {
+            "Title": "Team Member"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+          "ContentItemVersionId": "42c1tqw93x5g85nrf8nfjg155v",
+          "ContentType": "Customers",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:13:17.8559885Z",
+          "PublishedUtc": "2018-09-10T10:13:17.8579794Z",
+          "CreatedUtc": "2018-09-10T10:13:17.8579794Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customers": {},
+          "AliasPart": {
+            "Alias": "customers"
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "TitlePart": {
+            "Title": "Our Customers"
+          }
+        },
+        {
+          "ContentItemId": "4gj7z1dcqypsnr1fnnnx0j7fmx",
+          "ContentItemVersionId": "4vz9egxf843e7s3t6nenwbexmy",
+          "ContentType": "Customer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:14:34.2066904Z",
+          "PublishedUtc": "2018-09-10T10:14:34.2086471Z",
+          "CreatedUtc": "2018-09-10T10:14:34.2086471Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customer": {
+            "Logo": {
+              "Paths": [
+                "500x300.png"
+              ]
             }
           },
-          {
-            "ContentItemId": "4ye1tnz8dtmy0w7n71xcmztp40",
-            "ContentItemVersionId": "47t7ztsxjm159t3c93fwmnz3n4",
-            "ContentType": "QuestionAnswer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-18T08:59:39.2726019Z",
-            "PublishedUtc": "2018-09-18T08:59:39.2771402Z",
-            "CreatedUtc": "2018-09-18T08:59:39.2771402Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "QuestionAnswer": {},
-            "HtmlBodyPart": {
-              "Html": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. "
-            },
-            "TitlePart": {
-              "Title": "Collapsible Group Item #2"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
-              "Order": 0
+          "TitlePart": {
+            "Title": "Customer One"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4jqn9g5teavrg2tbzh32cn42d2",
+          "ContentItemVersionId": "4640xkwazkvx50nxr9xav63emh",
+          "ContentType": "Customer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:14:50.254898Z",
+          "PublishedUtc": "2018-09-10T10:14:50.2568511Z",
+          "CreatedUtc": "2018-09-10T10:14:50.2568511Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customer": {
+            "Logo": {
+              "Paths": [
+                "500x300.png"
+              ]
             }
           },
-          {
-            "ContentItemId": "4s00g66mzmysq5dvvs19p3r3wb",
-            "ContentItemVersionId": "4ta49kabsbctysm2dkmntctedg",
-            "ContentType": "QuestionAnswer",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-18T09:00:11.2422292Z",
-            "PublishedUtc": "2018-09-18T09:00:11.2461309Z",
-            "CreatedUtc": "2018-09-18T09:00:11.2461309Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "QuestionAnswer": {},
-            "HtmlBodyPart": {
-              "Html": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. "
-            },
-            "TitlePart": {
-              "Title": "Collapsible Group Item #3"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
-              "Order": 0
+          "TitlePart": {
+            "Title": "Customer Two"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4rmdnk7cg1t4bxzan3gadn9ydk",
+          "ContentItemVersionId": "48vnas3cw40rxywd33shga6wn9",
+          "ContentType": "Customer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:15:04.0224225Z",
+          "PublishedUtc": "2018-09-10T10:15:04.0244693Z",
+          "CreatedUtc": "2018-09-10T10:15:04.0244693Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customer": {
+            "Logo": {
+              "Paths": [
+                "500x300.png"
+              ]
             }
           },
-          {
-            "ContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
-            "ContentItemVersionId": "4s3z6njphq2bq20ad0f5jx2tcf",
-            "ContentType": "FAQ",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-18T09:43:27.3542248Z",
-            "PublishedUtc": "2018-09-18T09:43:27.3596888Z",
-            "CreatedUtc": "2018-09-18T08:58:45.8124279Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "FAQ": {},
-            "AutoroutePart": {
-              "Path": null,
-              "SetHomepage": false
-            },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
-            },
-            "TitlePart": {
-              "Title": "FAQ-List"
-            },
-            "SubtitlePart": {
-              "Subtitle": {
-                "Text": "FAQ Subheading"
-              }
-            },
-            "AliasPart": {
-              "Alias": "faq"
+          "TitlePart": {
+            "Title": "Customer Three"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4n3ag53mn2kaasjy7pbk3xaxm9",
+          "ContentItemVersionId": "4rxa2wv7x07fe2batkvh0rbede",
+          "ContentType": "Customer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:15:15.0872294Z",
+          "PublishedUtc": "2018-09-10T10:15:15.0894015Z",
+          "CreatedUtc": "2018-09-10T10:15:15.0894015Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customer": {
+            "Logo": {
+              "Paths": [
+                "500x300.png"
+              ]
             }
           },
-          {
-            "ContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
-            "ContentItemVersionId": "4gyjydvcdv2xhzn5bn6gh3785r",
-            "ContentType": "Blog",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-17T10:55:06.6858578Z",
-            "PublishedUtc": "2018-09-17T10:55:06.6940161Z",
-            "CreatedUtc": "2018-09-17T10:33:34.1961902Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "Blog": {},
-            "AutoroutePart": {
-              "Path": "blog-home",
-              "SetHomepage": false
-            },
-            "ListPart": {
-              "FeedProxyUrl": null,
-              "FeedItemsCount": 20
-            },
-            "TitlePart": {
-              "Title": "Blog"
-            },
-            "HtmlBodyPart": {
-              "Html": null
-            },
-            "AliasPart": {
-              "Alias": "blog"
+          "TitlePart": {
+            "Title": "Customer Four"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "44cw9gp3y5ny06zg31hm06gemd",
+          "ContentItemVersionId": "4jbgtzwdqyhq551h5z0p58fsdt",
+          "ContentType": "Customer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:15:26.823744Z",
+          "PublishedUtc": "2018-09-10T10:15:26.8256396Z",
+          "CreatedUtc": "2018-09-10T10:15:26.8256396Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customer": {
+            "Logo": {
+              "Paths": [
+                "500x300.png"
+              ]
             }
           },
-          {
-            "ContentItemId": "4frbxe000hzwm7bb723dek70cq",
-            "ContentItemVersionId": "42zqbkhsnm5g3yb6bd890h7gn9",
-            "ContentType": "BlogPost",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-17T15:23:21.9378291Z",
-            "PublishedUtc": "2018-09-17T15:23:21.9511556Z",
-            "CreatedUtc": "2018-09-17T10:56:17.1147918Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "BlogPost": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "AutoroutePart": {
-              "Path": "blog/blog-title-4",
-              "SetHomepage": false
-            },
-            "MarkdownBodyPart": {
-              "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
-            },
-            "TitlePart": {
-              "Title": "Blog title 4"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
-              "Order": 0
-            },
-            "ImagePart": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          "TitlePart": {
+            "Title": "Customer Five"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4d4n06hgb5r5t3ewkfymyyfgx1",
+          "ContentItemVersionId": "4v61z7x224nd5wqkbpbvhdxdcn",
+          "ContentType": "Customer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:15:37.6449151Z",
+          "PublishedUtc": "2018-09-10T10:15:37.6467648Z",
+          "CreatedUtc": "2018-09-10T10:15:37.6467648Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Customer": {
+            "Logo": {
+              "Paths": [
+                "500x300.png"
+              ]
             }
           },
-          {
-            "ContentItemId": "4kzf0zb4gpzsg47436kbm5x2w7",
-            "ContentItemVersionId": "4fja6bf5qaz932nqf8g521xrm7",
-            "ContentType": "BlogPost",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-17T15:23:27.2649049Z",
-            "PublishedUtc": "2018-09-17T15:23:27.2715775Z",
-            "CreatedUtc": "2018-09-17T10:55:56.1309674Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "BlogPost": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "AutoroutePart": {
-              "Path": "blog/blog-title-3",
-              "SetHomepage": false
-            },
-            "MarkdownBodyPart": {
-              "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
-            },
-            "TitlePart": {
-              "Title": "Blog title 3"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
-              "Order": 0
-            },
-            "ImagePart": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
-            }
+          "TitlePart": {
+            "Title": "Customer Six"
           },
-          {
-            "ContentItemId": "49q7na4wmgeggxeebaw7thencc",
-            "ContentItemVersionId": "4a88s17w1xc28xsmv66bfn41w9",
-            "ContentType": "BlogPost",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-17T15:23:32.377658Z",
-            "PublishedUtc": "2018-09-17T15:23:32.3843635Z",
-            "CreatedUtc": "2018-09-17T10:54:30.109778Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "BlogPost": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "AutoroutePart": {
-              "Path": "blog/post-title-2",
-              "SetHomepage": false
-            },
-            "MarkdownBodyPart": {
-              "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
-            },
-            "TitlePart": {
-              "Title": "Post title 2"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
-              "Order": 0
-            },
-            "ImagePart": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
-            }
+          "ContainedPart": {
+            "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
+          "ContentItemVersionId": "4m2qwpnwb76ra5tx01vw007gmn",
+          "ContentType": "Team",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-10T10:16:51.6748971Z",
+          "PublishedUtc": "2018-09-10T10:16:51.6802006Z",
+          "CreatedUtc": "2018-09-10T10:09:48.7999198Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Team": {},
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
           },
-          {
-            "ContentItemId": "4jc1t9975mfqa3evsegxqk4jdr",
-            "ContentItemVersionId": "4884zr0dbh0s92exx20g7vw4xk",
-            "ContentType": "BlogPost",
-            "Latest": true,
-            "Published": true,
-            "ModifiedUtc": "2018-09-17T15:23:36.9503632Z",
-            "PublishedUtc": "2018-09-17T15:23:36.9568801Z",
-            "CreatedUtc": "2018-09-17T10:38:00.9949333Z",
-            "Owner": "admin",
-            "Author": "admin",
-            "BlogPost": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "AutoroutePart": {
-              "Path": "blog/post-title",
-              "SetHomepage": false
-            },
-            "MarkdownBodyPart": {
-              "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
-            },
-            "TitlePart": {
-              "Title": "Post Title"
-            },
-            "ContainedPart": {
-              "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
-              "Order": 0
-            },
-            "ImagePart": {
-              "Image": {
-                "Paths": [
-                  "700x400.png"
-                ]
-              }
-            },
-            "HtmlBodyPart": {
-              "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          "TitlePart": {
+            "Title": "Our Team"
+          },
+          "AliasPart": {
+            "Alias": "team"
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "4cbv2rk3tjyg26ndn5jzt9y0wv",
+          "ContentType": "RawHtml",
+          "Latest": true,
+          "Published": true,
+          "Owner": "admin",
+          "Author": "admin",
+          "RawHtml": {
+            "Content": {
+              "Html": "[file:text('Snippets/Footer.html')]"
             }
           }
-          ]
+        },
+        {
+          "ContentItemId": "42dh17qbn2dqgsdz407b2gfxw7",
+          "ContentItemVersionId": "4ndgmb04w2xrx7kgjqrnn2gd59",
+          "ContentType": "LiquidWidget",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-12T08:17:14.6043209Z",
+          "PublishedUtc": "2018-09-12T08:17:14.7391357Z",
+          "CreatedUtc": "2018-09-11T15:23:13.2958814Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "LiquidPart": {
+            "Liquid": "{% assign path = \"slug:\" + Request.Path  %}\r\n{% assign currentItem = Content[path]  %}\r\n\r\n<div class=\"container\">\r\n            <h1 class=\"mt-4 mb-3\">\r\n                {{ currentItem.Content.TitlePart.Title }}\r\n                <small>{{ currentItem.Content.SubtitlePart.Subtitle.Text }}</small>\r\n            </h1>\r\n            <ol class=\"breadcrumb\">\r\n                <li class=\"breadcrumb-item\">\r\n                   <a href=\"{{ \"~/\" | href }}\">Home</a>\r\n                </li>\r\n              {% assign breadcrumb = currentItem.Content.AutoroutePart.Path | split: \"/\" %}\r\n              {% assign allItems = breadcrumb | size - 1 %}\r\n              \r\n              {% for i in (0..allItems) %}\r\n              \r\n              \t{% if i == allItems %}\r\n              \r\n              \t\t<li class=\"breadcrumb-item active\">{{ breadcrumb[i]  | capitalize }}</li>\r\n              \t{% else %}\r\n              \t\t{% assign baseUrl = \"~/\" + breadcrumb[i] %}\r\n              \t\t<li class=\"breadcrumb-item\"><a href=\"{{ baseUrl | href }}\">{{ breadcrumb[i] | capitalize }}</a></li> \r\n              \t{% endif %}\r\n              \r\n              {% endfor %}\r\n            </ol>\r\n        </div>\r\n<hr />"
+          }
+        },
+        {
+          "ContentItemId": "496vne7hycbz5zaab80yww5ynf",
+          "ContentItemVersionId": "4jyvw7nhg4yw1th4mdcfvxaa54",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:43:27.4760739Z",
+          "PublishedUtc": "2018-09-14T16:43:27.481613Z",
+          "CreatedUtc": "2018-09-14T16:43:27.481613Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Cras justo odio"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4cdfz86xb1g7vywv43jq9sz4w5",
+          "ContentItemVersionId": "43331cefjfavw4wgmpf3b2mad8",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:43:39.3062614Z",
+          "PublishedUtc": "2018-09-14T16:43:39.3104065Z",
+          "CreatedUtc": "2018-09-14T16:43:39.3104065Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Dapibus ac facilisis in"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "49bjw7a8hwdds4htaygseevtm0",
+          "ContentItemVersionId": "4q7gs21z62yqrwhe8xr4d7tt5a",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:43:51.5458012Z",
+          "PublishedUtc": "2018-09-14T16:43:51.5526691Z",
+          "CreatedUtc": "2018-09-14T16:43:51.5526691Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Vestibulum at eros"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4q1err7nf589ywggzfvqady755",
+          "ContentItemVersionId": "4f1hyw268vpcj73354811kxfmp",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:44:35.3152626Z",
+          "PublishedUtc": "2018-09-14T16:44:35.3191015Z",
+          "CreatedUtc": "2018-09-14T16:44:35.3191015Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Cras justo odio"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "48dckmcswsrar5xzc6ygbtnb5e",
+          "ContentItemVersionId": "48n0hg3tvpfa4x34he4d94jbng",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:44:55.3067041Z",
+          "PublishedUtc": "2018-09-14T16:44:55.3112144Z",
+          "CreatedUtc": "2018-09-14T16:44:55.3112144Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Dapibus ac facilisis in"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4p7mjkys9m4abvntqrg0hhn1x0",
+          "ContentItemVersionId": "4z1etvj8hwjs024r70hamedjcy",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:45:11.5544589Z",
+          "PublishedUtc": "2018-09-14T16:45:11.5580444Z",
+          "CreatedUtc": "2018-09-14T16:45:11.5580444Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Vestibulum at eros"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ccde44jqk2413y089qw03ncmb",
+          "ContentItemVersionId": "49qzq13r2b7vdrsqn9b7fzyqd5",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:45:37.0910739Z",
+          "PublishedUtc": "2018-09-14T16:45:37.0991679Z",
+          "CreatedUtc": "2018-09-14T16:45:37.0991679Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Cras justo odio"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "46gqq36x7qch2r9fvya147bfx1",
+          "ContentItemVersionId": "43cpn6f4yv5q82kybvzv6hn950",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:45:49.0917211Z",
+          "PublishedUtc": "2018-09-14T16:45:49.0952943Z",
+          "CreatedUtc": "2018-09-14T16:45:49.0952943Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Dapibus ac facilisis in"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4nf6388qb0rmmsh6r1y9ws9847",
+          "ContentItemVersionId": "4y1b5dqbw8cte4z6ms596pvtxv",
+          "ContentType": "Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:45:58.5401256Z",
+          "PublishedUtc": "2018-09-14T16:45:58.5454911Z",
+          "CreatedUtc": "2018-09-14T16:45:58.5454911Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Features": {},
+          "TitlePart": {
+            "Title": "Vestibulum at eros"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+          "ContentItemVersionId": "4r6e5r44fsbhtrbdp6fmhphkxq",
+          "ContentType": "Pricing",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T16:46:32.9212922Z",
+          "PublishedUtc": "2018-09-14T16:46:32.9302369Z",
+          "CreatedUtc": "2018-09-14T16:34:39.241972Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Pricing": {},
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Subheading pricing"
+            }
+          },
+          "TitlePart": {
+            "Title": "Pricing"
+          },
+          "AliasPart": {
+            "Alias": "pricing"
+          }
+        },
+        {
+          "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+          "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
+          "ContentType": "PricePlan",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
+          "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
+          "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "PricePlan": {
+            "Price": {
+              "Text": "$159.99"
+            }
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "TitlePart": {
+            "Title": "Ultra"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+            "Order": 0
+          },
+          "BagPart": {
+            "ContentItems": [
+              {
+                "Id": 0,
+                "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "Something"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "440m59re7qx636870txmfhj6x8",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "Bla bla"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "foo"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
+          "ContentItemVersionId": "4a03sp6vq03dw73v8w835m6fwp",
+          "ContentType": "PricePlan",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T17:22:29.406972Z",
+          "PublishedUtc": "2018-09-14T17:22:29.4191243Z",
+          "CreatedUtc": "2018-09-14T16:44:27.3145451Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "PricePlan": {
+            "Price": {
+              "Text": "$39.99"
+            }
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "TitlePart": {
+            "Title": "Plus"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+            "Order": 0
+          },
+          "BagPart": {
+            "ContentItems": [
+              {
+                "Id": 0,
+                "ContentItemId": "4nqfwj6zkzefh35jg8yy6xfcxy",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:22:29.4121293Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "wow"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "42gtcfqswcnc829z0bq313bj5k",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:22:29.4140812Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "amazing"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4gnckn7vhnky6t14jqrqc4174h",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:22:29.4161238Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "wee"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
+          "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
+          "ContentType": "PricePlan",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-14T17:30:38.9627564Z",
+          "PublishedUtc": "2018-09-14T17:30:38.9741722Z",
+          "CreatedUtc": "2018-09-14T16:42:55.2876489Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "PricePlan": {
+            "Price": {
+              "Text": "$19.99"
+            }
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "TitlePart": {
+            "Title": "Basic"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+            "Order": 0
+          },
+          "BagPart": {
+            "ContentItems": [
+              {
+                "Id": 0,
+                "ContentItemId": "4haed1cn6fq9c686493v00jbn3",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:30:38.9673719Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "Feature 1"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4y1k71s9pfaqd0dta8agwhhgcq",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:30:38.9694275Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "Feature 2"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "48hezb5vkxcf4rkrwehmxzxedm",
+                "ContentItemVersionId": null,
+                "ContentType": "Features",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-09-14T17:30:38.9710097Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Features": {},
+                "TitlePart": {
+                  "Title": "Feature 3"
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
+                  "Order": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ContentItemId": "4tncgpgvs9xfeyy4qtcgh8tbmp",
+          "ContentItemVersionId": "4g359aehhs3gjrv9913bnyrzdn",
+          "ContentType": "QuestionAnswer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-18T08:59:08.1490725Z",
+          "PublishedUtc": "2018-09-18T08:59:08.1549112Z",
+          "CreatedUtc": "2018-09-18T08:59:08.1549112Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "QuestionAnswer": {},
+          "HtmlBodyPart": {
+            "Html": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. "
+          },
+          "TitlePart": {
+            "Title": "Collapsible Group Item #1"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ye1tnz8dtmy0w7n71xcmztp40",
+          "ContentItemVersionId": "47t7ztsxjm159t3c93fwmnz3n4",
+          "ContentType": "QuestionAnswer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-18T08:59:39.2726019Z",
+          "PublishedUtc": "2018-09-18T08:59:39.2771402Z",
+          "CreatedUtc": "2018-09-18T08:59:39.2771402Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "QuestionAnswer": {},
+          "HtmlBodyPart": {
+            "Html": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. "
+          },
+          "TitlePart": {
+            "Title": "Collapsible Group Item #2"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4s00g66mzmysq5dvvs19p3r3wb",
+          "ContentItemVersionId": "4ta49kabsbctysm2dkmntctedg",
+          "ContentType": "QuestionAnswer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-18T09:00:11.2422292Z",
+          "PublishedUtc": "2018-09-18T09:00:11.2461309Z",
+          "CreatedUtc": "2018-09-18T09:00:11.2461309Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "QuestionAnswer": {},
+          "HtmlBodyPart": {
+            "Html": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. "
+          },
+          "TitlePart": {
+            "Title": "Collapsible Group Item #3"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
+          "ContentItemVersionId": "4s3z6njphq2bq20ad0f5jx2tcf",
+          "ContentType": "FAQ",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-18T09:43:27.3542248Z",
+          "PublishedUtc": "2018-09-18T09:43:27.3596888Z",
+          "CreatedUtc": "2018-09-18T08:58:45.8124279Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "FAQ": {},
+          "AutoroutePart": {
+            "Path": null,
+            "SetHomepage": false
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "TitlePart": {
+            "Title": "FAQ-List"
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "FAQ Subheading"
+            }
+          },
+          "AliasPart": {
+            "Alias": "faq"
+          }
+        },
+        {
+          "ContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
+          "ContentItemVersionId": "4gyjydvcdv2xhzn5bn6gh3785r",
+          "ContentType": "Blog",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-17T10:55:06.6858578Z",
+          "PublishedUtc": "2018-09-17T10:55:06.6940161Z",
+          "CreatedUtc": "2018-09-17T10:33:34.1961902Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "Blog": {},
+          "AutoroutePart": {
+            "Path": "blog-home",
+            "SetHomepage": false
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "TitlePart": {
+            "Title": "Blog"
+          },
+          "HtmlBodyPart": {
+            "Html": null
+          },
+          "AliasPart": {
+            "Alias": "blog"
+          }
+        },
+        {
+          "ContentItemId": "4frbxe000hzwm7bb723dek70cq",
+          "ContentItemVersionId": "42zqbkhsnm5g3yb6bd890h7gn9",
+          "ContentType": "BlogPost",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-17T15:23:21.9378291Z",
+          "PublishedUtc": "2018-09-17T15:23:21.9511556Z",
+          "CreatedUtc": "2018-09-17T10:56:17.1147918Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "BlogPost": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/blog-title-4",
+            "SetHomepage": false
+          },
+          "MarkdownBodyPart": {
+            "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
+          },
+          "TitlePart": {
+            "Title": "Blog title 4"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
+            "Order": 0
+          },
+          "ImagePart": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "HtmlBodyPart": {
+            "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          }
+        },
+        {
+          "ContentItemId": "4kzf0zb4gpzsg47436kbm5x2w7",
+          "ContentItemVersionId": "4fja6bf5qaz932nqf8g521xrm7",
+          "ContentType": "BlogPost",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-17T15:23:27.2649049Z",
+          "PublishedUtc": "2018-09-17T15:23:27.2715775Z",
+          "CreatedUtc": "2018-09-17T10:55:56.1309674Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "BlogPost": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/blog-title-3",
+            "SetHomepage": false
+          },
+          "MarkdownBodyPart": {
+            "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
+          },
+          "TitlePart": {
+            "Title": "Blog title 3"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
+            "Order": 0
+          },
+          "ImagePart": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "HtmlBodyPart": {
+            "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          }
+        },
+        {
+          "ContentItemId": "49q7na4wmgeggxeebaw7thencc",
+          "ContentItemVersionId": "4a88s17w1xc28xsmv66bfn41w9",
+          "ContentType": "BlogPost",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-17T15:23:32.377658Z",
+          "PublishedUtc": "2018-09-17T15:23:32.3843635Z",
+          "CreatedUtc": "2018-09-17T10:54:30.109778Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "BlogPost": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/post-title-2",
+            "SetHomepage": false
+          },
+          "MarkdownBodyPart": {
+            "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
+          },
+          "TitlePart": {
+            "Title": "Post title 2"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
+            "Order": 0
+          },
+          "ImagePart": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "HtmlBodyPart": {
+            "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          }
+        },
+        {
+          "ContentItemId": "4jc1t9975mfqa3evsegxqk4jdr",
+          "ContentItemVersionId": "4884zr0dbh0s92exx20g7vw4xk",
+          "ContentType": "BlogPost",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-17T15:23:36.9503632Z",
+          "PublishedUtc": "2018-09-17T15:23:36.9568801Z",
+          "CreatedUtc": "2018-09-17T10:38:00.9949333Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "BlogPost": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/post-title",
+            "SetHomepage": false
+          },
+          "MarkdownBodyPart": {
+            "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
+          },
+          "TitlePart": {
+            "Title": "Post Title"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
+            "Order": 0
+          },
+          "ImagePart": {
+            "Image": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "HtmlBodyPart": {
+            "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          }
+        },
+        {
+          "ContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+          "ContentItemVersionId": "4s32sfj4nrcqr2sg4kr39q9rma",
+          "ContentType": "ExtraContent",
+          "DisplayText": null,
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-25T10:38:43.5336232Z",
+          "PublishedUtc": "2018-09-25T10:38:43.5551344Z",
+          "CreatedUtc": "2018-09-25T10:38:43.5551344Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "ExtraContent": {},
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          }
+        },
+        {
+          "ContentItemId": "4cqpx622d23ra40x96bf30jrd2",
+          "ContentItemVersionId": "4g6j421nzzbsa03mppm0yyjs4z",
+          "ContentType": "RawContent",
+          "DisplayText": "Modern Business Features",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-25T10:41:30.1215513Z",
+          "PublishedUtc": "2018-09-25T10:41:30.1276229Z",
+          "CreatedUtc": "2018-09-25T10:41:30.1276229Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "AliasPart": {
+            "Alias": "welcome"
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>The Modern Business template by Start Bootstrap includes:</p>\r\n\r\n\r\n\r\n                <ul>\r\n\r\n\r\n\r\n                    <li>\r\n\r\n\r\n\r\n                        <strong>Bootstrap v4</strong>\r\n\r\n\r\n\r\n                    </li>\r\n\r\n\r\n\r\n                    <li>jQuery</li>\r\n\r\n\r\n\r\n                    <li>Font Awesome</li>\r\n\r\n\r\n\r\n                    <li>Working contact form with validation</li>\r\n\r\n\r\n\r\n                    <li>Unstyled page elements for easy customization</li>\r\n\r\n\r\n\r\n                </ul>\r\n\r\n\r\n\r\n                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>\r\n\r\n\r\n\r\n"
+          },
+          "MarkdownBodyPart": {
+            "Markdown": null
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": null
+            }
+          },
+          "TitlePart": {
+            "Title": "Modern Business Features"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
+        }
+      ]
         },
         {
           "name": "media",
