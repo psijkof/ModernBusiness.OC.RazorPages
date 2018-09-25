@@ -9,10 +9,11 @@
 
     var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(s => s.ContentType == "Project").Take(2).Skip(2));
     var project = portfolio.First();
-    var carousel = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Carousel"));
+    var carousels = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Carousel"));
     var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service").OrderByDescending(o => o.PublishedUtc));
     var service=services.First();
-
+    var carousel = carousels.Single();
+    var welcomeContent = await Orchard.GetContentItemByAliasAsync("welcome", latest: true);
 }
 
 @section Header {
@@ -32,4 +33,5 @@
 <h2>@project.Content.TitlePart.Title</h2>
 
 <h3>@service.Content</h3>
-@carousel
+@carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
+@*@(welcomeContent ?? welcomeContent.Content ?? "no welcome")*@
