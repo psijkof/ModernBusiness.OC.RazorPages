@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.App", "ModernBusiness.App\ModernBusiness.App.csproj", "{DE2B870F-07AF-4901-8FC5-C9953FDFF968}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Theme", "ModernBusiness.Theme\ModernBusiness.Theme.csproj", "{F5B96975-4E46-469D-829A-128343A87356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Theme", "Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj", "{F5B96975-4E46-469D-829A-128343A87356}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages", "ModernBusiness.Pages\ModernBusiness.Pages.csproj", "{A74D35BD-4960-4EC6-B631-EC3D281AF12B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages", "Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj", "{A74D35BD-4960-4EC6-B631-EC3D281AF12B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

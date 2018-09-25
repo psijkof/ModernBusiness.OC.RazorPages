@@ -1,0 +1,44 @@
+﻿@* Based on https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/ *@
+<!DOCTYPE html>
+<html lang="@Orchard.CultureName()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
+    <link type="image/x-icon" rel="shortcut icon" href="/ModernBusiness.Theme/favicon.ico" />
+    @*<script asp-name="bootstrap" use-cdn="true" version="4" at="Foot"></script>
+        <style asp-name="bootstrap" use-cdn="true" version="4"></style>*@
+    <style asp-name="font-awesome" use-cdn="true" version="5"></style>
+    <resources type="Meta" />
+    <resources type="HeadLink" />
+    <resources type="Stylesheet" />
+    <resources type="HeadScript" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="/ModernBusiness.Theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="ModernBusiness.Theme/css/modern-business.css" rel="stylesheet">
+</head>
+
+<body dir="@Orchard.CultureDir()">
+    <header>
+        @RenderSection("Header", required: false)
+        header in theme layout
+    </header>
+    
+    <main role="main" class="container">
+        @RenderSection("Messages", required: false)
+        main/body in theme layout
+        @RenderBody()
+    </main>
+    <footer>
+        @RenderSection("Footer", required: false)
+        <resources type="FootScript" />
+        <!-- Bootstrap core JavaScript from theme layout-->
+        <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
+        <script src="/ModernBusiness.Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        footer in theme layout
+    </footer>
+</body>
+</html>
