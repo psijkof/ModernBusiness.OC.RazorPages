@@ -2698,6 +2698,7 @@
                 "Id": 0,
                 "ContentItemId": "[js: uuid()]",
                 "ContentType": "Slide",
+                "DisplayText": "Look at this Moon!",
                 "Slide": {
                   "Description": {
                     "Text": "Moon"
@@ -2716,6 +2717,7 @@
                 "Id": 0,
                 "ContentItemId": "[js: uuid()]",
                 "ContentType": "Slide",
+                "DisplayText": "Look it works!",
                 "Slide": {
                   "Description": {
                     "Text": "Business"
