@@ -1,7 +1,10 @@
 ﻿
 @{
-    var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
-    var slides = carousel.Content.BagPart.ContentItems;
+    var slides = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1)
+        .GetAwaiter()
+        .GetResult()
+        .Single().Content.BagPart.ContentItems;
+    
     var state = "active";
 }
 
@@ -31,8 +34,8 @@
                 }
                 <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0])')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>@item.DisplayText</h3>
-                        <p>@item.Slide.Description.Text</p>
+                        <h3>@T[item.DisplayText]</h3>
+                        <p>@T[item.Slide.Description.Text]</p>
                     </div>
                 </div>
             }
@@ -40,10 +43,10 @@
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">@T["Previous"]</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">@T["Next"]</span>
     </a>
 </div>
