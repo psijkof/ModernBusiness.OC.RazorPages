@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Localization;
 using OrchardCore.Modules;
 
 namespace ModernBusiness.Pages
@@ -16,6 +17,7 @@ namespace ModernBusiness.Pages
             {
                 options.Conventions.AddAreaFolderRoute("ModernBusiness.Pages", "/", "");
             });
+            //services.AddTransient<IStringLocalizer>();
         }
     }
 }

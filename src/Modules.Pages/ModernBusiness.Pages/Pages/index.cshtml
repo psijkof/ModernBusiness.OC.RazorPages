@@ -1,5 +1,4 @@
 ﻿@page
-@inject OrchardCore.IOrchardHelper Orchard
 
 @functions{
     string test = "test value";
@@ -7,10 +6,10 @@
 
 @{
 
-    var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(s => s.ContentType == "Project").Take(2).Skip(2));
+    var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published).Take(2).Skip(2));
     var project = portfolio.First();
-    var carousels = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Carousel"));
-    var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service").OrderByDescending(o => o.PublishedUtc));
+    var carousels = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Carousel" && c.Published));
+    var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service" && c.Published).OrderByDescending(o => o.PublishedUtc));
     var service = services.First();
     var carousel = carousels.Single();
     var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
@@ -25,8 +24,9 @@
 }
 
 @section Footer {
+    This is the footer
 }
-<h1>The body: <br />This is the razor page with a value for test: @test</h1>
+<h1>The body: <br />@T[$"This is the razor page with a value for test: { test }"]</h1>
 
 <img asset-src="@project.Content.Project.Image.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />
 
@@ -36,4 +36,4 @@
 @carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
 @Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
 <img asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />
-@*@(welcomeContent ?? welcomeContent.Content ?? "no welcome")*@
+@(welcomeContent ?? welcomeContent.Content ?? "no welcome")
