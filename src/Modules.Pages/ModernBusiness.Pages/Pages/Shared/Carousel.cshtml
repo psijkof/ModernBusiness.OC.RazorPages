@@ -1,9 +1,49 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-
+﻿
 @{
-
+    var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
+    var slides = carousel.Content.BagPart.ContentItems;
+    var state = "active";
 }
 
-<div>Carousel</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        @{
+            for (var i=0; i < ((IEnumerable<object>)slides).Count(); i++)
+            {
+                if (i != 0)
+                {
+                    state = "";
+                }
+                <li data-target="#carouselExampleIndicators" data-slide-to="@i" class="@state"></li>
+            }
+            // reset state for next loop
+            state = "active";
+        }
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        @{
+            foreach (var item in slides)
+            {
+                if (item != ((IEnumerable<object>)slides).First())
+                {
+                    state = "";
+                }
+                <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0])')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>@item.DisplayText</h3>
+                        <p>@item.Slide.Description.Text</p>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
