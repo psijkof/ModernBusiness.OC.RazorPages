@@ -510,7 +510,7 @@
             "Creatable": "False",
             "Draftable": "True",
             "Versionable": "True",
-            "Listable": "False",
+            "Listable": "True",
             "Securable": "True",
             "Stereotype": "Widget"
           },

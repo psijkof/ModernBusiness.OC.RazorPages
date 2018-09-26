@@ -8,17 +8,17 @@
 
     var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published).Take(2).Skip(2));
     var project = portfolio.First();
-    var carousels = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Carousel" && c.Published));
     var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service" && c.Published).OrderByDescending(o => o.PublishedUtc));
     var service = services.First();
-    var carousel = carousels.Single();
+    var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
     var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
+
 }
 
 
 @section Header {
     <partial name="Carousel" />
-   
+
 }
 
 @section Messages {
