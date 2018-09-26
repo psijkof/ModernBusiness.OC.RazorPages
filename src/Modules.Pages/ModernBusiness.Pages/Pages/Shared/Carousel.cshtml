@@ -34,8 +34,8 @@
                 }
                 <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0])')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>@T[item.DisplayText]</h3>
-                        <p>@T[item.Slide.Description.Text]</p>
+                        <h3>@T[(string)item.DisplayText]</h3>
+                        <p>@T[(string)item.Slide.Description.Text]</p>
                     </div>
                 </div>
             }
