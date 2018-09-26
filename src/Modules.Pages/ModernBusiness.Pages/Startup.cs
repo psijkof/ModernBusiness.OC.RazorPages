@@ -17,7 +17,6 @@ namespace ModernBusiness.Pages
             {
                 options.Conventions.AddAreaFolderRoute("ModernBusiness.Pages", "/", "");
             });
-            //services.AddTransient<IStringLocalizer>();
         }
     }
 }
