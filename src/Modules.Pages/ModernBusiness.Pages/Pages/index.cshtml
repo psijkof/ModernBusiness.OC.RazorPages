@@ -34,5 +34,6 @@
 
 <h3>@service.Content</h3>
 @carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
-@welcomeContent.Content
+@Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
+<img asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />
 @*@(welcomeContent ?? welcomeContent.Content ?? "no welcome")*@

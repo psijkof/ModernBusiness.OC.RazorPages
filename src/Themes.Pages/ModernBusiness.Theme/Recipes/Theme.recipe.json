@@ -2067,6 +2067,32 @@
               }
             }
           ]
+        },
+        {
+          "Name": "RawContent",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Images",
+              "Settings": {
+                "DisplayName": "Images",
+                "Editor": null,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Hint": null,
+                "Required": false,
+                "Multiple": true,
+                "Position": "0"
+              }
+            }
+          ]
         }
       ]
     },
