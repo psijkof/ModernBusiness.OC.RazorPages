@@ -15,10 +15,12 @@
 
 }
 
+@section Nav {
+    <partial name="NavbarPart" />
+}
 
 @section Header {
     <partial name="Carousel" />
-
 }
 
 @section Messages {
@@ -26,7 +28,9 @@
 
 @section Footer {
     This is the footer
+    <menu alias="alias:main-menu"></menu>
 }
+
 <h1>The body: <br />@T[$"This is the razor page with a value for test: { test }"]</h1>
 
 <img asset-src="@project.Content.Project.Image.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />

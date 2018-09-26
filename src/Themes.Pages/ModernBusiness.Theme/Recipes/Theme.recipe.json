@@ -66,6 +66,7 @@
         "OrchardCore.Widgets",
 
         "ModernBusiness.Pages",
+        "ModernBusiness.Pages.Portfolio",
 
         // Themes
         "ModernBusiness.Theme",

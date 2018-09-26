@@ -7,7 +7,6 @@
   <ItemGroup>
     <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-68618" />
     <PackageReference Include="OrchardCore.Media" Version="1.0.0-beta3-68618" />
-    <PackageReference Include="OrchardCore.Menu" Version="1.0.0-beta3-68618" />
     <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68618" />
     <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-68618" />
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68618" />
@@ -15,5 +14,10 @@
     <PackageReference Include="OrchardCore.Queries" Version="1.0.0-beta3-68618" />
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68618" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
+  </ItemGroup>
+
 
 </Project>
