@@ -20,7 +20,7 @@
 
 }
 <div class="row">
-    @foreach (var project in portfolio)
+    @*@foreach (var project in portfolio)
     {
         var projectLink = $"/portfolio/{project.Content.TitlePart.Title}";
         <div class="col-lg-4 portfolio-item">
@@ -38,5 +38,7 @@
                 </div>
             </div>
         </div>
-    }
+    }*@
+    @*<partial name="/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCard.cshtml" model="portfolio"/>*@
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCard.cshtml" model="portfolio" />
 </div>

@@ -67,6 +67,7 @@
 
         "ModernBusiness.Pages",
         "ModernBusiness.Pages.Portfolio",
+        "ModernBusiness.Pages.Shared",
 
         // Themes
         "ModernBusiness.Theme",

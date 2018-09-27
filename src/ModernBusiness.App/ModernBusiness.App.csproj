@@ -21,6 +21,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
     <ProjectReference Include="..\Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj" />
   </ItemGroup>

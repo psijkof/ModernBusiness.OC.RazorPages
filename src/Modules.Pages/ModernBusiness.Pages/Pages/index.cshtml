@@ -10,11 +10,11 @@
     var service = services.First();
     var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
     var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
-
+    var portfolio = Orchard.GetRecentContentItemsByContentTypeAsync("Project").GetAwaiter().GetResult();
 }
 
 @section Nav {
-    
+
 }
 
 @section Header {
@@ -36,3 +36,7 @@
 @Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
 <img asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />
 @(welcomeContent ?? welcomeContent.Content ?? "no welcome")
+
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCard.cshtml" model="portfolio" />
+</div>
