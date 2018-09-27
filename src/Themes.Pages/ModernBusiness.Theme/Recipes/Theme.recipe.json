@@ -64,6 +64,8 @@
         "OrchardCore.Title",
         "OrchardCore.Templates",
         "OrchardCore.Widgets",
+        "OrchardCore.Workflows",
+        "OrchardCore.Workflows.Http",
 
         "ModernBusiness.Pages",
         "ModernBusiness.Pages.Portfolio",
@@ -2105,6 +2107,313 @@
       "Indices": [ "Search" ]
     },
     {
+      "name": "WorkflowType",
+      "data": [
+        {
+          "WorkflowTypeId": "4582zcr47jqh04v8b5t9xy6qcq",
+          "Name": "Contact Form",
+          "IsEnabled": true,
+          "IsSingleton": false,
+          "DeleteFinishedWorkflows": false,
+          "Activities": [
+            {
+              "ActivityId": "4v3f76cfab5sa6xvded1h3cx5g",
+              "Name": "HttpRequestEvent",
+              "X": 0,
+              "Y": 0,
+              "IsStart": true,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Contact Form Submitted"
+                },
+                "HttpMethod": "POST",
+                "Url": "/Workflows/Invoke?token=CfDJ8L4xCCz1RHtCpMaVtR-_DDJHklms6FKh6E4vo2NJ9RgjCW_1OfQ7r_a5g2jAyvpG5FTEp0b98NSs8QFUwFEhq9QgggtPn5G8HiTd_IGbLhl2T-IGwfjU7siHqiROsQKGyMq4pogBiLERT3IJnar024hBm-hsXWOOoJC9x3tRfEQBvn_99sfaGiNYyoTWrmfX2loHl-gjuQZZ_BgGcTa4dV6_CVv3clpUhEZfQswt3NEF",
+                "ValidateAntiforgeryToken": true
+              }
+            },
+            {
+              "ActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
+              "Name": "ForkTask",
+              "X": 80,
+              "Y": 240,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Form Fields"
+                },
+                "Forks": [
+                  "\"Validate Name",
+                  "Validate Phone",
+                  "Validate Email",
+                  "Validate Message",
+                  "Validate Captcha\""
+                ]
+              }
+            },
+            {
+              "ActivityId": "4fmmxevvccybv5k07ceggjqmw0",
+              "Name": "ValidateFormFieldTask",
+              "X": 20,
+              "Y": 480,
+              "IsStart": false,
+              "Properties": {
+                "FieldName": "Name",
+                "ErrorMessage": "Name is required",
+                "ActivityMetadata": {
+                  "Title": "Validate Name"
+                }
+              }
+            },
+            {
+              "ActivityId": "4bjrfjxtgvf1a239jm1x8a7nd9",
+              "Name": "ValidateFormFieldTask",
+              "X": 260,
+              "Y": 30,
+              "IsStart": false,
+              "Properties": {
+                "FieldName": "Phone",
+                "ErrorMessage": "Phone is required",
+                "ActivityMetadata": {
+                  "Title": "Validate Phone"
+                }
+              }
+            },
+            {
+              "ActivityId": "4f0kkef1x36r151nzkwv97ef4q",
+              "Name": "ValidateFormFieldTask",
+              "X": 240,
+              "Y": 460,
+              "IsStart": false,
+              "Properties": {
+                "FieldName": "Email",
+                "ErrorMessage": "Email is required",
+                "ActivityMetadata": {
+                  "Title": "Validate Email"
+                }
+              }
+            },
+            {
+              "ActivityId": "425b4eqq4409zrytafqd7rb7nn",
+              "Name": "ValidateFormFieldTask",
+              "X": 440,
+              "Y": 580,
+              "IsStart": false,
+              "Properties": {
+                "FieldName": "Message",
+                "ErrorMessage": "Message is required",
+                "ActivityMetadata": {
+                  "Title": "Validate Message"
+                }
+              }
+            },
+            {
+              "ActivityId": "4r3sjffa8y80zte23gg5r3565m",
+              "Name": "ValidateNoCaptchaTask",
+              "X": 490,
+              "Y": 80,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "46epnxmh1p77wta5h61cmmqsct",
+              "Name": "JoinTask",
+              "X": 1050,
+              "Y": 200,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                },
+                "Mode": 0
+              }
+            },
+            {
+              "ActivityId": "4rbn2ypr7h4j1wk4ra5bkrm2nb",
+              "Name": "ValidateFormTask",
+              "X": 1580,
+              "Y": 190,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "4x6yxhmms7ja9y73r2wpmmpxwk",
+              "Name": "HttpRedirectTask",
+              "X": 1560,
+              "Y": 440,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Display Form Errors"
+                },
+                "Location": {
+                  "Expression": "/contact"
+                },
+                "Permanent": false
+              }
+            },
+            {
+              "ActivityId": "4zt3raec28e4q65krmaznjcrmk",
+              "Name": "EmailTask",
+              "X": 1120,
+              "Y": 350,
+              "IsStart": false,
+              "Properties": {
+                "Sender": {
+                  "Expression": "marcosaidos@grupoma.eu"
+                },
+                "Recipients": {
+                  "Expression": "marcosaidos@grupoma.eu"
+                },
+                "Subject": {
+                  "Expression": "Contact form submitted by {{ Request.Form.Name }}"
+                },
+                "Body": {
+                  "Expression": "<p>The following information was submitted:<p/>\r\n<p>Name: {{ Request.Form.Name }}</p>\r\n<p>Email: {{ Request.Form.Email }}</p>\r\n<p>Message: {{ Request.Form.Message }}</p>"
+                },
+                "ActivityMetadata": {
+                  "Title": "Send Email to Site Admin"
+                }
+              }
+            },
+            {
+              "ActivityId": "4gh4h57mwgb7bz0zhz3qvy8wma",
+              "Name": "HttpRedirectTask",
+              "X": 1190,
+              "Y": 540,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Display Thank You Page"
+                },
+                "Location": {
+                  "Expression": "/thankyou"
+                },
+                "Permanent": false
+              }
+            },
+            {
+              "ActivityId": "44d2nc99qqfx7vmfdeh07sktdw",
+              "Name": "BindModelStateTask",
+              "X": 120,
+              "Y": 140,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Keep Values"
+                }
+              }
+            }
+          ],
+          "Transitions": [
+            {
+              "Id": 0,
+              "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
+              "SourceOutcomeName": "\"Validate Name",
+              "DestinationActivityId": "4fmmxevvccybv5k07ceggjqmw0"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
+              "SourceOutcomeName": "Validate Phone",
+              "DestinationActivityId": "4bjrfjxtgvf1a239jm1x8a7nd9"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
+              "SourceOutcomeName": "Validate Email",
+              "DestinationActivityId": "4f0kkef1x36r151nzkwv97ef4q"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
+              "SourceOutcomeName": "Validate Message",
+              "DestinationActivityId": "425b4eqq4409zrytafqd7rb7nn"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
+              "SourceOutcomeName": "Validate Captcha\"",
+              "DestinationActivityId": "4r3sjffa8y80zte23gg5r3565m"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4bjrfjxtgvf1a239jm1x8a7nd9",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "46epnxmh1p77wta5h61cmmqsct"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4r3sjffa8y80zte23gg5r3565m",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "46epnxmh1p77wta5h61cmmqsct"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "425b4eqq4409zrytafqd7rb7nn",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "46epnxmh1p77wta5h61cmmqsct"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4f0kkef1x36r151nzkwv97ef4q",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "46epnxmh1p77wta5h61cmmqsct"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4fmmxevvccybv5k07ceggjqmw0",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "46epnxmh1p77wta5h61cmmqsct"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4rbn2ypr7h4j1wk4ra5bkrm2nb",
+              "SourceOutcomeName": "Valid",
+              "DestinationActivityId": "4zt3raec28e4q65krmaznjcrmk"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4rbn2ypr7h4j1wk4ra5bkrm2nb",
+              "SourceOutcomeName": "Invalid",
+              "DestinationActivityId": "4x6yxhmms7ja9y73r2wpmmpxwk"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4zt3raec28e4q65krmaznjcrmk",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4gh4h57mwgb7bz0zhz3qvy8wma"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4v3f76cfab5sa6xvded1h3cx5g",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "44d2nc99qqfx7vmfdeh07sktdw"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "44d2nc99qqfx7vmfdeh07sktdw",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4xhmc4z3dxsh4tp2aecw29jkws"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "46epnxmh1p77wta5h61cmmqsct",
+              "SourceOutcomeName": "Joined",
+              "DestinationActivityId": "4rbn2ypr7h4j1wk4ra5bkrm2nb"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "content",
       "data": [
         {
@@ -3972,47 +4281,47 @@
         }
 
       ]
+    },
+    {
+      "name": "media",
+      "Files": [
+        {
+          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Base64": "[file:base64('../wwwroot/img/6087de0a-f453-495d-882f-9b3396d400a9.jpg')]"
         },
         {
-          "name": "media",
-          "Files": [
-            {
-              "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
-              "Base64": "[file:base64('../wwwroot/img/6087de0a-f453-495d-882f-9b3396d400a9.jpg')]"
-            },
-            {
-              "Path": "b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg",
-              "Base64": "[file:base64('../wwwroot/img/b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg')]"
-            },
-            {
-              "Path": "modern.jpg",
-              "Base64": "[file:base64('../wwwroot/img/modern.jpg')]"
-            },
-            {
-              "Path": "700x450.png",
-              "Base64": "[file:base64('../wwwroot/img/700x450.png')]"
-            },
-            {
-              "Path": "700x400.png",
-              "Base64": "[file:base64('../wwwroot/img/700x400.png')]"
-            },
-            {
-              "Path": "700x300.png",
-              "Base64": "[file:base64('../wwwroot/img/700x300.png')]"
-            },
-            {
-              "Path": "750x450.png",
-              "Base64": "[file:base64('../wwwroot/img/750x450.png')]"
-            },
-            {
-              "Path": "500x300.png",
-              "Base64": "[file:base64('../wwwroot/img/500x300.png')]"
-            },
-            {
-              "Path": "1200x300.png",
-              "Base64": "[file:base64('../wwwroot/img/1200x300.png')]"
-            }
-          ]
+          "Path": "b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg",
+          "Base64": "[file:base64('../wwwroot/img/b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg')]"
+        },
+        {
+          "Path": "modern.jpg",
+          "Base64": "[file:base64('../wwwroot/img/modern.jpg')]"
+        },
+        {
+          "Path": "700x450.png",
+          "Base64": "[file:base64('../wwwroot/img/700x450.png')]"
+        },
+        {
+          "Path": "700x400.png",
+          "Base64": "[file:base64('../wwwroot/img/700x400.png')]"
+        },
+        {
+          "Path": "700x300.png",
+          "Base64": "[file:base64('../wwwroot/img/700x300.png')]"
+        },
+        {
+          "Path": "750x450.png",
+          "Base64": "[file:base64('../wwwroot/img/750x450.png')]"
+        },
+        {
+          "Path": "500x300.png",
+          "Base64": "[file:base64('../wwwroot/img/500x300.png')]"
+        },
+        {
+          "Path": "1200x300.png",
+          "Base64": "[file:base64('../wwwroot/img/1200x300.png')]"
         }
       ]
+    }
+  ]
 }
