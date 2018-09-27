@@ -34,7 +34,11 @@
         @RenderSection("Messages", required: false)
         @RenderBody()
     </main>
-    <footer>
+    <footer class="py-5 bg-dark">
+        @{
+            var footerContent = await Orchard.GetContentItemByAliasAsync("alias:footer");
+        }
+        @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
         @RenderSection("Footer", required: false)
         <resources type="FootScript" />
         <!-- Bootstrap core JavaScript from theme layout-->

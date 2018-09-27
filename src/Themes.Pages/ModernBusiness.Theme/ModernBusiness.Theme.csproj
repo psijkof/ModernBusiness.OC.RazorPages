@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-68638" />
     <PackageReference Include="OrchardCore.Menu" Version="1.0.0-beta3-68638" />
     <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta3-68638" />
     <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-68638" />
