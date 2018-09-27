@@ -3928,7 +3928,49 @@
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0
           }
+        },
+        {
+          "ContentItemId": "4cqpx622d23ra40x97bf30jrd2",
+          "ContentItemVersionId": "4g6j421nzzbsa02mppm0yyjs4z",
+          "ContentType": "RawContent",
+          "DisplayText": "Footer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-09-25T10:41:30.1215513Z",
+          "PublishedUtc": "2018-09-25T10:41:30.1276229Z",
+          "CreatedUtc": "2018-09-25T10:41:30.1276229Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": {
+              "Paths": [
+                "700x400.png"
+              ]
+            }
+          },
+          "AliasPart": {
+            "Alias": "footer"
+          },
+          "HtmlBodyPart": {
+            "Html": "Copyright %copy; The Orchard Team 2018"
+          },
+          "MarkdownBodyPart": {
+            "Markdown": null
+          },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": null
+            }
+          },
+          "TitlePart": {
+            "Title": "Footer"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
         }
+
       ]
         },
         {
