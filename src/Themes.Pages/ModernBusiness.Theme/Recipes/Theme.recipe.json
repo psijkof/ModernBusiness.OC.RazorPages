@@ -1337,7 +1337,7 @@
                 "Position": "4",
                 "DisplayName": null,
                 "Description": null,
-                "Editor": null,
+                "Editor": "Wysiwyg",
                 "HtmlBodyPartSettings": {},
                 "ContentIndexSettings": {}
               }
@@ -2102,11 +2102,6 @@
       ]
     },
     {
-      // Create the indices before the content items so they are indexed automatically.
-      "name": "lucene-index",
-      "Indices": [ "Search" ]
-    },
-    {
       "name": "WorkflowType",
       "data": [
         {
@@ -2412,6 +2407,11 @@
           ]
         }
       ]
+    },
+    {
+      // Create the indices before the content items so they are indexed automatically.
+      "name": "lucene-index",
+      "Indices": [ "Search" ]
     },
     {
       "name": "content",
@@ -4261,7 +4261,7 @@
             "Alias": "footer"
           },
           "HtmlBodyPart": {
-            "Html": "<div class=\"container\">\r\n        <p class=\"m-0 text-center text-white\">Copyright © The Orchard Team 2018</p>\r\n</div>"
+            "Html": "Copyright %copy; The Orchard Team 2018"
           },
           "MarkdownBodyPart": {
             "Markdown": null
