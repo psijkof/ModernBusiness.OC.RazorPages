@@ -1337,7 +1337,7 @@
                 "Position": "4",
                 "DisplayName": null,
                 "Description": null,
-                "Editor": "Wysiwyg",
+                "Editor": null,
                 "HtmlBodyPartSettings": {},
                 "ContentIndexSettings": {}
               }
@@ -4261,7 +4261,7 @@
             "Alias": "footer"
           },
           "HtmlBodyPart": {
-            "Html": "Copyright %copy; The Orchard Team 2018"
+            "Html": "<div class=\"container\">\r\n        <p class=\"m-0 text-center text-white\">Copyright © The Orchard Team 2018</p>\r\n</div>"
           },
           "MarkdownBodyPart": {
             "Markdown": null
