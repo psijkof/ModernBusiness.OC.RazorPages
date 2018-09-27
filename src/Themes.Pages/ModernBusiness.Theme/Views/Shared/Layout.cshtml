@@ -22,32 +22,24 @@
 </head>
 
 <body dir="@Orchard.CultureDir()">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <menu alias="alias:main-menu" />
-            </div>
-        </div>
-    </nav>
-                @RenderSection("Nav", required: false)
+    
+    <menu alias="alias:main-menu"></menu>
 
-                <header>
-                    @RenderSection("Header", required: false)
-                </header>
-                <main role="main" class="container">
-                    @RenderSection("Messages", required: false)
-                    @RenderBody()
-                </main>
-                <footer>
-                    @RenderSection("Footer", required: false)
-                    <resources type="FootScript" />
-                    <!-- Bootstrap core JavaScript from theme layout-->
-                    <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
-                    <script src="/ModernBusiness.Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-                </footer>
+    @RenderSection("Nav", required: false)
+
+    <header>
+        @RenderSection("Header", required: false)
+    </header>
+    <main role="main" class="container">
+        @RenderSection("Messages", required: false)
+        @RenderBody()
+    </main>
+    <footer>
+        @RenderSection("Footer", required: false)
+        <resources type="FootScript" />
+        <!-- Bootstrap core JavaScript from theme layout-->
+        <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
+        <script src="/ModernBusiness.Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </footer>
 </body>
 </html>
