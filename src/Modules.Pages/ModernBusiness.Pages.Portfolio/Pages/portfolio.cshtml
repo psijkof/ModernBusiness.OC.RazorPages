@@ -1,22 +1,42 @@
-﻿@page
+﻿@page "{ProjectTitle?}"
 @model dynamic
 @functions{
+    [FromRoute]
+    public string ProjectTitle { get; set; }
 }
 
 @{
+    var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published).Take(6));
 }
 
 @section Nav {
 }
-
 @section Header {
 }
-
 @section Messages {
 }
-
 @section Footer {
-}
+    <div class="alert alert-primary">you wanted project @ProjectTitle</div>
 
-<h1>The body: <br />@T[$"This is portfolio"]</h1>
-@*<partial name="test" model="@somemodel"/>*@
+}
+<div class="row">
+    @foreach (var project in portfolio)
+    {
+        var projectLink = $"/portfolio/{project.Content.TitlePart.Title}";
+        <div class="col-lg-4 portfolio-item">
+            <div class="card h-100">
+                <a href="@projectLink">
+                    <img class="card-img-top" src="@Orchard.AssetUrl((string)project.Content.Project.Image.Paths[0])" alt="">
+                </a>
+                <div class="card-body">
+                    <a href="@projectLink">
+                        <h4 class="card-title">
+                            @project.Content.TitlePart.Title
+                        </h4>
+                    </a>
+                    <p class="card-text">@project.Content.HtmlBodyPart.Html</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

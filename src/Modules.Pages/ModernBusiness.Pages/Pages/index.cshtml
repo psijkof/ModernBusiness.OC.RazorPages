@@ -6,8 +6,6 @@
 
 @{
 
-    var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published).Take(2).Skip(2));
-    var project = portfolio.First();
     var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service" && c.Published).OrderByDescending(o => o.PublishedUtc));
     var service = services.First();
     var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
@@ -32,9 +30,6 @@
 
 <h1>The body: <br />@T[$"This is the razor page with a value for test: { test }"]</h1>
 
-<img asset-src="@project.Content.Project.Image.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />
-
-<h2>@project.Content.TitlePart.Title</h2>
 
 <h3>@service.Content</h3>
 @carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
