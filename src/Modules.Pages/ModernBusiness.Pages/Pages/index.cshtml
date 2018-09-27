@@ -11,6 +11,8 @@
     var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
     var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
     var portfolio = Orchard.GetRecentContentItemsByContentTypeAsync("Project").GetAwaiter().GetResult();
+    var contactForm = Orchard.GetRecentContentItemsByContentTypeAsync("Form").GetAwaiter().GetResult().SingleOrDefault(f => f.DisplayText == "Contact");
+
 }
 
 @section Nav {
@@ -28,7 +30,13 @@
 
 }
 
-    <h1 class="my-4">Welcome to Modern Business</h1>
+
+@if (contactForm == null)
+{
+    <div class="alert"><h1>The form could not be found. Make sure it is present and named 'Contact'</h1></div>
+}
+
+<h1 class="my-4">Welcome to Modern Business</h1>
 <!-- Marketing Icons Section -->
 <div class="row">
     <div class="col-lg-4 mb-4">
