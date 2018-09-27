@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Portfo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Shared", "Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj", "{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Contact", "Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj", "{7024170E-FF78-44D9-8422-B10107F903E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Contact", "Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj", "{7024170E-FF78-44D9-8422-B10107F903E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
