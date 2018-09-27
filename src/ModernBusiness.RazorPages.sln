@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages", "Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Portfolio", "Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj", "{736861F6-42A0-4FB0-BB3B-D781888D65C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Shared", "Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj", "{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Shared", "Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj", "{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Contact", "Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj", "{7024170E-FF78-44D9-8422-B10107F903E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}.Release|x64.Build.0 = Release|Any CPU
 		{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}.Release|x86.ActiveCfg = Release|Any CPU
 		{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}.Release|x86.Build.0 = Release|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Release|x64.Build.0 = Release|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{7024170E-FF78-44D9-8422-B10107F903E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
