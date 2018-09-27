@@ -1,0 +1,26 @@
+﻿@{
+    int level = (int)Model.Level;
+
+    Model.Metadata.Alternates.Clear();
+    Model.Metadata.Type = "MenuItemLink";
+
+}
+
+<li class="nav-item @((bool)Model.HasItems ? "dropdown" : "")">
+
+    @(await DisplayAsync(Model))
+
+    @if ((bool)(Model.HasItems))
+    {
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="@Model.Name">
+            @foreach (var item in Model.Items)
+            {
+                item.Level = level + 1;
+               
+                @*<partial name="MenuItemLink-LinkMenuItem" model="item"/>*@
+                @await DisplayAsync(item);
+
+            }
+        </div>
+    }
+</li>
