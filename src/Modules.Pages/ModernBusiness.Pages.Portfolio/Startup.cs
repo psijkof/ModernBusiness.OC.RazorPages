@@ -19,7 +19,7 @@ namespace ModernBusiness.Pages.Portfolio
         {
             services.Configure<RazorPagesOptions>(options =>
             {
-                options.Conventions.AddAreaFolderRoute("ModernBusiness.Pages.Portfolio", "/portfolio", "");
+                options.Conventions.AddAreaFolderRoute("ModernBusiness.Pages.Portfolio", "/", "");
             });
         }
     }
