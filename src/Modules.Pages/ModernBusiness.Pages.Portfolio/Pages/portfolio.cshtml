@@ -1,5 +1,5 @@
 ﻿@page "{ProjectTitle?}"
-@model dynamic
+@model portfolioModel
 
 @inject IContentItemDisplayManager DisplayManager
 
@@ -9,7 +9,6 @@
 }
 
 @{
-    dynamic portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published));
 }
 
 @section Nav {
@@ -23,15 +22,13 @@
 }
 
 @{
-
-    var pager = (await New.Pager(portfolio.Pager)).ShowNext(portfolio.HasMoreResults);
+   
+}
+<br /><br /><br />
+@{ 
+    var pagInfo = new PagerInfo() 
 
 }
-
-@await DisplayAsync(pager)
-
-@*@New.Form(null)*@
-
 <div class="row">
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="portfolio" />
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="Model.PagedList" />
 </div>
