@@ -39,11 +39,12 @@
             var footerContent = await Orchard.GetContentItemByAliasAsync("alias:footer");
         }
         @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
-        @RenderSection("Footer", required: false)
+
         <resources type="FootScript" />
         <!-- Bootstrap core JavaScript from theme layout-->
         <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
         <script src="/ModernBusiness.Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        @RenderSection("Footer", required: false)
     </footer>
 </body>
 </html>
