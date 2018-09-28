@@ -2142,8 +2142,7 @@
                   "\"Validate Name",
                   "Validate Phone",
                   "Validate Email",
-                  "Validate Message",
-                  "Validate Captcha\""
+                  "Validate Message\""
                 ]
               }
             },
@@ -2200,18 +2199,6 @@
                 "ErrorMessage": "Message is required",
                 "ActivityMetadata": {
                   "Title": "Validate Message"
-                }
-              }
-            },
-            {
-              "ActivityId": "4r3sjffa8y80zte23gg5r3565m",
-              "Name": "ValidateNoCaptchaTask",
-              "X": 490,
-              "Y": 80,
-              "IsStart": false,
-              "Properties": {
-                "ActivityMetadata": {
-                  "Title": null
                 }
               }
             },
@@ -2291,7 +2278,7 @@
                   "Title": "Display Thank You Page"
                 },
                 "Location": {
-                  "Expression": "/thankyou"
+                  "Expression": "/contact/thankyou"
                 },
                 "Permanent": false
               }
@@ -2333,12 +2320,6 @@
               "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
               "SourceOutcomeName": "Validate Message",
               "DestinationActivityId": "425b4eqq4409zrytafqd7rb7nn"
-            },
-            {
-              "Id": 0,
-              "SourceActivityId": "4xhmc4z3dxsh4tp2aecw29jkws",
-              "SourceOutcomeName": "Validate Captcha\"",
-              "DestinationActivityId": "4r3sjffa8y80zte23gg5r3565m"
             },
             {
               "Id": 0,
