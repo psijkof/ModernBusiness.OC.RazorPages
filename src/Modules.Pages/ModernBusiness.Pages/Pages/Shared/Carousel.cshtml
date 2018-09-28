@@ -3,7 +3,7 @@
     var slides = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1)
         .GetAwaiter()
         .GetResult()
-        .Single().Content.BagPart.ContentItems;
+        .Single()?.Content.BagPart.ContentItems;
     
     var state = "active";
 }

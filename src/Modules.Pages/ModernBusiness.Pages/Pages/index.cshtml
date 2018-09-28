@@ -1,22 +1,15 @@
 ﻿@page
 
-@functions{
-    string test = "test value";
-}
-
 @{
+    var servicesContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Services").GetAwaiter().GetResult().SingleOrDefault();
+    var servicesList = Orchard.GetRecentContentItemsByContentTypeAsync("Service", 3).GetAwaiter().GetResult().OrderBy(s => s.PublishedUtc);
 
-    var services = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Service" && c.Published).OrderByDescending(o => o.PublishedUtc));
-    var service = services.First();
-    var carousel = Orchard.GetRecentContentItemsByContentTypeAsync("Carousel", 1).GetAwaiter().GetResult().Single();
     var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
-    var portfolio = Orchard.GetRecentContentItemsByContentTypeAsync("Project").GetAwaiter().GetResult();
-    var contactForm = Orchard.GetRecentContentItemsByContentTypeAsync("Form").GetAwaiter().GetResult().SingleOrDefault(f => f.DisplayText == "Contact");
-
+    var portfolioList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
+    var portfolioContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Portfolio").GetAwaiter().GetResult().SingleOrDefault();
 }
 
 @section Nav {
-
 }
 
 @section Header {
@@ -27,63 +20,56 @@
 }
 
 @section Footer {
-
 }
 
-
-@if (contactForm == null)
-{
-    <div class="alert"><h1>The form could not be found. Make sure it is present and named 'Contact'</h1></div>
-}
-
-<h1 class="my-4">Welcome to Modern Business</h1>
+<h1 class="my-4">@servicesContainer?.Content?.TitlePart.Title</h1>
 <!-- Marketing Icons Section -->
 <div class="row">
-    <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
-            <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
+    @foreach (var service in servicesList)
+    {
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+                <h4 class="card-header">@service.Content.TitlePart.Title</h4>
+                <div class="card-body">
+                    <p class="card-text">@Html.Raw(service.Content.HtmlBodyPart.Html)</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">@T["Learn More"]</a>
+                </div>
             </div>
         </div>
+    }
+</div>
+<!-- /.row -->
+<!-- Portfolio Section -->
+<h2>@portfolioContainer?.Content?.TitlePart.Title</h2>
+
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCard.cshtml" model="portfolioList" />
+</div>
+<!-- /.row -->
+<!-- Features Section -->
+<div class="row">
+    <div class="col-lg-6">
+        @Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
     </div>
-    <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
-            <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-            </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
-            <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
+    <div class="col-lg-6">
+        <img class="img-fluid rounded" asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="700" img-height="400" img-resize-mode="Crop" />
     </div>
 </div>
 <!-- /.row -->
 
+<hr>
 
-
-
-<h3>@service.Content</h3>
-@carousel.Content.BagPart.ContentItems[0].Slide.Image.Paths[0]
-@Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
-<img asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="200" img-height="100" img-resize-mode="Crop" />
-@(welcomeContent ?? welcomeContent.Content ?? "no welcome")
-
-<div class="row">
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCard.cshtml" model="portfolio" />
+<!-- Call to Action Section -->
+<div class="row mb-4">
+    <div class="col-md-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+    </div>
 </div>
+
+    </div>
+<!-- /.container -->
