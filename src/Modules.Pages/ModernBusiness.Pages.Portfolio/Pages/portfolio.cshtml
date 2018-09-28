@@ -1,27 +1,37 @@
 ﻿@page "{ProjectTitle?}"
 @model dynamic
+
+@inject IContentItemDisplayManager DisplayManager
+
 @functions{
     [FromRoute]
     public string ProjectTitle { get; set; }
 }
 
 @{
-    var portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published).Take(6));
+    dynamic portfolio = await Orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == "Project" && c.Published));
 }
 
 @section Nav {
 }
 @section Header {
-
 }
 @section Messages {
-
 }
 @section Footer {
     <div class="alert alert-primary">you wanted project @ProjectTitle</div>
+}
+
+@{
+
+    var pager = (await New.Pager(portfolio.Pager)).ShowNext(portfolio.HasMoreResults);
 
 }
 
+@await DisplayAsync(pager)
+
+@*@New.Form(null)*@
+
 <div class="row">
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCard.cshtml" model="portfolio" />
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="portfolio" />
 </div>
