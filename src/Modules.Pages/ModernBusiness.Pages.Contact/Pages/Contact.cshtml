@@ -9,17 +9,21 @@
 public string ThankYou { get; set; }
 }
 
+@section Header {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@form"/>
+}
+
 
 @if (!string.IsNullOrEmpty(ThankYou))
 {
-<div class="container">
-    <br />
-    <br />
-    <br />
-    <h1>Thank you for contacting us.</h1>
-    <p>We will contact you as soon as possible!</p>
-    <br />
-</div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <h1>Thank you for contacting us.</h1>
+        <p>We will contact you as soon as possible!</p>
+        <br />
+    </div>
 }
 else
 {
@@ -59,7 +63,6 @@ else
             @await DisplayAsync(await DisplayManager.BuildDisplayAsync(form, null, "Detail"))
         </div>
     </div>
-
 }
 
 @section Footer {
