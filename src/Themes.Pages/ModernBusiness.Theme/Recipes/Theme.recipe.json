@@ -2579,6 +2579,7 @@
           "ContentItemId": "[js: variables('portfolioContentItemId')]",
           "ContentItemVersionId": "[js: uuid()]",
           "ContentType": "Portfolio",
+          "DisplayText": "Portfolio",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-04T16:23:01.8141153Z",
@@ -2587,9 +2588,6 @@
           "Owner": "admin",
           "Author": "admin",
           "Portfolio": {},
-          "TitlePart": {
-            "Title": "Portfolio"
-          },
           "AliasPart": {
             "Alias": "portfolio"
           },
@@ -2854,6 +2852,7 @@
           "ContentItemId": "[js: variables('servicesContentItemId')]",
           "ContentItemVersionId": "4wn1acj3tg7f7wbfa6cv14w2cb",
           "ContentType": "Services",
+          "DisplayText": "Services",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T13:41:50.1846147Z",
@@ -2868,7 +2867,7 @@
               ]
             },
             "Subheading": {
-              "Text": "Subheading"
+              "Text": "All we have to offer"
             }
           },
           "TitlePart": {
@@ -3140,6 +3139,7 @@
           "ContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
           "ContentItemVersionId": "42c1tqw93x5g85nrf8nfjg155v",
           "ContentType": "Customers",
+          "DisplayText": "Customers",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:13:17.8559885Z",
@@ -3319,6 +3319,7 @@
           "ContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
           "ContentItemVersionId": "4m2qwpnwb76ra5tx01vw007gmn",
           "ContentType": "Team",
+          "DisplayText": "Team",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:16:51.6748971Z",
@@ -3551,6 +3552,7 @@
           "ContentItemId": "4tmyvyfpbw9g4wg104551485wa",
           "ContentItemVersionId": "4r6e5r44fsbhtrbdp6fmhphkxq",
           "ContentType": "Pricing",
+          "DisplayText": "Prices",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-14T16:46:32.9212922Z",
@@ -3933,6 +3935,7 @@
           "ContentItemId": "4tk05bd0jydgn6bdew8q0gqwwk",
           "ContentItemVersionId": "4s3z6njphq2bq20ad0f5jx2tcf",
           "ContentType": "FAQ",
+          "DisplayText": "FAQ",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-18T09:43:27.3542248Z",
@@ -3965,6 +3968,7 @@
           "ContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
           "ContentItemVersionId": "4gyjydvcdv2xhzn5bn6gh3785r",
           "ContentType": "Blog",
+          "DisplayText": "Blog",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-17T10:55:06.6858578Z",
