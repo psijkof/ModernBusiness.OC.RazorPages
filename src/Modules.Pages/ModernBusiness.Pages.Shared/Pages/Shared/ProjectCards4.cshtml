@@ -2,16 +2,16 @@
 
 @foreach (var project in Model.CurrentItemsOnPage)
 {
-    var projectLink = $"/project/{project.Content.TitlePart.Title}";
+    //var projectLink = $"~/project/{project.DisplayText}";
     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-            <a href="@projectLink">
+            <a asp-page="project" asp-route-projectTitle="@project.DisplayText">
                 <img class="card-img-top" src="@Orchard.AssetUrl((string)project.Content.Project.Image.Paths[0])" alt="">
             </a>
             <div class="card-body">
-                <a href="@projectLink">
+                <a asp-page="project" asp-route-projectTitle="@project.DisplayText">
                     <h4 class="card-title">
-                        @project.Content.TitlePart.Title
+                        @project.DisplayText
                     </h4>
                 </a>
                 <p class="card-text">@project.Content.HtmlBodyPart.Html</p>
