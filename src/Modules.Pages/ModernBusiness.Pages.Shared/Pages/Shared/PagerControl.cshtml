@@ -1,23 +1,25 @@
 ﻿@model PagerInfo
+@if (Model.TotalPages > 1)
+{
+    <div>
+        @if (Model.HasPreviousPage)
+        {
+            <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@(Model.CurrentPage- 1)">
+                @("<--")
+            </a>
+        }
 
-<div>
-    @if (Model.paginatedList.HasPreviousPage)
-    {
-        <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@(Model.paginatedList.PageIndex - 1)">
-            @("<--")
-        </a>
-    }
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@i" class="@(Model.CurrentPage== i ? "active" : "")">@i</a>
+        }
 
-    @for (int i = 1; i <= Model.paginatedList.TotalPages; i++)
-    {
-        <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@i" class="@(Model.paginatedList.PageIndex == i ? "active" : "")">@i</a>
-    }
+        @if (Model.HasNextPage)
+        {
+            <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@(Model.CurrentPage+ 1)">
+                @("-->")
+            </a>
+        }
 
-    @if (Model.paginatedList.HasNextPage)
-    {
-        <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@(Model.paginatedList.PageIndex + 1)">
-            @("-->")
-        </a>
-    }
-
-</div>
+    </div>
+}

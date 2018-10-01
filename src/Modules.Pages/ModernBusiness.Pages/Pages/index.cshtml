@@ -4,7 +4,10 @@
     var servicesContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Services").GetAwaiter().GetResult().SingleOrDefault();
     var servicesList = Orchard.GetRecentContentItemsByContentTypeAsync("Service", 3).GetAwaiter().GetResult().OrderBy(s => s.PublishedUtc);
 
+
     var portfolioList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
+    var portfolioPager = new PagerInfo() { CurrentItemsOnPage = portfolioList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 6, TotalPages = 1 };
+
     var portfolioContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Portfolio").GetAwaiter().GetResult().SingleOrDefault();
     var welcomeContent = Orchard.GetContentItemByAliasAsync("alias:welcome").GetAwaiter().GetResult();
 
@@ -33,7 +36,7 @@
 <h2>@portfolioContainer?.Content?.TitlePart.Title</h2>
 
 <div class="row">
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="portfolioList" />
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="portfolioPager" />
 </div>
 <!-- /.row -->
 <!-- Features Section -->

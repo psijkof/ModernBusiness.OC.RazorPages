@@ -1,6 +1,6 @@
 ﻿@model dynamic
 
-@foreach (var project in Model)
+@foreach (var project in Model.CurrentItemsOnPage)
 {
     var projectLink = $"/portfolio/{project.Content.TitlePart.Title}";
     <div class="col-lg-4 portfolio-item">

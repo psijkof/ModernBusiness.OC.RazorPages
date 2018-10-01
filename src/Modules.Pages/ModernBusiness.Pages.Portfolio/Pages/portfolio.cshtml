@@ -18,17 +18,20 @@
 @section Messages {
 }
 @section Footer {
-    <div class="alert alert-primary">you wanted project @ProjectTitle</div>
+    @if (!string.IsNullOrEmpty(ProjectTitle))
+    {
+        <div class="alert alert-primary">you wanted project @ProjectTitle</div>
+    }
 }
 
 @{
-   
+
 }
 <br /><br /><br />
-@{ 
-    var pagInfo = new PagerInfo() 
+@{
 
 }
 <div class="row">
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="Model.PagedList" />
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards.cshtml" model="Model.PagerInfo" />
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/PagerControl.cshtml" model="Model.PagerInfo">
 </div>
