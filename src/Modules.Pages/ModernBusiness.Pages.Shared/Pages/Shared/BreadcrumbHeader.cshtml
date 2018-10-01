@@ -1,13 +1,14 @@
 ﻿@model dynamic
 @{
-    var breadCrumb = Context.Request.Path.Value.Replace("/"," ").Split(' ');
+    var breadCrumb = Context.Request.Path.Value.Split('/');
     var allItems = breadCrumb.Count() - 1;
 }
 
 <div class="container">
     <h1 class="mt-4 mb-3">
         @Model.DisplayText
-        <small>@Model.Content.SubtitlePart.Subtitle.Text</small>
+        
+        <small>@Model.Content.SubtitlePart?.Subtitle.Text</small>
     </h1>
     <ol class="breadcrumb">
         <li class="">

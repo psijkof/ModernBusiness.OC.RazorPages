@@ -86,7 +86,6 @@
       "Admin": "TheAdmin",
       "Site": "ModernBusiness.Theme"
     },
-
     {
       "name": "ContentDefinition",
       "ContentTypes": [
@@ -2471,10 +2470,83 @@
                 "Author": "admin",
                 "LinkMenuItemPart": {
                   "Name": "Portfolio",
-                  "Url": "~/portfolio"
+                  "Url": null
                 },
                 "MenuItemsListPart": {
-                  "MenuItems": []
+                  "MenuItems": [
+                    {
+                      "Id": 0,
+                      "ContentItemId": "46s2tftd69n0j49a322959bjwv",
+                      "ContentItemVersionId": null,
+                      "ContentType": "LinkMenuItem",
+                      "DisplayText": null,
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2018-10-01T15:50:28.2608757Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": null,
+                      "Author": "admin",
+                      "LinkMenuItemPart": {
+                        "Name": "1 Column Portfolio",
+                        "Url": "./portfolio1"
+                      }
+                    },
+                    {
+                      "Id": 0,
+                      "ContentItemId": "4kmpxy49bs6tm40yv4wcjqq0we",
+                      "ContentItemVersionId": null,
+                      "ContentType": "LinkMenuItem",
+                      "DisplayText": null,
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2018-10-01T15:51:02.708895Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": null,
+                      "Author": "admin",
+                      "LinkMenuItemPart": {
+                        "Name": "2 Column Portfolio",
+                        "Url": "./portfolio2"
+                      }
+                    },
+                    {
+                      "Id": 0,
+                      "ContentItemId": "453dvf5c7fhwhsegbzsaszr1cz",
+                      "ContentItemVersionId": null,
+                      "ContentType": "LinkMenuItem",
+                      "DisplayText": null,
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2018-10-01T15:51:21.2860567Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": null,
+                      "Author": "admin",
+                      "LinkMenuItemPart": {
+                        "Name": "3 Column Portfolio",
+                        "Url": "./portfolio3"
+                      }
+                    },
+                    {
+                      "Id": 0,
+                      "ContentItemId": "4hw766m902r8e3nt8p7trwzhnj",
+                      "ContentItemVersionId": null,
+                      "ContentType": "LinkMenuItem",
+                      "DisplayText": null,
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2018-10-01T15:51:51.686155Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": null,
+                      "Author": "admin",
+                      "LinkMenuItemPart": {
+                        "Name": "4 Column Portfolio",
+                        "Url": "./portfolio4"
+                      }
+                    }
+                  ]
                 }
               },
               {
@@ -2598,6 +2670,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": null,
           "ContentType": "Project",
+          "DisplayText": "Project One",
           "Latest": false,
           "Published": false,
           "ModifiedUtc": "2018-09-04T16:23:01.8148799Z",
@@ -2611,9 +2684,6 @@
                 "700x400.png"
               ]
             },
-            "Subtitle": {
-              "Text": null
-            },
             "Link": {
               "Url": null,
               "Text": null
@@ -2621,9 +2691,6 @@
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
-          },
-          "TitlePart": {
-            "Title": "Project One"
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
@@ -2643,6 +2710,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": null,
           "ContentType": "Project",
+          "DisplayText": "Project Two",
           "Latest": false,
           "Published": true,
           "CreatedUtc": "2018-09-02T16:23:01.850052Z",
@@ -2652,9 +2720,6 @@
                 "700x400.png"
               ]
             },
-            "Subtitle": {
-              "Text": null
-            },
             "Link": {
               "Url": null,
               "Text": null
@@ -2662,9 +2727,6 @@
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."
-          },
-          "TitlePart": {
-            "Title": "Project Two "
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
@@ -2684,6 +2746,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": null,
           "ContentType": "Project",
+          "DisplayText": "Project Three",
           "Latest": false,
           "Published": true,
           "CreatedUtc": "2018-09-03T16:23:01.850052Z",
@@ -2694,9 +2757,6 @@
                 "700x400.png"
               ]
             },
-            "Subtitle": {
-              "Text": null
-            },
             "Link": {
               "Url": null,
               "Text": null
@@ -2704,9 +2764,6 @@
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!"
-          },
-          "TitlePart": {
-            "Title": "Project Three"
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
@@ -2726,6 +2783,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": null,
           "ContentType": "Project",
+          "DisplayText": "Project Four",
           "Latest": true,
           "Published": true,
           "CreatedUtc": "2018-09-04T16:23:01.850052Z",
@@ -2736,9 +2794,6 @@
                 "700x400.png"
               ]
             },
-            "Subtitle": {
-              "Text": null
-            },
             "Link": {
               "Url": null,
               "Text": null
@@ -2746,9 +2801,6 @@
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!"
-          },
-          "TitlePart": {
-            "Title": "Project Four"
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
@@ -2768,6 +2820,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": null,
           "ContentType": "Project",
+          "DisplayText": "Project Five",
           "Latest": true,
           "Published": true,
           "CreatedUtc": "2018-09-05T16:23:01.850052Z",
@@ -2778,9 +2831,6 @@
                 "700x400.png"
               ]
             },
-            "Subtitle": {
-              "Text": null
-            },
             "Link": {
               "Url": null,
               "Text": null
@@ -2788,9 +2838,6 @@
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
-          },
-          "TitlePart": {
-            "Title": "Project Five"
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
@@ -2810,6 +2857,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": null,
           "ContentType": "Project",
+          "DisplayText": "Project Six",
           "Latest": true,
           "Published": true,
           "CreatedUtc": "2018-09-06T16:23:01.850052Z",
@@ -2820,9 +2868,6 @@
                 "700x400.png"
               ]
             },
-            "Subtitle": {
-              "Text": null
-            },
             "Link": {
               "Url": null,
               "Text": null
@@ -2830,9 +2875,6 @@
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
-          },
-          "TitlePart": {
-            "Title": "Project Six"
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
@@ -4218,9 +4260,6 @@
               "Text": null
             }
           },
-          "TitlePart": {
-            "Title": "Modern Business Features"
-          },
           "ContainedPart": {
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0
@@ -4259,9 +4298,6 @@
               "Text": null
             }
           },
-          "TitlePart": {
-            "Title": "Footer"
-          },
           "ContainedPart": {
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0
@@ -4299,9 +4335,6 @@
             "Subtitle": {
               "Text": null
             }
-          },
-          "TitlePart": {
-            "Title": "About Modern Business"
           },
           "ContainedPart": {
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
