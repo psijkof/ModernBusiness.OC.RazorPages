@@ -1,0 +1,24 @@
+﻿@model dynamic
+
+@{
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <img class="card-img-top" src="@Orchard.AssetUrl((string)item.Content.TeamMember.Photo.Paths[0])" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">@item.Content.TitlePart.Title</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">@item.Content.TeamMember.Position.Text</h6>
+                    <p class="card-text">@Html.Raw(item.Content.HtmlBodyPart.Html)</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">@item.Content.TeamMember.Email.Text</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

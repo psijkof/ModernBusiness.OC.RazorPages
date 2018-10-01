@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-68638" />
+    <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-68638" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68638" />
+    <PackageReference Include="OrchardCore.Media" Version="1.0.0-beta3-68638" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68638" />
+    <PackageReference Include="OrchardCore.Queries" Version="1.0.0-beta3-68638" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68638" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
