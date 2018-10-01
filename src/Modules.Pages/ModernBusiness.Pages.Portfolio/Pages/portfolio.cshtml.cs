@@ -43,7 +43,7 @@ namespace ModernBusiness.Pages.Pages
                         .Skip(((pageIndex ?? 1) - 1) * PagerInfo.PageSize)
                         .Take(PagerInfo.PageSize)).GetAwaiter().GetResult();
 
-            PagerInfo.CurrentPage = Convert.ToInt32(pageIndex);
+            PagerInfo.CurrentPage = pageIndex ?? 1;
 
         }
 

@@ -22,7 +22,7 @@ namespace ModernBusiness.Pages.Shared.ViewModels
         }
         public bool HasNextPage
         {
-            get { return CurrentPage + 1 < TotalPages; }
+            get { return CurrentPage < TotalPages; }
             set { _hasNextPage = value; }
         }
     }
