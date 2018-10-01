@@ -1,0 +1,39 @@
+﻿@page
+
+@inject IContentItemDisplayManager DisplayManager
+
+@{
+    var welcomeText = Orchard.GetContentItemByAliasAsync("alias:aboutbusiness").GetAwaiter().GetResult();
+    var team = Orchard.GetRecentContentItemsByContentTypeAsync("Team").GetAwaiter().GetResult().SingleOrDefault();
+    var teamMembers = Orchard.GetRecentContentItemsByContentTypeAsync("TeamMember").GetAwaiter().GetResult();
+    var customers = Orchard.GetRecentContentItemsByContentTypeAsync("Customers").GetAwaiter().GetResult().SingleOrDefault();
+    var customerList = Orchard.GetRecentContentItemsByContentTypeAsync("Customer").GetAwaiter().GetResult();
+}
+
+@section Header {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@welcomeText" />
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="@Orchard.AssetUrl((string)welcomeText.Content.RawContent.Images.Paths[0])" alt="">
+    </div>
+    <div class="col-lg-6">
+        <h2>About Modern Business</h2>
+        @Html.Raw(welcomeText.Content.HtmlBodyPart.Html)
+    </div>
+</div>
+
+<h2>@team.Content.TitlePart.Title</h2>
+<partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/TeamCard.cshtml" model="@teamMembers" />
+
+<h2>@customers.Content.TitlePart.Title</h2>
+
+<div class="row">
+    @foreach (var item in customerList)
+    {
+        <div class="col-lg-2 col-sm-4 mb-4">
+            <img class="img-fluid" src="@Orchard.AssetUrl((string)item.Content.Customer.Logo.Paths[0])" alt="">
+        </div>
+    }
+</div>
