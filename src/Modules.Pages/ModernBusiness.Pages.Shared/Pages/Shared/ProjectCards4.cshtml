@@ -1,0 +1,23 @@
+﻿@model dynamic
+
+@foreach (var project in Model.CurrentItemsOnPage)
+{
+    var projectLink = $"/project/{project.Content.TitlePart.Title}";
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="@projectLink">
+                <img class="card-img-top" src="@Orchard.AssetUrl((string)project.Content.Project.Image.Paths[0])" alt="">
+            </a>
+            <div class="card-body">
+                <a href="@projectLink">
+                    <h4 class="card-title">
+                        @project.Content.TitlePart.Title
+                    </h4>
+                </a>
+                <p class="card-text">@project.Content.HtmlBodyPart.Html</p>
+            </div>
+        </div>
+    </div>
+}
+
+
