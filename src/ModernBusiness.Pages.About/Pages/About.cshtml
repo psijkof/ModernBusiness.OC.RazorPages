@@ -1,7 +1,5 @@
 ﻿@page
 
-@inject IContentItemDisplayManager DisplayManager
-
 @{
     var welcomeText = Orchard.GetContentItemByAliasAsync("alias:aboutbusiness").GetAwaiter().GetResult();
     var team = Orchard.GetRecentContentItemsByContentTypeAsync("Team").GetAwaiter().GetResult().SingleOrDefault();
@@ -37,3 +35,6 @@
         </div>
     }
 </div>
+
+
+
