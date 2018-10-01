@@ -1,0 +1,20 @@
+﻿@page
+
+@model portfolio4Model
+
+@inject IContentItemDisplayManager DisplayManager
+
+@section Nav {
+}
+@section Header {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="Model.Portfolio" />
+}
+@section Messages {
+}
+@section Footer {
+}
+
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards4.cshtml" model="Model.PagerInfo" />
+</div>
+<partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/PagerControl.cshtml" model="Model.PagerInfo">

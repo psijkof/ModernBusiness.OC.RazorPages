@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Shared
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Contact", "Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj", "{7024170E-FF78-44D9-8422-B10107F903E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.About", "ModernBusiness.Pages.About\ModernBusiness.Pages.About.csproj", "{A51F1E3F-8A16-4C3B-BB84-B32863C56CDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.About", "ModernBusiness.Pages.About\ModernBusiness.Pages.About.csproj", "{A51F1E3F-8A16-4C3B-BB84-B32863C56CDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
