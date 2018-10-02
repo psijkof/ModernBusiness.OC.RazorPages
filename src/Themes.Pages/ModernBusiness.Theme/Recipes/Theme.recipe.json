@@ -1415,6 +1415,49 @@
               }
             }
           ]
+        },
+        {
+          "Name": "FormsContainer",
+          "DisplayName": "FormsContainer",
+          "Settings": {
+            "Creatable": "True",
+            "Draftable": "True",
+            "Versionable": "True",
+            "Listable": "True",
+            "Securable": "True",
+            "Stereotype": null
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "FormsContainer",
+              "Name": "FormsContainer",
+              "Settings": {
+                "Position": "2"
+              }
+            },
+            {
+              "PartName": "ListPart",
+              "Name": "ListPart",
+              "Settings": {
+                "DisplayName": null,
+                "Description": null,
+                "Editor": null,
+                "PageSize": "10",
+                "ContainedContentTypes": [
+                  "Form"
+                ],
+                "ContentIndexSettings": {},
+                "Position": "1"
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -2411,7 +2454,7 @@
           "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": "[js: uuid()]",
           "ContentType": "Menu",
-          "DisplayText":  "NavBar",
+          "DisplayText": "NavBar",
           "Latest": true,
           "Published": true,
           "Owner": "admin",
@@ -4349,7 +4392,346 @@
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0
           }
-        }  
+        },
+        {
+          "ContentItemId": "4xnd4aztqz1604xaby7y8czjn8",
+          "ContentItemVersionId": "42s01b1te6h5e1ek84tfda1s5x",
+          "ContentType": "Form",
+          "DisplayText": "Contact",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-02T08:33:57.7559202Z",
+          "PublishedUtc": "2018-10-02T08:33:57.805537Z",
+          "CreatedUtc": "2018-10-02T08:29:29.876443Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "TitlePart": {
+            "Title": "Contact"
+          },
+          "FormPart": {
+            "Action": "/Workflows/Invoke?token=CfDJ8L4xCCz1RHtCpMaVtR-_DDJHklms6FKh6E4vo2NJ9RgjCW_1OfQ7r_a5g2jAyvpG5FTEp0b98NSs8QFUwFEhq9QgggtPn5G8HiTd_IGbLhl2T-IGwfjU7siHqiROsQKGyMq4pogBiLERT3IJnar024hBm-hsXWOOoJC9x3tRfEQBvn_99sfaGiNYyoTWrmfX2loHl-gjuQZZ_BgGcTa4dV6_CVv3clpUhEZfQswt3NEF",
+            "Method": "POST",
+            "WorkflowTypeId": null
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "Id": 0,
+                "ContentItemId": "47kk3ftss5znz4v2tgrs3wt7wq",
+                "ContentItemVersionId": null,
+                "ContentType": "Label",
+                "DisplayText": "Full Name:",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7608657Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Full Name:"
+                },
+                "FormElementPart": {
+                  "Id": "lblName"
+                },
+                "LabelPart": {
+                  "For": "Name"
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4p3fgwvak4j5mx8e3rj5ac0hdb",
+                "ContentItemVersionId": null,
+                "ContentType": "Input",
+                "DisplayText": "Name",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7633848Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "FormInputElementPart": {
+                  "Name": "Name"
+                },
+                "FormElementPart": {
+                  "Id": "Name"
+                },
+                "InputPart": {
+                  "Type": "text",
+                  "DefaultValue": null,
+                  "Placeholder": null
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4xcpq9279zzj3zn3fxhj0s15nv",
+                "ContentItemVersionId": null,
+                "ContentType": "Label",
+                "DisplayText": "Phone Number:",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7653919Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Phone Number:"
+                },
+                "FormElementPart": {
+                  "Id": "lblPhone"
+                },
+                "LabelPart": {
+                  "For": "Phone"
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4ffrz81rtngaw1c2erkznpj0xb",
+                "ContentItemVersionId": null,
+                "ContentType": "Input",
+                "DisplayText": "Phone",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7714256Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "FormInputElementPart": {
+                  "Name": "Phone"
+                },
+                "FormElementPart": {
+                  "Id": "Phone"
+                },
+                "InputPart": {
+                  "Type": "tel",
+                  "DefaultValue": null,
+                  "Placeholder": null
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "49j0qxk1mav5t6ds2tf7qce1dv",
+                "ContentItemVersionId": null,
+                "ContentType": "Label",
+                "DisplayText": "Email Address:",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7734247Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Email Address:"
+                },
+                "FormElementPart": {
+                  "Id": "lblEmail"
+                },
+                "LabelPart": {
+                  "For": "Email"
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "40wmjtygpc2j6tjg8jmkdtptxs",
+                "ContentItemVersionId": null,
+                "ContentType": "Input",
+                "DisplayText": "Email",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7754399Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "FormInputElementPart": {
+                  "Name": "Email"
+                },
+                "FormElementPart": {
+                  "Id": "Email"
+                },
+                "InputPart": {
+                  "Type": "email",
+                  "DefaultValue": null,
+                  "Placeholder": null
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4m9cczz21v1dr5y3w42xx5e0wm",
+                "ContentItemVersionId": null,
+                "ContentType": "Label",
+                "DisplayText": "Message:",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7774816Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Message:"
+                },
+                "FormElementPart": {
+                  "Id": "lblMessage"
+                },
+                "LabelPart": {
+                  "For": "Message"
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4kn8ywbccjg9sre7vdjwjrxvnc",
+                "ContentItemVersionId": null,
+                "ContentType": "TextArea",
+                "DisplayText": "Message",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7795873Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "FormInputElementPart": {
+                  "Name": "Message"
+                },
+                "FormElementPart": {
+                  "Id": "Message"
+                },
+                "TextAreaPart": {
+                  "DefaultValue": null,
+                  "Placeholder": null
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4c54p0g7qatawt0bpz60fxw2nq",
+                "ContentItemVersionId": null,
+                "ContentType": "ValidationSummary",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7814688Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "ValidationSummaryPart": {},
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              },
+              {
+                "Id": 0,
+                "ContentItemId": "4cz44jwwmhgcq78yy4m7zjpb4g",
+                "ContentItemVersionId": null,
+                "ContentType": "Button",
+                "DisplayText": "Submit",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2018-10-02T08:33:57.7835679Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "FormInputElementPart": {
+                  "Name": "Submit"
+                },
+                "FormElementPart": {
+                  "Id": "btnSubmit"
+                },
+                "ButtonPart": {
+                  "Text": "Send Message",
+                  "Type": "submit"
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                },
+                "ContainedPart": {
+                  "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+                  "Order": 0
+                }
+              }
+            ]
+          },
+          "ContainedPart": {
+            "ListContentItemId": "41q800mmzg2rr1v23ds2hjnzd3",
+            "Order": 0
+          }
+        }
       ]
     },
     {
@@ -4390,6 +4772,22 @@
         {
           "Path": "1200x300.png",
           "Base64": "[file:base64('../wwwroot/img/1200x300.png')]"
+        },
+        {
+          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Base64": "[file:base64('../wwwroot/img/1ColumnPortfolio.jpg')]"
+        },
+        {
+          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Base64": "[file:base64('../wwwroot/img/2ColumnPortfolio.jpg')]"
+        },
+        {
+          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Base64": "[file:base64('../wwwroot/img/3ColumnPortfolio.jpg')]"
+        },
+        {
+          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Base64": "[file:base64('../wwwroot/img/4ColumnPortfolio.jpg')]"
         }
       ]
     }
