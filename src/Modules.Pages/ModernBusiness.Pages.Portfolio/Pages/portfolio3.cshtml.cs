@@ -13,13 +13,13 @@ using OrchardCore.Navigation;
 
 namespace ModernBusiness.Pages.Pages
 {
-    public class portfolioModel : PageModel
+    public class portfolio3Model : PageModel
     {
         private readonly IOrchardHelper _orchard;
         public readonly PagerInfo PagerInfo;
         public ContentItem Portfolio;
 
-        public portfolioModel(IOrchardHelper orchard)
+        public portfolio3Model(IOrchardHelper orchard)
         {
             _orchard = orchard;
 
