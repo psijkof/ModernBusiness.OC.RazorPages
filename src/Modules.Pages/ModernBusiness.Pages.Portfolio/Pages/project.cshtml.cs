@@ -93,7 +93,7 @@ namespace ModernBusiness.Pages.Pages
         //    string pagination = "";
         //    // get first page
         //    var lastPageChecked = listPages.FirstOrDefault();
-
+        //    // add leading dots if first page is not page 1
         //    if (lastPageChecked > 1)
         //    {
         //        pagination += "... ";
@@ -109,7 +109,7 @@ namespace ModernBusiness.Pages.Pages
         //        // add the page
         //        pagination += $"{page} ";
         //    }
-
+        //    // add trailing dots if last page is not the final page
         //    if (listPages.Last() < totalPages)
         //    {
         //        pagination += "... ";
