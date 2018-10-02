@@ -1704,6 +1704,24 @@
                 "Multiple": false,
                 "Position": "0"
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Subheading",
+              "Settings": {
+                "DisplayName": "Subtitle",
+                "Editor": null,
+                "Hint": null,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
             }
           ]
         },
@@ -1760,6 +1778,24 @@
                 "Required": false,
                 "Multiple": false,
                 "Position": "0"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Subtitle",
+              "Settings": {
+                "DisplayName": "Subtitle",
+                "Editor": null,
+                "Hint": null,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "2"
               }
             },
             {
@@ -2880,6 +2916,9 @@
               "Paths": [
                 "1200x300.png"
               ]
+            },
+            "Subheading": {
+              "Text": "All we have to offer"
             }
           },
           "TitlePart": {
@@ -2891,11 +2930,6 @@
           "ListPart": {
             "FeedProxyUrl": null,
             "FeedItemsCount": 20
-          },
-          "SubtitlePart": {
-            "Subtitle": {
-              "Text": "All our offerings"
-            }
           }
         },
         {
