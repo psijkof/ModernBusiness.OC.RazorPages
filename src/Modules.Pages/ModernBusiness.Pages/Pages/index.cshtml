@@ -4,11 +4,10 @@
     var servicesContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Services").GetAwaiter().GetResult().SingleOrDefault();
     var servicesList = Orchard.GetRecentContentItemsByContentTypeAsync("Service", 3).GetAwaiter().GetResult().OrderBy(s => s.PublishedUtc);
 
-
-    var portfolioList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
-    var portfolioPager = new PagerInfo() { CurrentItemsOnPage = portfolioList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 6, TotalPages = 1 };
-
     var portfolioContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Portfolio").GetAwaiter().GetResult().SingleOrDefault();
+    var projectsList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
+    var portfolioPager = new PagerInfo() { CurrentItemsOnPage = projectsList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 6, TotalPages = 1 };
+
     var welcomeContent = Orchard.GetContentItemByAliasAsync("alias:welcome").GetAwaiter().GetResult();
 
 }
