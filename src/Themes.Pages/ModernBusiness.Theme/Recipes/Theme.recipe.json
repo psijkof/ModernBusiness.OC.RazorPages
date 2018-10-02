@@ -4774,19 +4774,19 @@
           "Base64": "[file:base64('../wwwroot/img/1200x300.png')]"
         },
         {
-          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Path": "1ColumnPortfolio.jpg",
           "Base64": "[file:base64('../wwwroot/img/1ColumnPortfolio.jpg')]"
         },
         {
-          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Path": "2ColumnPortfolio.jpg",
           "Base64": "[file:base64('../wwwroot/img/2ColumnPortfolio.jpg')]"
         },
         {
-          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Path": "3ColumnPortfolio.jpg",
           "Base64": "[file:base64('../wwwroot/img/3ColumnPortfolio.jpg')]"
         },
         {
-          "Path": "6087de0a-f453-495d-882f-9b3396d400a9.jpg",
+          "Path": "4ColumnPortfolio.jpg",
           "Base64": "[file:base64('../wwwroot/img/4ColumnPortfolio.jpg')]"
         }
       ]
