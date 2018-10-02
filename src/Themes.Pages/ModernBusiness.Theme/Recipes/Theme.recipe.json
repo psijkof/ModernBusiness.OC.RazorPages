@@ -1824,24 +1824,6 @@
               }
             },
             {
-              "FieldName": "TextField",
-              "Name": "Subtitle",
-              "Settings": {
-                "DisplayName": "Subtitle",
-                "Editor": null,
-                "Hint": null,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "2"
-              }
-            },
-            {
               "FieldName": "LinkField",
               "Name": "Link",
               "Settings": {
@@ -1855,6 +1837,29 @@
                 "TextPlaceholder": null,
                 "DefaultUrl": null,
                 "DefaultText": null,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
+            },
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "RelatedProjects",
+              "Settings": {
+                "DisplayName": "Related Projects",
+                "Editor": null,
+                "Hint": "Related projects to current project",
+                "Required": false,
+                "Multiple": true,
+                "DisplayedContentTypes": [
+                  "Project"
+                ],
                 "ContentIndexSettings": {
                   "Included": false,
                   "Stored": false,
@@ -2924,6 +2929,12 @@
               "Url": null,
               "Text": null
             }
+          },
+          "RelatedProjects": {
+            "ContentItemIds": [
+              "4t436k477d246shwg4dnmvpjn2",
+              "472bqwzkcf4qdx63c1ebdzhmwe"
+            ]
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
