@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
+    <ProjectReference Include="..\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
   </ItemGroup>
 
 </Project>

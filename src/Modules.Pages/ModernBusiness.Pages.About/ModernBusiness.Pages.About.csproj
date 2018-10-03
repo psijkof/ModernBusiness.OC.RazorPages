@@ -14,8 +14,4 @@
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68638" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
-  </ItemGroup>
-
 </Project>
