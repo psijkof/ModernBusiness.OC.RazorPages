@@ -25,6 +25,11 @@
     <!-- /.row -->
     <!-- Related Projects Row -->
     <h3 class="my-4">Related Projects</h3>
+    
+    @foreach (var relProj in Model.RelatedProjects)
+    {
+        @relProj.Content
+    }
 
     <div class="row">
 
@@ -57,7 +62,6 @@
 }
 else
 {
-
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
@@ -132,4 +136,4 @@ else
             </div>
         </div>
     </div>
-        }
+}

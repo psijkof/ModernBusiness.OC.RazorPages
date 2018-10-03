@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json.Linq;
 using OrchardCore;
 using OrchardCore.ContentManagement;
 
@@ -14,6 +15,8 @@ namespace ModernBusiness.Pages.Pages
     {
         private readonly IOrchardHelper _orchardHelper;
         public dynamic Project { get; private set; }
+
+        public IEnumerable<ContentItem> RelatedProjects { get; private set; }
 
         public projectModel(IOrchardHelper orchardHelper)
         {
@@ -37,6 +40,9 @@ namespace ModernBusiness.Pages.Pages
             Project = _orchardHelper.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == projectTitle))
                 .GetAwaiter().GetResult().SingleOrDefault();
 
+            IEnumerable<string> relProjs = Project.Content.RelatedProjects.ContentItemIds.ToObject<IEnumerable<string>>();
+
+            RelatedProjects = _orchardHelper.GetContentItemsByIdAsync(relProjs).GetAwaiter().GetResult();
         }
 
         /// <summary>
