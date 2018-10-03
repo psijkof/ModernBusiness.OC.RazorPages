@@ -2155,6 +2155,31 @@
                 "Multiple": true,
                 "Position": "0"
               }
+            },
+            {
+              "FieldName": "LinkField",
+              "Name": "Link",
+              "Settings": {
+                "DisplayName": "Link",
+                "Editor": null,
+                "Hint": "Provide a url to render a link",
+                "HintLinkText": null,
+                "Required": false,
+                "LinkTextMode": 3,
+                "UrlPlaceholder": "http://",
+                "TextPlaceholder": "Click here",
+                "DefaultUrl": "~/portfolio1",
+                "DefaultText": "Our portfolio",
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
             }
           ]
         }
@@ -2724,77 +2749,60 @@
           "ListPart": {}
         },
         {
-          "Id": 0,
-          "ContentItemId": "[js: uuid()]",
-          "ContentItemVersionId": null,
+          "ContentItemId": "4m9fjqmxqv3bprskrm7g1y0g42",
+          "ContentItemVersionId": "437as15nq2e4wx8ewm1s25rp41",
           "ContentType": "Project",
           "DisplayText": "Project One",
-          "Latest": false,
-          "Published": false,
-          "ModifiedUtc": "2018-09-04T16:23:01.8148799Z",
-          "PublishedUtc": null,
-          "CreatedUtc": "2018-09-01T16:23:01.850052Z",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-02T16:55:50.096351Z",
+          "PublishedUtc": "2018-10-02T16:55:50.1021647Z",
+          "CreatedUtc": "2018-10-02T16:55:50.1021647Z",
           "Owner": null,
           "Author": "admin",
           "Project": {
-            "Image": {
-              "Paths": [
-                "700x400.png"
-              ]
-            },
+            "Image": { "Paths": [ "700x400.png" ] },
             "Link": {
               "Url": null,
               "Text": null
             }
           },
-          "HtmlBodyPart": {
-            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
-          },
+          "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!" },
           "ContainedPart": {
-            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
             "Order": 0
           },
-          "SubtitlePart": {
-            "Subtitle": {
-              "Text": "Project One subheading"
-            }
-          },
+          "SubtitlePart": { "Subtitle": { "Text": "Project One subheading" } },
           "AutoroutePart": {
             "Path": "portfolio/project-one",
             "SetHomepage": false
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
-          "ContentItemVersionId": null,
+          "ContentItemId": "4pc1qk20cdej976rxqft7gcmwg",
+          "ContentItemVersionId": "414ajd7hpj8qj05we2z6md6643",
           "ContentType": "Project",
           "DisplayText": "Project Two",
-          "Latest": false,
+          "Latest": true,
           "Published": true,
-          "CreatedUtc": "2018-09-02T16:23:01.850052Z",
+          "ModifiedUtc": "2018-10-02T16:55:50.642591Z",
+          "PublishedUtc": "2018-10-02T16:55:50.644498Z",
+          "CreatedUtc": "2018-10-02T16:55:50.644498Z",
+          "Owner": null,
+          "Author": null,
           "Project": {
-            "Image": {
-              "Paths": [
-                "700x400.png"
-              ]
-            },
+            "Image": { "Paths": [ "700x400.png" ] },
             "Link": {
               "Url": null,
               "Text": null
             }
           },
-          "HtmlBodyPart": {
-            "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae."
-          },
+          "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae." },
           "ContainedPart": {
-            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
             "Order": 1
           },
-          "SubtitlePart": {
-            "Subtitle": {
-              "Text": "Project Two subheading"
-            }
-          },
+          "SubtitlePart": { "Subtitle": { "Text": "Project Two subheading" } },
           "AutoroutePart": {
             "Path": "portfolio/project-two",
             "SetHomepage": false
@@ -2912,47 +2920,36 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
-          "ContentItemVersionId": null,
+          "ContentItemId": "406ej8515a2ayy8r6x1gmv3b4w",
+          "ContentItemVersionId": "49z21m41r0ha8r2keafq14mndf",
           "ContentType": "Project",
           "DisplayText": "Project Six",
           "Latest": true,
           "Published": true,
-          "CreatedUtc": "2018-09-06T16:23:01.850052Z",
+          "ModifiedUtc": "2018-10-02T17:00:11.0817524Z",
+          "PublishedUtc": "2018-10-02T17:00:11.3287099Z",
+          "CreatedUtc": "2018-10-02T16:55:52.7748792Z",
+          "Owner": null,
           "Author": "admin",
           "Project": {
-            "Image": {
-              "Paths": [
-                "700x400.png"
-              ]
-            },
+            "Image": { "Paths": [ "700x400.png" ] },
             "Link": {
               "Url": null,
               "Text": null
-            }
+            },
+            "RelatedProjects": { "ContentItemIds": [ "4m9fjqmxqv3bprskrm7g1y0g42", "4pc1qk20cdej976rxqft7gcmwg" ] }
           },
-          "RelatedProjects": {
-            "ContentItemIds": [
-              "4t436k477d246shwg4dnmvpjn2",
-              "472bqwzkcf4qdx63c1ebdzhmwe"
-            ]
-          },
-          "HtmlBodyPart": {
-            "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!"
-          },
+          "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!" },
           "ContainedPart": {
-            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
+            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
             "Order": 5
           },
-          "SubtitlePart": {
-            "Subtitle": {
-              "Text": "Project Six subheading"
-            }
-          },
+          "SubtitlePart": { "Subtitle": { "Text": "Project Six subheading" } },
           "AutoroutePart": {
             "Path": "portfolio/project-six",
             "SetHomepage": false
-          }
+          },
+          "TitlePart": { "Title": "Project Six" }
         },
         {
           "ContentItemId": "[js: variables('servicesContentItemId')]",
@@ -4400,6 +4397,35 @@
               "Text": null
             }
           },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ypv1memvn21vrab8hrf19penk",
+          "ContentItemVersionId": "48s438dhkd503zgv0qa3dsfdmy",
+          "ContentType": "RawContent",
+          "DisplayText": "Call To Action Homepage",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-03T12:55:22.1657273Z",
+          "PublishedUtc": "2018-10-03T12:55:22.1903799Z",
+          "CreatedUtc": "2018-10-03T10:43:33.7566572Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": { "Paths": [] },
+            "Link": {
+              "Url": "~/Contact",
+              "Text": null
+            }
+          },
+          "AliasPart": { "Alias": "ctaHomePage" },
+          "HtmlBodyPart": { "Html": "Why don't you drop us a line and let's engage for your next web or mobile app?" },
+          "MarkdownBodyPart": { "Markdown": "## Ready for your next awesome app?\r\n" },
+          "SubtitlePart": { "Subtitle": { "Text": "Get in touch with us!" } },
+          "TitlePart": { "Title": "Call To Action Homepage" },
           "ContainedPart": {
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0
