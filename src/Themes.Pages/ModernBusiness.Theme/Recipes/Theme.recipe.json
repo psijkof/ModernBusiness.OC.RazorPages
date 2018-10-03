@@ -75,6 +75,7 @@
         "ModernBusiness.Pages.Contact",
         "ModernBusiness.Pages.About",
         "ModernBusiness.Pages.Service",
+        "ModernBusiness.Pages.Blog",
 
         // Themes
         "ModernBusiness.Theme",

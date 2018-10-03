@@ -12,7 +12,7 @@
                 </a>
             </li>
         }
-        @for (int i = 1; i <= Model.TotalPages; i++)
+        @for (int i = 1; i <= Model.TotalPages && Model.ShowPages; i++)
         {
             <a asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@i" class="page-link @(Model.CurrentPage== i ? "active" : "")">@(Model.CurrentPage == i ? Html.Raw($"<strong>{i}</strong>") : Html.Raw(i.ToString()))</a>
         }
