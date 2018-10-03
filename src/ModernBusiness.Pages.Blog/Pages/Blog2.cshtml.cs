@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,23 +10,23 @@ using OrchardCore.ContentManagement;
 
 namespace ModernBusiness.Pages.Blog.Pages
 {
-	public class Blog1Model : PageModel
-	{
+    public class Blog2Model : PageModel
+    {
 		private readonly IOrchardHelper _orchard;
 		public readonly PagerInfo PagerInfo;
 		public ContentItem Blog;
 		public dynamic BlogPostTitle { get; private set; }
 		public dynamic BlogPost;
 
-		public Blog1Model(IOrchardHelper orchard)
+		public Blog2Model(IOrchardHelper orchard)
 		{
 			_orchard = orchard;
 			Blog = _orchard.GetRecentContentItemsByContentTypeAsync("Blog").GetAwaiter().GetResult().SingleOrDefault();
 			PagerInfo = new PagerInfo
 			{
-				PageSize = 3,
+				PageSize = 4,
 				ShowPages = false,
-				PageBaseUrl = "/blog-1"
+				PageBaseUrl = "/blog-2"
 			};
 
 			PagerInfo.TotalPages = (int)Math.Ceiling(_orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published))
@@ -39,11 +39,11 @@ namespace ModernBusiness.Pages.Blog.Pages
 				.Skip(((pageIndex ?? 1) - 1) * PagerInfo.PageSize).Take(PagerInfo.PageSize));
 
 			PagerInfo.CurrentPage = pageIndex ?? 1;
-
 			if (!string.IsNullOrEmpty(BlogPostTitle))
 			{
 				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle))).SingleOrDefault();
 			}
+
 		}
 	}
 }
