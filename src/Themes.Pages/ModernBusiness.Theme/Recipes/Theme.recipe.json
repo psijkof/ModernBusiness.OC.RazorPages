@@ -2572,7 +2572,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "1 Column Portfolio",
-                        "Url": "./portfolio1"
+                        "Url": "~/portfolio1"
                       }
                     },
                     {
@@ -2590,7 +2590,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "2 Column Portfolio",
-                        "Url": "./portfolio2"
+                        "Url": "~/portfolio2"
                       }
                     },
                     {
@@ -2608,7 +2608,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "3 Column Portfolio",
-                        "Url": "./portfolio3"
+                        "Url": "~/portfolio3"
                       }
                     },
                     {
@@ -2626,7 +2626,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "4 Column Portfolio",
-                        "Url": "./portfolio4"
+                        "Url": "~/portfolio4"
                       }
                     }
                   ]
@@ -2661,7 +2661,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Blog Home 1",
-                        "Url": "./blog1"
+                        "Url": "~/blog1"
                       }
                     },
                     {
@@ -2679,7 +2679,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Blog Home 2",
-                        "Url": "./blog2"
+                        "Url": "~/blog2"
                       }
                     }
                   ]
@@ -2735,7 +2735,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "FAQ",
-                        "Url": "./faq"
+                        "Url": "~/faq"
                       }
                     },
                     {
@@ -2761,7 +2761,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Princing Table",
-                        "Url": "./price-plan"
+                        "Url": "~/price-plan"
                       }
                     }
                   ]
