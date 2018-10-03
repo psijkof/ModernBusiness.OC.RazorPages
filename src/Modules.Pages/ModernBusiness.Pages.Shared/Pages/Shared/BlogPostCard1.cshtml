@@ -2,17 +2,16 @@
 
 @foreach (var post in Model.CurrentItemsOnPage)
 {
-
-    
+    var blogLink = $"blog1/{post.DisplayText}";
     <div class="card mb-4">
         <img class="card-img-top" src="@Orchard.AssetUrl((string)post.Content.BlogPost.Image.Paths[0])" alt="Card image cap">
         <div class="card-body">
             <h2 class="card-title">@post.Content.TitlePart.Title</h2>
             <p class="card-text">@Html.Raw(((string)post.Content.HtmlBodyPart.Html).Ellipsize(200))</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+            <a href="@blogLink" class="btn btn-primary">Read More</a>
         </div>
         <div class="card-footer text-muted">
-            <a href="#"></a>
+            Posted on @post.PublishedUtc by @post.Author
         </div>
     </div>
 }

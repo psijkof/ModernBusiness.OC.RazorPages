@@ -2642,7 +2642,47 @@
                 "Author": "admin",
                 "LinkMenuItemPart": {
                   "Name": "Blog",
-                  "Url": "~/blog"
+                  "Url": "null"
+                },
+                "MenuItemsListPart": {
+                  "MenuItems": [
+                    {
+                      "Id": 0,
+                      "ContentItemId": "4kkzqsht60jc9v1k0c05e2frww",
+                      "ContentItemVersionId": null,
+                      "ContentType": "LinkMenuItem",
+                      "DisplayText": null,
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2018-10-03T14:03:47.1172407Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": null,
+                      "Author": "admin",
+                      "LinkMenuItemPart": {
+                        "Name": "Blog Home 1",
+                        "Url": "./blog1"
+                      }
+                    },
+                    {
+                      "Id": 0,
+                      "ContentItemId": "4fhkwfp4qm2q417tghsjsm5sc5",
+                      "ContentItemVersionId": null,
+                      "ContentType": "LinkMenuItem",
+                      "DisplayText": null,
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2018-10-03T14:04:26.0804557Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": null,
+                      "Author": "admin",
+                      "LinkMenuItemPart": {
+                        "Name": "Blog Home 2",
+                        "Url": "./blog2"
+                      }
+                    }
+                  ]
                 }
               },
               {
@@ -4102,6 +4142,7 @@
           "ContentItemId": "4frbxe000hzwm7bb723dek70cq",
           "ContentItemVersionId": "42zqbkhsnm5g3yb6bd890h7gn9",
           "ContentType": "BlogPost",
+          "DisplayText": "Blogpost-4",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-17T15:23:21.9378291Z",
@@ -4117,14 +4158,14 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/blog-title-4",
+            "Path": "blog/blogpost-4",
             "SetHomepage": false
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
           },
           "TitlePart": {
-            "Title": "Blog title 4"
+            "Title": "Blogpost 4"
           },
           "ContainedPart": {
             "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
@@ -4145,6 +4186,7 @@
           "ContentItemId": "4kzf0zb4gpzsg47436kbm5x2w7",
           "ContentItemVersionId": "4fja6bf5qaz932nqf8g521xrm7",
           "ContentType": "BlogPost",
+          "DisplayText": "Blogpost-3",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-17T15:23:27.2649049Z",
@@ -4160,14 +4202,14 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/blog-title-3",
+            "Path": "blog/blog-3",
             "SetHomepage": false
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
           },
           "TitlePart": {
-            "Title": "Blog title 3"
+            "Title": "Blog 3"
           },
           "ContainedPart": {
             "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
@@ -4188,6 +4230,7 @@
           "ContentItemId": "49q7na4wmgeggxeebaw7thencc",
           "ContentItemVersionId": "4a88s17w1xc28xsmv66bfn41w9",
           "ContentType": "BlogPost",
+          "DisplayText": "Blogpost-2",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-17T15:23:32.377658Z",
@@ -4203,14 +4246,14 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/post-title-2",
+            "Path": "blog/Blogpost-2",
             "SetHomepage": false
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
           },
           "TitlePart": {
-            "Title": "Post title 2"
+            "Title": "Blogpost 2"
           },
           "ContainedPart": {
             "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
@@ -4231,6 +4274,7 @@
           "ContentItemId": "4jc1t9975mfqa3evsegxqk4jdr",
           "ContentItemVersionId": "4884zr0dbh0s92exx20g7vw4xk",
           "ContentType": "BlogPost",
+          "DisplayText": "Blogpost-1",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-17T15:23:36.9503632Z",
@@ -4246,14 +4290,14 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/post-title",
+            "Path": "blog/Blogpost-1",
             "SetHomepage": false
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
           },
           "TitlePart": {
-            "Title": "Post Title"
+            "Title": "Blogpost 1"
           },
           "ContainedPart": {
             "ListContentItemId": "4hsnm1tbkt1vpsstvxx4cz45cc",
