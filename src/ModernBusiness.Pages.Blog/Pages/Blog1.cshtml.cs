@@ -26,21 +26,24 @@ namespace ModernBusiness.Pages.Blog.Pages
 			{
 				PageSize = 3,
 				ShowPages = false,
-				PageBaseUrl = "/blog-1"
+				PageBaseUrl = "/blog1"
 			};
 
-			PagerInfo.TotalPages = (int)Math.Ceiling(_orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published))
+			PagerInfo.TotalPages = (int)Math.Ceiling(_orchard.QueryContentItemsAsync(
+				q => q.Where(b => b.ContentType == "BlogPost" && b.Published))
 				.GetAwaiter().GetResult().Count() / (double)PagerInfo.PageSize);
 		}
 
 		public async Task OnGetAsync(int? pageIndex, string BlogPostTitle)
 		{
-			PagerInfo.CurrentItemsOnPage = await _orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published)
+			if (string.IsNullOrEmpty(BlogPostTitle))
+			{
+				PagerInfo.CurrentItemsOnPage = await _orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published)
 				.Skip(((pageIndex ?? 1) - 1) * PagerInfo.PageSize).Take(PagerInfo.PageSize));
 
-			PagerInfo.CurrentPage = pageIndex ?? 1;
-
-			if (!string.IsNullOrEmpty(BlogPostTitle))
+				PagerInfo.CurrentPage = pageIndex ?? 1;
+			}
+			else
 			{
 				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle))).SingleOrDefault();
 			}

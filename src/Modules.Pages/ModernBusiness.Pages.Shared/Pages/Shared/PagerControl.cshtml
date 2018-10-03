@@ -20,7 +20,7 @@
         @if (Model.HasNextPage)
         {
             <li class="page-item">
-                <a class="page-link" asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@(Model.CurrentPage+ 1)" aria-label="Next">
+                <a class="page-link" asp-page="@Model.PageBaseUrl" asp-route-pageIndex="@(Model.CurrentPage + 1)" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">@T["Next"]</span>
                 </a>

@@ -26,7 +26,7 @@ namespace ModernBusiness.Pages.Blog.Pages
 			{
 				PageSize = 4,
 				ShowPages = false,
-				PageBaseUrl = "/blog-2"
+				PageBaseUrl = "/blog2"
 			};
 
 			PagerInfo.TotalPages = (int)Math.Ceiling(_orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published))
