@@ -8,7 +8,8 @@
     var projectsList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
     var portfolioPager = new PagerInfo() { CurrentItemsOnPage = projectsList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 6, TotalPages = 1 };
 
-    var welcomeContent = Orchard.GetContentItemByAliasAsync("alias:welcome").GetAwaiter().GetResult();
+    var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
+    var ctaHomePage = await Orchard.GetContentItemByAliasAsync("alias:ctaHomePage");
 
 }
 
@@ -51,13 +52,5 @@
 
 <hr>
 
-<!-- Call to Action Section -->
-<div class="row mb-4">
-    <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-    </div>
-    <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-    </div>
-</div>
-<!-- /.container -->
+<partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/CallToAction.cshtml" model="ctaHomePage" />
+

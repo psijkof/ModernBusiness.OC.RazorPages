@@ -1,0 +1,21 @@
+﻿@model dynamic
+@* Uses RawContent contenttype *@
+<!-- Call to Action Section -->
+<div class="row mb-4">
+    <div class="col-md-8">
+
+        @if (Model.Content.MarkdownBodyPart != null)
+        {
+            @Orchard.MarkdownToHtml((string)Model.Content.MarkdownBodyPart.Markdown)
+        }
+        else
+        {
+            @Html.Raw(Model.Content.HtmlBodyPart.Html)
+        }
+    </div>
+    <div class="col-md-4">
+        
+        <a class="btn btn-lg btn-secondary btn-block" href="@Url.Content((string)Model.Content.RawContent.Link.Url)">@Model.Content.SubtitlePart.Subtitle.Text</a>
+    </div>
+</div>
+<!-- /.container -->
