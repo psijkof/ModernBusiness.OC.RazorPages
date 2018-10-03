@@ -24,41 +24,27 @@
     </div>
     <!-- /.row -->
     <!-- Related Projects Row -->
-    <h3 class="my-4">Related Projects</h3>
-    
-    @foreach (var relProj in Model.RelatedProjects)
+    @if (Model.RelatedProjects != null)
     {
-        @relProj.Content
+
+        <h3 class="my-4">Related Projects</h3>
+
+        <div class="row">
+            @foreach (var relProj in Model.RelatedProjects)
+            {
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="@relProj.DisplayText">
+                        <img class="img-fluid" asset-src="@relProj.Content.Project.Image.Paths[0]" img-width="500" img-height="300" img-resize-mode="Max" alt="" />
+                    </a>
+                </div>
+            }
+        </div>
+        <!-- /.row -->
     }
-
-    <div class="row">
-
-        <div class="col-md-3 col-sm-6 mb-4">
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-    </div>
-    <!-- /.row -->
+    else
+    {
+        <br />
+    }
 }
 else
 {
