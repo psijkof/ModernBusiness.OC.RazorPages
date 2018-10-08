@@ -2642,7 +2642,7 @@
                 "Author": "admin",
                 "LinkMenuItemPart": {
                   "Name": "Blog",
-                  "Url": "null"
+                  "Url": null
                 },
                 "MenuItemsListPart": {
                   "MenuItems": [
