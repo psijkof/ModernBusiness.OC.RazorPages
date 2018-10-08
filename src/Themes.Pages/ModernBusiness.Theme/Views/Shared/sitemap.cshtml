@@ -1,0 +1,13 @@
+﻿@model dynamic
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Content((string)item.LinkMenuItemPart.Url)">@item.LinkMenuItemPart.Name</a>
+        </li>
+        if (item.MenuItemsListPart?.MenuItems != null)
+        {
+            <partial name="sitemap" model="item.MenuItemsListPart.MenuItems" />
+        }
+    }
+</ul>
