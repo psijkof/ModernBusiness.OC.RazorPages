@@ -45,7 +45,7 @@ namespace ModernBusiness.Pages.Blog.Pages
 			}
 			else
 			{
-				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle))).SingleOrDefault();
+				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle && c.Published))).SingleOrDefault();
 			}
 		}
 	}

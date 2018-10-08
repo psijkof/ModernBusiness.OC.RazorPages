@@ -9,6 +9,8 @@ namespace TestTagPart.OrchardCore.ViewModels
     {
         public string MySetting { get; set; }
 
+		public string Tags { get; set; }
+
         public bool Show { get; set; }
 
         [BindNever]

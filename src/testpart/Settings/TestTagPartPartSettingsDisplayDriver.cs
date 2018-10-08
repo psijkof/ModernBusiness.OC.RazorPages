@@ -21,6 +21,8 @@ namespace TestTagPart.OrchardCore.Settings
                 var settings = contentPartDefinition.GetSettings<TestTagPartPartSettings>();
 
                 model.MySetting = settings.MySetting;
+				model.Required = settings.Required;
+				model.Multiple = settings.Multiple;
                 model.TestTagPartPartSettings = settings;
 
                 return Task.CompletedTask;
@@ -36,9 +38,14 @@ namespace TestTagPart.OrchardCore.Settings
 
             var model = new TestTagPartPartSettingsViewModel();
 
-            if (await context.Updater.TryUpdateModelAsync(model, Prefix, m => m.MySetting))
+            if (await context.Updater.TryUpdateModelAsync(model, Prefix, m => m.MySetting, m => m.Multiple, m => m.Required ))
             {
-                context.Builder.WithSettings(new TestTagPartPartSettings { MySetting = model.MySetting });
+                context.Builder.WithSettings(new TestTagPartPartSettings
+				{
+					MySetting = model.MySetting,
+					Required = model.Required,
+					Multiple = model.Multiple
+				});
             }
 
             return Edit(contentPartDefinition, context.Updater);

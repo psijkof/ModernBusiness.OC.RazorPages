@@ -8,7 +8,8 @@ namespace TestTagPart.OrchardCore.Handlers
     {
         public override Task InitializingAsync(InitializingContentContext context, TestTagPartPart part)
         {
-            part.Show = true;
+			part.Show = true;
+			part.Tags = "Hello there";
 
             return Task.CompletedTask;
         }

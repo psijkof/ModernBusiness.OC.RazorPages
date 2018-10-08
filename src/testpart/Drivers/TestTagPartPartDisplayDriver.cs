@@ -38,7 +38,7 @@ namespace TestTagPart.OrchardCore.Drivers
         {
             var settings = GetTestTagPartPartSettings(model);
 
-            await updater.TryUpdateModelAsync(model, Prefix, t => t.Show);
+            await updater.TryUpdateModelAsync(model, Prefix, t => t.Show, t => t.Tags);
             
             return Edit(model);
         }
@@ -59,6 +59,7 @@ namespace TestTagPart.OrchardCore.Drivers
             model.ContentItem = part.ContentItem;
             model.MySetting = settings.MySetting;
             model.Show = part.Show;
+			model.Tags = part.Tags;
             model.TestTagPartPart = part;
             model.Settings = settings;
 

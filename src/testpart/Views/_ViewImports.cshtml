@@ -4,8 +4,11 @@
 *@
 
 @inherits OrchardCore.DisplayManagement.Razor.RazorPage<TModel>
+@using OrchardCore.DisplayManagement
+@using TestTagPart.OrchardCore.ViewModels
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, OrchardCore.DisplayManagement
-@addTagHelper *, OrchardCore.ResourceManagement
+@addTagHelper *, OrchardCore.ResourceManagement.TagHelpers
+@addTagHelper *, OrchardCore.ContentFields
+@addTagHelper *, OrchardCore.Contents
 
-@using TestTagPart.OrchardCore.ViewModels

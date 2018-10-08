@@ -12,7 +12,7 @@
 
         <!-- Date/Time -->
         <p>Posted on @Model.PublishedUtc</p>
-
+        
         <hr>
 
         <!-- Post Content -->
@@ -44,6 +44,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="list-unstyled mb-0">
+                            @Model.Content.TestTagPartPart.Tags
                             <li>
                                 <a href="#">Web Design</a>
                             </li>

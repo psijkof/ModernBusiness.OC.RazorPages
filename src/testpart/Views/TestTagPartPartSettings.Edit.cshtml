@@ -1,9 +1,19 @@
 @model TestTagPart.OrchardCore.Settings.TestTagPartPartSettingsViewModel
 
 <fieldset class="form-group">
-    <div class="row col-lg">
-        <label asp-for="MySetting">@T["Setting"]</label>
-        <input asp-for="MySetting" class="form-control" />
-        <span class="hint">@T["The setting."]</span>
+    <div class="form-check">
+        <label class="form-check-label">
+            <input asp-for="Required" type="checkbox" class="form-check-input" />
+            <span class="hint">@T["Check if the field is required."]</span>
+        </label>
+    </div>
+</fieldset>
+
+<fieldset class="form-group">
+    <div class="form-check">
+        <label class="form-check-label">
+            <input asp-for="Multiple" type="checkbox" class="form-check-input" />
+            <span class="hint">@T["Check to allow the user to select multiple content items."]</span>
+        </label>
     </div>
 </fieldset>
