@@ -1,0 +1,17 @@
+﻿@page
+@model ServicesModel
+@{
+}
+
+@section Header  {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="Model.ServicesContainer" />
+}
+
+<!-- Image Header -->
+<img asset-src="@Model.ServicesContainer.Content.Services.Image.Paths[0]" class="img-fluid rounded mb-4" alt="" img-width="1200" img-height="300" img-resize-mode="Crop" />
+
+<!-- Marketing Icons Section -->
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ServiceCards.cshtml" model="Model.ServicesList" />
+</div>
+<!-- /.row -->

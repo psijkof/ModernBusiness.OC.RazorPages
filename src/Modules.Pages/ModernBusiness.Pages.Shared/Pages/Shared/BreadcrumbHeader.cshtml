@@ -1,0 +1,29 @@
+﻿@model dynamic
+@{
+    var breadCrumb = Context.Request.Path.Value.Split('/');
+    var allItems = breadCrumb.Count() - 1;
+}
+
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        @Model.DisplayText
+        
+        <small>@Model.Content.SubtitlePart?.Subtitle.Text</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li class="">
+            <a href="~/">@T["Home"]</a>
+        </li>
+        @for (int i = 0; i <= allItems; i++)
+        {
+            if (i == allItems)
+            {
+                <li class="breadcrumb-item active">@breadCrumb[i]</li>
+            }
+            else
+            {
+                <li class="breadcrumb-item"><a href="~/@breadCrumb[i]">@breadCrumb[i]</a></li>
+            }
+        }
+    </ol>
+</div>

@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <TieredCompilation>true</TieredCompilation>
+    <UserSecretsId>15f28c54-5804-428f-8de5-e273da215282</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68540" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68540" />
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68540" />
+    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68776" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68776" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68776" />
   </ItemGroup>
   
   <ItemGroup>
@@ -20,8 +21,14 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
-    <ProjectReference Include="..\ModernBusiness.Theme\ModernBusiness.Theme.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.About\ModernBusiness.Pages.About.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Blog\ModernBusiness.Pages.Blog.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Service\ModernBusiness.Pages.Service.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
+    <ProjectReference Include="..\Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj" />
   </ItemGroup>
 
 </Project>

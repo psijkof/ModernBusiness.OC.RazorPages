@@ -1,0 +1,21 @@
+﻿@model dynamic
+
+@foreach (var project in Model.CurrentItemsOnPage)
+{
+    var projectLink = $"~/project/{project.DisplayText}";
+    <div class="col-lg-6 portfolio-item">
+        <div class="card h-100">
+            <a href="@Url.Content(projectLink)">
+                <img class="card-img-top"  asset-src="@project.Content.Project.Image.Paths[0]" alt=""/>
+            </a>
+            <div class="card-body">
+                <a href="@Url.Content(projectLink)">
+                    <h4 class="card-title">
+                        @project.DisplayText
+                    </h4>
+                </a>
+                <p class="card-text">@project.Content.HtmlBodyPart.Html</p>
+            </div>
+        </div>
+    </div>
+}
