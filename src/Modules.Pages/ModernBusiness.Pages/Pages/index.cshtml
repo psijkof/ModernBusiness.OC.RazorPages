@@ -1,0 +1,56 @@
+﻿@page
+@inject OrchardCore.Settings.ISiteService SiteService
+@{
+    var servicesContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Services").GetAwaiter().GetResult().SingleOrDefault();
+    var servicesList = Orchard.GetRecentContentItemsByContentTypeAsync("Service", 3).GetAwaiter().GetResult().OrderBy(s => s.PublishedUtc);
+
+    var portfolioContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Portfolio").GetAwaiter().GetResult().SingleOrDefault();
+    var projectsList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
+    var portfolioPager = new PagerInfo() { CurrentItemsOnPage = projectsList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 6, TotalPages = 1 };
+
+    var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
+    var ctaHomePage = await Orchard.GetContentItemByAliasAsync("alias:ctaHomePage");
+    var settings = await SiteService.GetSiteSettingsAsync();
+}
+
+@section Nav {
+}
+
+@section Header {
+    <partial name="Carousel" />
+} 
+
+@section Messages {
+}
+
+@section Footer {
+}
+
+<h1 class="my-4">@servicesContainer?.Content?.TitlePart.Title</h1>
+<!-- Marketing Icons Section -->
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ServiceCards.cshtml" model="servicesList" />
+</div>
+<!-- /.row -->
+<!-- Portfolio Section -->
+<h2>@portfolioContainer?.Content?.TitlePart.Title</h2>
+
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards3.cshtml" model="portfolioPager" />
+</div>
+<!-- /.row -->
+<!-- Features Section -->
+<div class="row">
+    <div class="col-lg-6">
+        @Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
+    </div>
+    <div class="col-lg-6">
+        <img class="img-fluid rounded" asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="700" img-height="400" img-resize-mode="Crop" />
+    </div>
+</div>
+<!-- /.row -->
+
+<hr>
+
+<partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/CallToAction.cshtml" model="ctaHomePage" />
+
