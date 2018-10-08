@@ -54,10 +54,7 @@
     <!-- /.container -->
     <!-- Footer -->
     <footer class="py-5 bg-dark">
-        @{
-            var footerContent = await Orchard.GetContentItemByAliasAsync("alias:footer");
-        }
-        @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
+        @Html.Raw((await Orchard.GetContentItemByAliasAsync("alias:footer")).Content.HtmlBodyPart.Html)
         <!-- /.container -->
     </footer>
 
