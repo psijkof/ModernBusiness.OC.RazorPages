@@ -18,6 +18,14 @@
 
   "steps": [
     {
+      "name": "Settings",
+      "SiteName": "ModernBusiness with OC and Razor Pages",
+      "SupportedCultures": [
+        "en",
+        "pt"
+      ]
+    },
+    {
       "name": "feature",
       "disable": [],
       "enable": [
