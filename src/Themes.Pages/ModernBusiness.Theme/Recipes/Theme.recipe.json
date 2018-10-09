@@ -2809,7 +2809,7 @@
           },
           "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!" },
           "ContainedPart": {
-            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 0
           },
           "SubtitlePart": { "Subtitle": { "Text": "Project One subheading" } },
@@ -2839,7 +2839,7 @@
           },
           "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae." },
           "ContainedPart": {
-            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 1
           },
           "SubtitlePart": { "Subtitle": { "Text": "Project Two subheading" } },
@@ -2981,7 +2981,7 @@
           },
           "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!" },
           "ContainedPart": {
-            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 5
           },
           "SubtitlePart": { "Subtitle": { "Text": "Project Six subheading" } },
