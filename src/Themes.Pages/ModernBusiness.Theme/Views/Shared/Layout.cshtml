@@ -33,9 +33,7 @@
     <main role="main" class="container">
         @RenderSection("Messages", required: false)
         @RenderBody()
-        @*<cache expires-after="@cacheDuration">*@
-            <shape Type="languageselection" />
-        @*</cache>*@
+        <shape Type="languageselection" />
     </main>
     <footer class="py-5 bg-dark">
         <cache expires-after="@cacheDuration">

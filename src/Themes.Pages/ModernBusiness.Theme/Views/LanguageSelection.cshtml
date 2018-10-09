@@ -14,11 +14,11 @@
     var cultureItems = settings.SupportedCultures.Select(i => new SelectListItem { Value = i, Text = i }).ToList();
 }
 
-<li class="dropdown">
+@*<li class="dropdown">*@
     <form class="nav-link lang-dropdown language-dropdown" id="selectLanguage" asp-area="ModernBusiness.Theme" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post">
         <div class="div_lang">
             <i class="fas fa-globe language-img"></i>
         </div>
         <select name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems" onchange="this.form.submit();"></select>
     </form>
-</li>
+@*</li>*@
