@@ -1,9 +1,21 @@
 ﻿@model TestTagPartPartViewModel
-@using OrchardCore.ContentManagement.Metadata.Models
 
 
-<style asp-src="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css"></style>
-<script asp-src="https://unpkg.com/vue-multiselect@2.1.0" asp-name="vuemultiselect" at="Foot"></script>
+<style asp-src="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css"></style>
+<script asp-src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js" asp-name="angularJs" at="Head"></script>
+<script asp-src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js" asp-name="ngTags" at="Head"></script>
+<script at="Head">document.write('<base href="' + document.location + '" />');</script>
+<script at="Head">
+    var app = angular.module('plunker', ['ngTagsInput']);
+
+    app.controller('MainCtrl', function ($scope, $http) {
+        $scope.tags = [
+            { text: 'Tag1' },
+            { text: 'Tag2' },
+            { text: 'Tag3' }
+        ];
+    });
+</script>
 
 <fieldset class="form-group">
     <div class="form-check">
@@ -17,10 +29,11 @@
                 @T["Tags"]
             </label>*@
     </div>
-
-    <div>
-        <label class="typo__label" asp-for="Tags">Tagging</label>
-        <multiselect v-model="value" tag-placeholder="Add this as new tag" placeholder="Search or add a tag" label="name" track-by="code" :options="options" :multiple="true" :taggable="true"></multiselect>
-        <pre class="language-json"><code>{{ value }}</code></pre>
+    <div ng-app="plunker">
+        <div ng-controller="MainCtrl">
+            <tags-input ng-model="tags" asp-for="Tags"></tags-input>
+            <input asp-for="Tags" value="{{tags}}" />
+            <p >Model: {{tags}}</p>
+        </div>
     </div>
 </fieldset>
