@@ -9,7 +9,6 @@
     var settings = await SiteService.GetSiteSettingsAsync();
 }
 
-
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
     var cultureItems = settings.SupportedCultures.Select(i => new SelectListItem { Value = i, Text = i }).ToList();
