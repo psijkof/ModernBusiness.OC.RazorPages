@@ -17,4 +17,8 @@
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68792" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Assets\js\" />
+  </ItemGroup>
+
 </Project>

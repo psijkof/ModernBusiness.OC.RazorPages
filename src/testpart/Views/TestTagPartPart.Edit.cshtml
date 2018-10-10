@@ -1,10 +1,24 @@
 ﻿@model TestTagPartPartViewModel
+@using Newtonsoft.Json;
+@using Newtonsoft.Json.Serialization;
+@using TestTagPart.OrchardCore.Settings
 
-@*<style asp-src="/TestTagPart.OrchardCore/Assets/css/projects.min.css"></style>*@
-@*<style asp-src="../Assests/css/css/taggle.css"></style>*@
+@{
+//var settings = Model.Settings;
+//var selectedTags = "Hello";/*Html.Raw(JsonConvert.SerializeObject(Model.Tags, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }));*/
+//var multiple = settings.Multiple.ToString().ToLowerInvariant();
+//var vueElementId = "Tag";
+}
+
+@*<script asp-src="/OrchardCore.ContentFields/Scripts/contentPicker.js" asp-name="contentPicker" at="Foot" depends-on="vuejs, vuemultiselect"></script>
+    <style asp-src="/OrchardCore.ContentFields/Styles/contentPicker.min.css" debug-src="/OrchardCore.ContentFields/Styles/contentPicker.css"></style>*@
+
+
+<style asp-src="/TestTagPart.OrchardCore/Assets/css/tags.css"></style>
 <style asp-src="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css"></style>
 <script asp-src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js" asp-name="angularJs" at="Head"></script>
 <script asp-src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js" asp-name="ngTags" at="Head"></script>
+<script asp-src="/TestTagPart.OrchardCore/Assets/tag.js" at="Foot"></script>
 <script at="Head">document.write('<base href="' + document.location + '" />');</script>
 <script at="Head">
     var app = angular.module('plunker', ['ngTagsInput']);
@@ -17,15 +31,6 @@
         ];
     });
 </script>
-<style asp-src="~/TestTagPart.OrchardCore/Assets/css/normalize.css"></style>
-<style asp-src="~/TestTagPart.OrchardCore/Assets/css/stylesheet.css"></style>
-<!--[if IE 8]><script src="js/es5.js"></script><![endif]-->
-<script asp-src="~/TestTagPart.OrchardCore/Assets/js/jquery.min.js" at="Head"></script>
-<script asp-src="~/TestTagPart.OrchardCore/Assets/js/standalone/selectize.js" at="Head"></script>
-<script asp-src="~/TestTagPart.OrchardCore/Assets/js/index.js" at="Head"></script>
-<script asp-src="~/TestTagPart.OrchardCore/Assets/js/jqueryui.js" at="Head"></script>
-
-
 
 <fieldset class="form-group">
     <div class="form-check">
@@ -39,26 +44,19 @@
                 @T["Tags"]
             </label>*@
     </div>
-    <div ng-app="plunker">
-        <div ng-controller="MainCtrl">
-            <tags-input ng-model="tags" asp-for="Tags"></tags-input>
-            <input asp-for="Tags" value="{{tags}}" />
-            <p>Model: {{tags}}</p>
-        </div>
-    </div>
+    @*<div ng-app="plunker">
+            <div ng-controller="MainCtrl">
+                <tags-input ng-model="tags"></tags-input>
+                <input asp-for="Tags" value="{{tags}}" />
+                <p>Model: {{tags}}</p>
+            </div>
+        </div>*@
+    <label asp-for="Tags">Tags</label>
+    <br />
+    <div class="tags-input form-control" data-name="tags-input">
 
-    <div class="demo">
-        <h2>Tags</h2>
-        <div class="control-group">
-            <label for="input-tags">Tags:</label>
-            <input type="text" id="input-tags" class="demo-default form-control" value="awesome,neat">
-        </div>
-        <script at="Foot">
-            $('#input-tags').selectize({
-                persist: false,
-                createOnBlur: true,
-                create: true
-            });
-        </script>
+        @*<input class="main-input" type="text" />*@
     </div>
 </fieldset>
+
+
