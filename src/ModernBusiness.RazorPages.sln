@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Blog",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTagPart.OrchardCore", "testpart\TestTagPart.OrchardCore.csproj", "{AB4D8D86-D532-4115-B7A6-616569DA125D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Faq", "Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj", "{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Faq", "Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj", "{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.PricePlan", "Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj", "{A10F8E12-743D-4B73-AE39-CA98FD17337A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -167,6 +169,18 @@ Global
 		{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}.Release|x64.Build.0 = Release|Any CPU
 		{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}.Release|x86.ActiveCfg = Release|Any CPU
 		{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}.Release|x86.Build.0 = Release|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Debug|x64.Build.0 = Debug|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Debug|x86.Build.0 = Debug|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x64.ActiveCfg = Release|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x64.Build.0 = Release|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x86.ActiveCfg = Release|Any CPU
+		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

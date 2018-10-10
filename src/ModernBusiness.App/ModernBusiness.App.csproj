@@ -26,6 +26,7 @@
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Service\ModernBusiness.Pages.Service.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
