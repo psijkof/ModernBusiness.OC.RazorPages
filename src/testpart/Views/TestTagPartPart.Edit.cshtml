@@ -4,10 +4,11 @@
 @using TestTagPart.OrchardCore.Settings
 
 @{
-//var settings = Model.Settings;
-//var selectedTags = "Hello";/*Html.Raw(JsonConvert.SerializeObject(Model.Tags, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }));*/
-//var multiple = settings.Multiple.ToString().ToLowerInvariant();
-//var vueElementId = "Tag";
+    
+    //var settings = Model.Settings;
+    //var selectedTags = "Hello";/*Html.Raw(JsonConvert.SerializeObject(Model.Tags, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }));*/
+    //var multiple = settings.Multiple.ToString().ToLowerInvariant();
+    //var vueElementId = "Tag";
 }
 
 @*<script asp-src="/OrchardCore.ContentFields/Scripts/contentPicker.js" asp-name="contentPicker" at="Foot" depends-on="vuejs, vuemultiselect"></script>
@@ -35,7 +36,7 @@
 <fieldset class="form-group">
     <div class="form-check">
         <label class="form-check-label" asp-for="Show">
-            <input asp-for="Show" type="checkbox" class="form-check-input" />
+            <input asp-for="Show" type="checkbox" class="form-check-input"   />
             @T["Show"]
         </label>
         <br />
@@ -51,12 +52,17 @@
                 <p>Model: {{tags}}</p>
             </div>
         </div>*@
-    <label asp-for="Tags">Tags</label>
+    <label>Tags</label>
     <br />
-    <div class="tags-input form-control" data-name="tags-input">
-
-        @*<input class="main-input" type="text" />*@
+    <input id="tagin"   class="form-control" onkeypress="tagEditor()" />
+    <input id="tagout" asp-for="Tags" />
+    <div id="showTags"  class="tags-input" data-name="tags-input">
+        @*<input id="tagInput" class="main-input" asp-for="Tags" type="text" />*@
     </div>
 </fieldset>
+
+<script at="Foot">
+   // initializeTagEditor('');
+</script>
 
 
