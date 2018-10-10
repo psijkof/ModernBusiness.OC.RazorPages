@@ -3,35 +3,9 @@
 @using Newtonsoft.Json.Serialization;
 @using TestTagPart.OrchardCore.Settings
 
-@{
-    
-    //var settings = Model.Settings;
-    //var selectedTags = "Hello";/*Html.Raw(JsonConvert.SerializeObject(Model.Tags, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }));*/
-    //var multiple = settings.Multiple.ToString().ToLowerInvariant();
-    //var vueElementId = "Tag";
-}
-
-@*<script asp-src="/OrchardCore.ContentFields/Scripts/contentPicker.js" asp-name="contentPicker" at="Foot" depends-on="vuejs, vuemultiselect"></script>
-    <style asp-src="/OrchardCore.ContentFields/Styles/contentPicker.min.css" debug-src="/OrchardCore.ContentFields/Styles/contentPicker.css"></style>*@
-
 
 <style asp-src="/TestTagPart.OrchardCore/Assets/css/tags.css"></style>
-<style asp-src="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css"></style>
-<script asp-src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js" asp-name="angularJs" at="Head"></script>
-<script asp-src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js" asp-name="ngTags" at="Head"></script>
 <script asp-src="/TestTagPart.OrchardCore/Assets/tag.js" at="Foot"></script>
-<script at="Head">document.write('<base href="' + document.location + '" />');</script>
-<script at="Head">
-    var app = angular.module('plunker', ['ngTagsInput']);
-
-    app.controller('MainCtrl', function ($scope, $http) {
-        $scope.tags = [
-            { text: 'Tag1' },
-            { text: 'Tag2' },
-            { text: 'Tag3' }
-        ];
-    });
-</script>
 
 <fieldset class="form-group">
     <div class="form-check">
@@ -40,30 +14,15 @@
             @T["Show"]
         </label>
         <br />
-        @*<label class="form-check-label" asp-for="Tags">
-                <input asp-for="Tags" type="text" class="form-control" />
-                @T["Tags"]
-            </label>*@
     </div>
-    @*<div ng-app="plunker">
-            <div ng-controller="MainCtrl">
-                <tags-input ng-model="tags"></tags-input>
-                <input asp-for="Tags" value="{{tags}}" />
-                <p>Model: {{tags}}</p>
-            </div>
-        </div>*@
+
     <label>Tags</label>
     <br />
     <input id="tagin" class="form-control" onkeypress="tagEditor()" />
     <input id="tagout" asp-for="Tags" type="hidden"/>
     <div id="showTags"  class="tags-input" data-name="tags-input">
-        @*<input id="tagInput" class="main-input" asp-for="Tags" type="text" />*@
     </div>
 </fieldset>
-
-@{ 
-    
-}
 
 <script at="Foot">
     existingTags('@Model.Tags');
