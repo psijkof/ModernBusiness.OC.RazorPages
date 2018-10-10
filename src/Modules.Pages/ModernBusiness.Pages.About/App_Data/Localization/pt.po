@@ -1,0 +1,3 @@
+﻿msgctxt "ModernBusiness.Pages.About.Pages.About"
+msgid "About Modern Business"
+msgstr "Sobre negocios modernos"
