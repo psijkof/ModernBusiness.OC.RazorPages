@@ -3746,6 +3746,7 @@
           }
         },
         {
+          "Id":  2,
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
           "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
           "ContentType": "PricePlan",
@@ -3841,6 +3842,7 @@
           }
         },
         {
+          "Id": 1,
           "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
           "ContentItemVersionId": "4a03sp6vq03dw73v8w835m6fwp",
           "ContentType": "PricePlan",
@@ -3936,6 +3938,7 @@
           }
         },
         {
+          "Id": 0,
           "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
           "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
           "ContentType": "PricePlan",
