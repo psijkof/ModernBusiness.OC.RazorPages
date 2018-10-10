@@ -54,15 +54,19 @@
         </div>*@
     <label>Tags</label>
     <br />
-    <input id="tagin"   class="form-control" onkeypress="tagEditor()" />
-    <input id="tagout" asp-for="Tags" />
+    <input id="tagin" class="form-control" onkeypress="tagEditor()" />
+    <input id="tagout" asp-for="Tags" type="hidden"/>
     <div id="showTags"  class="tags-input" data-name="tags-input">
         @*<input id="tagInput" class="main-input" asp-for="Tags" type="text" />*@
     </div>
 </fieldset>
 
+@{ 
+    
+}
+
 <script at="Foot">
-   // initializeTagEditor('');
+    existingTags('@Model.Tags');
 </script>
 
 

@@ -8,12 +8,71 @@
 //  ];
 //});
 // @ts-check
+var tags = [];
+var showTags = document.getElementById('showTags');
+var tagOut = document.getElementById('tagout');
 
-function tagEditor() {
-    var tags = [];
+function existingTags(modelTags) {
+    if (modelTags.length > 0) {
+        var tagArray = modelTags.split(',');
+        for (var i = 0; i < tagArray.length; i++) {
+            addTag(tagArray[i]);
+        }
+    }
+    //if (tagArray.length > 0) {
+    //    tagArray.forEach(function (t) {
+    //        addTag(t)
+    //        console.log(t);
+    //    }); 
+    //}
+}
+
+function addTag(text) {
+    let tag = {
+        text: text,
+        element: document.createElement('span')
+    };
+
+    tag.element.classList.add('tag');
+    tag.element.textContent = tag.text;
+
+    let closeBtn = document.createElement('span');
+    closeBtn.classList.add('close');
+    closeBtn.addEventListener('click', function () {
+        removeTag(tags.indexOf(tag));
+    });
+    tag.element.appendChild(closeBtn);
+
+    tags.push(tag);
+    //console.log(tags);
+    showTags.appendChild(tag.element)
+    tagOut.setAttribute('value', tagOut.getAttribute('value') + ' ' + tag.text);
+
+    refreshTags();
+}
+
+function removeTag(index) {
+    let tag = tags[index];
+    tags.splice(index, 1)
+    showTags.removeChild(tag.element);
+
+    refreshTags();
+}
+
+
+function refreshTags() {
+    let tagsList = [];
+    tags.forEach(function (t) {
+        tagsList.push(t.text);
+    });
+    var value = tagsList.join(',');
+    tagOut.setAttribute('value', value);
+    console.log(tagsList);
+}
+
+function tagEditor() { 
     var input = document.getElementById('tagin');
-    var showTags = document.getElementById('showTags');
-    var tagOut = document.getElementById('tagout');
+
     var tag = input.value;
     if (tag.includes(',')) {
         tag = tag.replace(',', '');
@@ -21,35 +80,6 @@ function tagEditor() {
         input.value = "";
         addTag(tag);
     }
-
-    function addTag(text) {
-        let tag = {
-            text: text,
-            element: document.createElement('span')
-        };
-
-        tag.element.classList.add('tag');
-        tag.element.textContent = tag.text;
-
-        let closeBtn = document.createElement('span');
-        closeBtn.classList.add('close');
-        closeBtn.addEventListener('click', function () {
-            removeTag(tags.indexOf(tag));
-        });
-        tag.element.appendChild(closeBtn);
-
-        tags.push(tag.text);
-
-        showTags.appendChild(tag.element)
-        tagOut.setAttribute('value', tagOut.getAttribute('value') + tag.text);
-    }
-
-    function removeTag(index) {
-        let tag = tags[index];
-        tags.splice(index, 1)
-        showTags.removeChild(tag.element);
-    }
-
 }
 
 //    let enteredTags =  .value.split(',');
