@@ -78,6 +78,7 @@
         "ModernBusiness.Pages.Service",
         "ModernBusiness.Pages.Blog",
         "ModernBusiness.Pages.Faq",
+        "TestTagPart.OrchardCore",
 
         // Themes
         "ModernBusiness.Theme",
@@ -217,6 +218,13 @@
               "Name": "TitlePart",
               "Settings": {
                 "Position": "0"
+              }
+            },
+            {
+              "PartName": "TestTagPartPart",
+              "Name": "TestTagPartPart",
+              "Settings": {
+                "Position": "1"
               }
             }
           ]
@@ -2191,6 +2199,14 @@
               }
             }
           ]
+        },
+        {
+          "Name": "TestTagPartPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a TestTagPart part for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
         }
       ]
     },
@@ -3730,6 +3746,7 @@
           }
         },
         {
+          "Id":  2,
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
           "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
           "ContentType": "PricePlan",
@@ -3825,6 +3842,7 @@
           }
         },
         {
+          "Id": 1,
           "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
           "ContentItemVersionId": "4a03sp6vq03dw73v8w835m6fwp",
           "ContentType": "PricePlan",
@@ -3920,6 +3938,7 @@
           }
         },
         {
+          "Id": 0,
           "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
           "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
           "ContentType": "PricePlan",
@@ -4189,6 +4208,10 @@
           },
           "HtmlBodyPart": {
             "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          },
+          "TestTagPartPart": {
+            "Show": true,
+            "Tags": "show,another"
           }
         },
         {
