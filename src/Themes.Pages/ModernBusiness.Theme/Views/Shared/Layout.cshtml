@@ -33,7 +33,6 @@
     <main role="main" class="container">
         @RenderSection("Messages", required: false)
         @RenderBody()
-        <shape Type="languageselection" />
     </main>
     <footer class="py-5 bg-dark">
         <cache expires-after="@cacheDuration">
@@ -42,6 +41,8 @@
             }
             @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
         </cache>
+        <shape Type="languageselection" />
+
         <resources type="FootScript" />
         <!-- Bootstrap core JavaScript from theme layout-->
         <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
