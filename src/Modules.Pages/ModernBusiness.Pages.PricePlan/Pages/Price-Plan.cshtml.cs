@@ -24,7 +24,7 @@ namespace ModernBusiness.Pages.PricePlan
         public async void OnGet()
         {
             Pricing = (await _orchard.GetRecentContentItemsByContentTypeAsync("Pricing")).SingleOrDefault();
-            PriceList =await _orchard.GetRecentContentItemsByContentTypeAsync("PricePlan");
+            PriceList = await _orchard.GetRecentContentItemsByContentTypeAsync("PricePlan");
         }
     }
 }

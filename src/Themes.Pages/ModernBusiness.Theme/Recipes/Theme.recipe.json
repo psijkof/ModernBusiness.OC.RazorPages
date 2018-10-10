@@ -78,6 +78,7 @@
         "ModernBusiness.Pages.Service",
         "ModernBusiness.Pages.Blog",
         "ModernBusiness.Pages.Faq",
+        "ModernBusiness.Pages.PricePlan",
         "TestTagPart.OrchardCore",
 
         // Themes
@@ -3746,20 +3747,20 @@
           }
         },
         {
-          "Id":  2,
-          "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-          "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
+          "Id": 0,
+          "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
+          "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
           "ContentType": "PricePlan",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
-          "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
-          "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
+          "ModifiedUtc": "2018-09-14T17:30:38.9627564Z",
+          "PublishedUtc": "2018-09-14T17:30:38.9741722Z",
+          "CreatedUtc": "2018-09-14T16:42:55.2876489Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
             "Price": {
-              "Text": "$159.99"
+              "Text": "$19.99"
             }
           },
           "ListPart": {
@@ -3767,7 +3768,7 @@
             "FeedItemsCount": 20
           },
           "TitlePart": {
-            "Title": "Ultra"
+            "Title": "Basic"
           },
           "ContainedPart": {
             "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3777,19 +3778,19 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
+                "ContentItemId": "4haed1cn6fq9c686493v00jbn3",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
+                "ModifiedUtc": "2018-09-14T17:30:38.9673719Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Something"
+                  "Title": "Feature 1"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3798,19 +3799,19 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "440m59re7qx636870txmfhj6x8",
+                "ContentItemId": "4y1k71s9pfaqd0dta8agwhhgcq",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
+                "ModifiedUtc": "2018-09-14T17:30:38.9694275Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Bla bla"
+                  "Title": "Feature 2"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3819,19 +3820,19 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
+                "ContentItemId": "48hezb5vkxcf4rkrwehmxzxedm",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
+                "ModifiedUtc": "2018-09-14T17:30:38.9710097Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "foo"
+                  "Title": "Feature 3"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3842,7 +3843,6 @@
           }
         },
         {
-          "Id": 1,
           "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
           "ContentItemVersionId": "4a03sp6vq03dw73v8w835m6fwp",
           "ContentType": "PricePlan",
@@ -3937,21 +3937,21 @@
             ]
           }
         },
+
         {
-          "Id": 0,
-          "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
-          "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
+          "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+          "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
           "ContentType": "PricePlan",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-09-14T17:30:38.9627564Z",
-          "PublishedUtc": "2018-09-14T17:30:38.9741722Z",
-          "CreatedUtc": "2018-09-14T16:42:55.2876489Z",
+          "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
+          "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
+          "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
             "Price": {
-              "Text": "$19.99"
+              "Text": "$159.99"
             }
           },
           "ListPart": {
@@ -3959,7 +3959,7 @@
             "FeedItemsCount": 20
           },
           "TitlePart": {
-            "Title": "Basic"
+            "Title": "Ultra"
           },
           "ContainedPart": {
             "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3969,19 +3969,19 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4haed1cn6fq9c686493v00jbn3",
+                "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:30:38.9673719Z",
+                "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Feature 1"
+                  "Title": "Something"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3990,19 +3990,19 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4y1k71s9pfaqd0dta8agwhhgcq",
+                "ContentItemId": "440m59re7qx636870txmfhj6x8",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:30:38.9694275Z",
+                "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Feature 2"
+                  "Title": "Bla bla"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4011,19 +4011,19 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "48hezb5vkxcf4rkrwehmxzxedm",
+                "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:30:38.9710097Z",
+                "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Feature 3"
+                  "Title": "foo"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
