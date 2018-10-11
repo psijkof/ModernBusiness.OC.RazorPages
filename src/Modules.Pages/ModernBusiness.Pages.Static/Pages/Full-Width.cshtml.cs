@@ -23,6 +23,7 @@ namespace ModernBusiness.Pages.Static
         public async void OnGet()
         {
             HeaderInfo = await _orchardCore.GetContentItemByAliasAsync("alias:fullwidth");
+
         }
     }
 }
