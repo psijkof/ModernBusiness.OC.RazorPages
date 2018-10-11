@@ -20,7 +20,7 @@
             //var index = pairsIndexVal.Single(e => e.Value.ContentItemId == pricing.ContentItemId).Index;
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h3 class="card-header @((bool)pricing.Content.PricePlan.Recommended.Value ? "bg-primary text-white" : "") ">@pricing.Content.TitlePart.Title</h3>
+                    <h3 class="card-header @(pricing.Content.PricePlan.Recommended?.Value != null && (bool)pricing.Content.PricePlan.Recommended?.Value ? "bg-primary text-white" : "") ">@pricing.Content.TitlePart.Title</h3>
                     <div class="card-body">
                         <div class="display-4">@pricing.Content.PricePlan.Price.Text</div>
                         <div class="font-italic">@T["per month"]</div>

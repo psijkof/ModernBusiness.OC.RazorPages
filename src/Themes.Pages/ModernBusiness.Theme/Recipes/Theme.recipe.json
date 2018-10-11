@@ -2858,10 +2858,11 @@
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 0
           },
-          "SubtitlePart": { "Subtitle": { "Text": "Project One subheading" } },
+          "SubtitlePart": {
+            "Subtitle": { "Text": "Project One subheading" }
+          },
           "AutoroutePart": {
-            "Path": "portfolio/project-one",
-            "SetHomepage": false
+            "Path": "portfolio/project-one"
           }
         },
         {
@@ -2888,10 +2889,11 @@
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 1
           },
-          "SubtitlePart": { "Subtitle": { "Text": "Project Two subheading" } },
+          "SubtitlePart": {
+            "Subtitle": { "Text": "Project Two subheading" }
+          },
           "AutoroutePart": {
-            "Path": "portfolio/project-two",
-            "SetHomepage": false
+            "Path": "portfolio/project-two"
           }
         },
         {
@@ -2927,8 +2929,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "portfolio/project-three",
-            "SetHomepage": false
+            "Path": "portfolio/project-three"
           }
         },
         {
@@ -2964,8 +2965,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "portfolio/project-four",
-            "SetHomepage": false
+            "Path": "portfolio/project-four"
           }
         },
         {
@@ -3001,8 +3001,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "portfolio/project-five",
-            "SetHomepage": false
+            "Path": "portfolio/project-five"
           }
         },
         {
@@ -3030,10 +3029,13 @@
             "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 5
           },
-          "SubtitlePart": { "Subtitle": { "Text": "Project Six subheading" } },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Six subheading"
+            }
+          },
           "AutoroutePart": {
-            "Path": "portfolio/project-six",
-            "SetHomepage": false
+            "Path": "portfolio/project-six"
           },
           "TitlePart": { "Title": "Project Six" }
         },
@@ -3974,6 +3976,7 @@
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
           "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
           "ContentType": "PricePlan",
+          "DisplayName": "Basic",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
@@ -3983,7 +3986,7 @@
           "Author": "admin",
           "PricePlan": {
             "Price": {
-              "Text": "$159.99"
+              "Text": "$19.99"
             }
           },
           "ListPart": {
@@ -3991,7 +3994,7 @@
             "FeedItemsCount": 20
           },
           "TitlePart": {
-            "Title": "Ultra"
+            "Title": "Basic"
           },
           "ContainedPart": {
             "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4013,7 +4016,7 @@
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Something"
+                  "Title": "Single node instance"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4034,7 +4037,7 @@
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Bla bla"
+                  "Title": "Best for light workloads"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4055,7 +4058,7 @@
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "foo"
+                  "Title": "Standard office hours support"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4181,8 +4184,7 @@
           "Author": "admin",
           "Blog": {},
           "AutoroutePart": {
-            "Path": "blog-home",
-            "SetHomepage": false
+            "Path": "blog-home"
           },
           "ListPart": {
             "FeedProxyUrl": null,
@@ -4218,8 +4220,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/blogpost-4",
-            "SetHomepage": false
+            "Path": "blog/blogpost-4"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4266,8 +4267,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/blog-3",
-            "SetHomepage": false
+            "Path": "blog/blog-3"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4310,8 +4310,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/Blogpost-2",
-            "SetHomepage": false
+            "Path": "blog/Blogpost-2"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4354,8 +4353,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/Blogpost-1",
-            "SetHomepage": false
+            "Path": "blog/Blogpost-1"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"

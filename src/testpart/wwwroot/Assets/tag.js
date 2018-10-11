@@ -5,13 +5,13 @@ var showTags = document.getElementById('showTags');
 var tagOut = document.getElementById('tagout');
 
 function existingTags(modelTags) {
+    console.log(modelTags);
     if (modelTags.length > 0) {
-        var tagArray = modelTags.split(',');
+        var tagArray = modelTags.split(' ');
         for (var i = 0; i < tagArray.length; i++) {
             addTag(tagArray[i]);
         }
     }
-
 }
 
 function addTag(text) {
@@ -32,8 +32,8 @@ function addTag(text) {
 
     tags.push(tag);
     showTags.appendChild(tag.element)
-    tagOut.setAttribute('value', tagOut.getAttribute('value') + ' ' + tag.text);
-
+    
+    //tagOut.setAttribute('value', tagOut.getAttribute('value') + tag.text);
     refreshTags();
 }
 
@@ -51,7 +51,7 @@ function refreshTags() {
     tags.forEach(function (t) {
         tagsList.push(t.text);
     });
-    var value = tagsList.join(',');
+    var value = tagsList.join();
     tagOut.setAttribute('value', value);
     console.log(tagsList);
 }
