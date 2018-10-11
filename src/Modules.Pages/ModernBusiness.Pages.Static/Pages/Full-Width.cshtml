@@ -1,0 +1,13 @@
+﻿@page
+@model Full_WidthModel
+@{
+}
+<!-- Page Heading/Breadcrumbs -->
+@section Header  {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.HeaderInfo" />
+}
+<p>
+    @Html.Raw(Model.HeaderInfo.Content.HtmlBodyPart.Html)
+    <a href="@Model.HeaderInfo.Content.RawContent.Link.Url">@Model.HeaderInfo.Content.RawContent.Link.Text</a>.
+</p>
+

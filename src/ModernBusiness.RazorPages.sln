@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTagPart.OrchardCore", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Faq", "Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj", "{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.PricePlan", "Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj", "{A10F8E12-743D-4B73-AE39-CA98FD17337A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.PricePlan", "Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj", "{A10F8E12-743D-4B73-AE39-CA98FD17337A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Static", "Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj", "{0916D910-0DBA-4189-B440-73AB6E75BA41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -181,6 +183,18 @@ Global
 		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x64.Build.0 = Release|Any CPU
 		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x86.ActiveCfg = Release|Any CPU
 		{A10F8E12-743D-4B73-AE39-CA98FD17337A}.Release|x86.Build.0 = Release|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Debug|x64.Build.0 = Debug|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Debug|x86.Build.0 = Debug|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Release|x64.ActiveCfg = Release|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Release|x64.Build.0 = Release|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Release|x86.ActiveCfg = Release|Any CPU
+		{0916D910-0DBA-4189-B440-73AB6E75BA41}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

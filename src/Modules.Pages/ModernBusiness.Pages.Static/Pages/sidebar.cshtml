@@ -1,0 +1,26 @@
+﻿@page
+@model sidebarModel
+@{
+    var mainMenu = await Orchard.GetContentItemByAliasAsync("alias:main-menu");
+}
+
+<!-- Page Heading/Breadcrumbs -->
+@section Header  {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.SideBarInfo" />
+}
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-lg-3 mb-4">
+        <div class="list-group">
+            <a class="list-group-item" href="@Url.Content("~/")">Home</a>
+            <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/LinkList.cshtml" model="mainMenu.Content.MenuItemsListPart.MenuItems" />
+        </div>
+    </div>
+    <!-- Content Column -->
+    <div class="col-lg-9 mb-4">
+        @Html.Raw(Model.SideBarInfo.Content.HtmlBodyPart.Html)
+    </div>
+</div>
+<!-- /.row -->

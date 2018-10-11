@@ -79,6 +79,7 @@
         "ModernBusiness.Pages.Blog",
         "ModernBusiness.Pages.Faq",
         "ModernBusiness.Pages.PricePlan",
+        "ModernBusiness.Pages.Static",
         "TestTagPart.OrchardCore",
 
         // Themes
@@ -2735,7 +2736,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Full Width Page",
-                        "Url": null
+                        "Url": "~/full-width"
                       }
                     },
                     {
@@ -2748,7 +2749,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Sidebar Page",
-                        "Url": null
+                        "Url": "~/sidebar"
                       }
                     },
                     {
@@ -3937,7 +3938,6 @@
             ]
           }
         },
-
         {
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
           "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
@@ -4502,6 +4502,64 @@
           "MarkdownBodyPart": { "Markdown": "## Ready for your next awesome app?\r\n" },
           "SubtitlePart": { "Subtitle": { "Text": "Get in touch with us!" } },
           "TitlePart": { "Title": "Call To Action Homepage" },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ypv1memvn21vrab9hrf19penk",
+          "ContentItemVersionId": "48s438dhkd503zgv0qb3dsfdmy",
+          "ContentType": "RawContent",
+          "DisplayText": "Full width page",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-03T12:55:22.1657273Z",
+          "PublishedUtc": "2018-10-03T12:55:22.1903799Z",
+          "CreatedUtc": "2018-10-03T10:43:33.7566572Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": { "Paths": [] },
+            "Link": {
+              "Url": "http://startbootstrap.com/template-categories/unstyled",
+              "Text": "http://startbootstrap.com/template-categories/unstyled"
+            }
+          },
+          "AliasPart": { "Alias": "fullwidth" },
+          "HtmlBodyPart": { "Html": "Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at" },
+          "MarkdownBodyPart": { "Markdown": null },
+          "SubtitlePart": { "Subtitle": { "Text": "Pages examples" } },
+          "TitlePart": { "Title": "Full width page" },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ypv1mfmvn21vrab9hrf19penk",
+          "ContentItemVersionId": "48s438dhkd513zgv0qb3dsfdmy",
+          "ContentType": "RawContent",
+          "DisplayText": "Sidebar page",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-03T12:55:22.1657273Z",
+          "PublishedUtc": "2018-10-03T12:55:22.1903799Z",
+          "CreatedUtc": "2018-10-03T10:43:33.7566572Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": { "Paths": [] },
+            "Link": {
+              "Url": null,
+              "Text": null
+            }
+          },
+          "AliasPart": { "Alias": "sidebar" },
+          "HtmlBodyPart": { "Html": "<h2>Section Heading</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>" },
+          "MarkdownBodyPart": { "Markdown": null },
+          "SubtitlePart": { "Subtitle": { "Text": "Pages examples" } },
+          "TitlePart": { "Title": "Sidebar Page" },
           "ContainedPart": {
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0
