@@ -7,7 +7,7 @@ var tagOut = document.getElementById('tagout');
 function existingTags(modelTags) {
     console.log(modelTags);
     if (modelTags.length > 0) {
-        var tagArray = modelTags.split(' ');
+        var tagArray = modelTags.split(',');
         for (var i = 0; i < tagArray.length; i++) {
             addTag(tagArray[i]);
         }
