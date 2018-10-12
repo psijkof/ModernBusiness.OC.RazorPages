@@ -3,32 +3,24 @@
     var blogPosts = (await Orchard.GetRecentContentItemsByContentTypeAsync("BLogPost"));
     var tags = "";
 
-    var blogQ = (await Orchard.ContentQueryAsync("BlogPosts")).ToList();
-}
+    foreach (var item in blogPosts)
+    {
+        tags += item.Content.TestTagPartPart.Tags + ',';
+    }
 
-@foreach (var item in blogPosts)
-{
-    tags += item.Content.TestTagPartPart.Tags + ',';
-}
-
-@{ 
     var tagArray = tags.Split(',');
 }
 
-@foreach (var item in blogQ)
-{
-    @item.Content.TestTagPartPart.Tags;
-}
 <div class="card my-4">
     <h5 class="card-header">Categories</h5>
     <div class="card-body">
         <div class="row">
-            @foreach (var tag in tagArray)
-             {
+            @foreach (var tag in tagArray.Distinct())
+            {
                 <div class="col-lg-6">
                     <a href="#">@tag</a>
                 </div>
-             }
+            }
         </div>
     </div>
 </div>
