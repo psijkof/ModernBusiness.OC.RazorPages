@@ -2,6 +2,8 @@
 @{
     var blogPosts = (await Orchard.GetRecentContentItemsByContentTypeAsync("BLogPost"));
     var tags = "";
+
+    var blogQ = (await Orchard.ContentQueryAsync("BlogPosts")).ToList();
 }
 
 @foreach (var item in blogPosts)
@@ -11,6 +13,11 @@
 
 @{ 
     var tagArray = tags.Split(',');
+}
+
+@foreach (var item in blogQ)
+{
+    @item.Content.TestTagPartPart.Tags;
 }
 <div class="card my-4">
     <h5 class="card-header">Categories</h5>

@@ -12,6 +12,8 @@ using TestTagPart.OrchardCore.Handlers;
 using TestTagPart.OrchardCore.Models;
 using TestTagPart.OrchardCore.Settings;
 using OrchardCore.Modules;
+using OrchardCore.Indexing;
+using TestTagPart.OrchardCore.Indexing;
 
 namespace TestTagPart.OrchardCore
 {
@@ -22,6 +24,7 @@ namespace TestTagPart.OrchardCore
             services.AddScoped<IContentPartDisplayDriver, TestTagPartPartDisplayDriver>();
             services.AddSingleton<ContentPart, TestTagPartPart>();
             services.AddScoped<IContentPartDefinitionDisplayDriver, TestTagPartPartSettingsDisplayDriver>();
+			services.AddScoped<IContentPartIndexHandler, TestTagPartIndexHandler>();
             services.AddScoped<IDataMigration, Migrations>();
             services.AddScoped<IContentPartHandler, TestTagPartPartHandler>();
         }

@@ -8,18 +8,10 @@
 <script asp-src="/TestTagPart.OrchardCore/Assets/tag.js" at="Foot"></script>
 
 <fieldset class="form-group">
-    <div class="form-check">
-        <label class="form-check-label" asp-for="Show">
-            <input asp-for="Show" type="checkbox" class="form-check-input"   />
-            @T["Show"]
-        </label>
-        <br />
-    </div>
-
     <label>Tags</label>
     <br />
     <input id="tagin" class="form-control" onkeypress="tagEditor()" />
-    <input id="tagout" asp-for="Tags" />
+    <input id="tagout" asp-for="Tags" type="hidden"/>
     <div id="showTags"  class="tags-input" data-name="tags-input">
     </div>
 </fieldset>
