@@ -1,0 +1,5 @@
+﻿msgctxt "ModernBusiness.Pages.PricePlan.Pages.Price-Plan"
+msgid "per month"
+msgstr "por mês"
+msgid "Sign Up!"
+msgstr "Registe Agora!"

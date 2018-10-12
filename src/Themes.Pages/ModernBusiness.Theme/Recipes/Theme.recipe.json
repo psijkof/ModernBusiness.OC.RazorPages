@@ -7,7 +7,7 @@
   "version": "2.0",
   "issetuprecipe": true,
   "categories": [ "default" ],
-  "tags": [ "blog" ],
+  "tags": [ "modularapp" ],
 
   // The variables are evaluated the first time they are accessed, and reused across steps
   "variables": {
@@ -22,10 +22,9 @@
       "disable": [],
       "enable": [
         // SaaS
-        "OrchardCore.Mvc",
-        "OrchardCore.HomeRoute",
-        "OrchardCore.Admin",
         "OrchardCore.Commons",
+        "OrchardCore.Mvc",
+        "OrchardCore.Admin",
         "OrchardCore.Diagnostics",
         "OrchardCore.DynamicCache",
         "OrchardCore.Features",
@@ -58,6 +57,7 @@
         "OrchardCore.Lucene",
         "OrchardCore.Lists",
         "OrchardCore.Liquid",
+        "OrchardCore.Localization",
         "OrchardCore.Markdown",
         "OrchardCore.Media",
         "OrchardCore.Menu",
@@ -76,12 +76,24 @@
         "ModernBusiness.Pages.About",
         "ModernBusiness.Pages.Service",
         "ModernBusiness.Pages.Blog",
+        "ModernBusiness.Pages.Faq",
+        "ModernBusiness.Pages.PricePlan",
+        "ModernBusiness.Pages.Static",
+        "TestTagPart.OrchardCore",
 
         // Themes
         "ModernBusiness.Theme",
         "TheAdmin",
         "SafeMode"
       ]
+    },
+    {
+      "name": "Settings",
+      "HomeRoute": {}
+      //"SupportedCultures": [
+      //  "en",
+      //  "pt"
+      //]
     },
     {
       "name": "themes",
@@ -208,6 +220,13 @@
               "Name": "TitlePart",
               "Settings": {
                 "Position": "0"
+              }
+            },
+            {
+              "PartName": "TestTagPartPart",
+              "Name": "TestTagPartPart",
+              "Settings": {
+                "Position": "1"
               }
             }
           ]
@@ -1108,6 +1127,13 @@
           },
           "ContentTypePartDefinitionRecords": [
             {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
               "PartName": "Pricing",
               "Name": "Pricing",
               "Settings": {
@@ -1134,13 +1160,6 @@
               "Name": "SubtitlePart",
               "Settings": {
                 "Position": "2"
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "Position": "0"
               }
             },
             {
@@ -2129,6 +2148,25 @@
                 },
                 "Position": "0"
               }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "Recommended",
+              "Settings": {
+                "DisplayName": "Recommended",
+                "Editor": "Switch",
+                "Hint": "Select this is you want to highlight the plan",
+                "Label": "Recommended",
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
             }
           ]
         },
@@ -2182,6 +2220,14 @@
               }
             }
           ]
+        },
+        {
+          "Name": "TestTagPartPart",
+          "Settings": {
+            "Attachable": "True",
+            "Description": "Provides a TestTagPart part for your content item."
+          },
+          "ContentPartFieldDefinitionRecords": []
         }
       ]
     },
@@ -2642,7 +2688,7 @@
                 "Author": "admin",
                 "LinkMenuItemPart": {
                   "Name": "Blog",
-                  "Url": "null"
+                  "Url": null
                 },
                 "MenuItemsListPart": {
                   "MenuItems": [
@@ -2709,7 +2755,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Full Width Page",
-                        "Url": null
+                        "Url": "~/full-width"
                       }
                     },
                     {
@@ -2722,7 +2768,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "Sidebar Page",
-                        "Url": null
+                        "Url": "~/sidebar"
                       }
                     },
                     {
@@ -2809,13 +2855,14 @@
           },
           "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!" },
           "ContainedPart": {
-            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 0
           },
-          "SubtitlePart": { "Subtitle": { "Text": "Project One subheading" } },
+          "SubtitlePart": {
+            "Subtitle": { "Text": "Project One subheading" }
+          },
           "AutoroutePart": {
-            "Path": "portfolio/project-one",
-            "SetHomepage": false
+            "Path": "portfolio/project-one"
           }
         },
         {
@@ -2839,13 +2886,14 @@
           },
           "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae." },
           "ContainedPart": {
-            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 1
           },
-          "SubtitlePart": { "Subtitle": { "Text": "Project Two subheading" } },
+          "SubtitlePart": {
+            "Subtitle": { "Text": "Project Two subheading" }
+          },
           "AutoroutePart": {
-            "Path": "portfolio/project-two",
-            "SetHomepage": false
+            "Path": "portfolio/project-two"
           }
         },
         {
@@ -2881,8 +2929,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "portfolio/project-three",
-            "SetHomepage": false
+            "Path": "portfolio/project-three"
           }
         },
         {
@@ -2918,8 +2965,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "portfolio/project-four",
-            "SetHomepage": false
+            "Path": "portfolio/project-four"
           }
         },
         {
@@ -2955,8 +3001,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "portfolio/project-five",
-            "SetHomepage": false
+            "Path": "portfolio/project-five"
           }
         },
         {
@@ -2981,13 +3026,16 @@
           },
           "HtmlBodyPart": { "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!" },
           "ContainedPart": {
-            "ListContentItemId": "4h9n7p4aqy80s3m9agtcptjk43",
+            "ListContentItemId": "[js: variables('portfolioContentItemId')]",
             "Order": 5
           },
-          "SubtitlePart": { "Subtitle": { "Text": "Project Six subheading" } },
+          "SubtitlePart": {
+            "Subtitle": {
+              "Text": "Project Six subheading"
+            }
+          },
           "AutoroutePart": {
-            "Path": "portfolio/project-six",
-            "SetHomepage": false
+            "Path": "portfolio/project-six"
           },
           "TitlePart": { "Title": "Project Six" }
         },
@@ -3722,18 +3770,22 @@
         },
         {
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-          "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
+          "ContentItemVersionId": "4g5g5dk7re5np6k1ehw857w5mn",
           "ContentType": "PricePlan",
+          "DisplayText": "Ultra",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
-          "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
+          "ModifiedUtc": "2018-10-11T11:01:41.3050236Z",
+          "PublishedUtc": "2018-10-11T11:01:41.3344359Z",
           "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
             "Price": {
               "Text": "$159.99"
+            },
+            "Recommended": {
+              "Value": false
             }
           },
           "ListPart": {
@@ -3751,19 +3803,20 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
+                "ContentItemId": "4d704sj8yym2m4rc07bh0annwr",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "Fully redundant",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
+                "ModifiedUtc": "2018-10-11T11:01:41.3171109Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Something"
+                  "Title": "Fully redundant"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3772,19 +3825,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "440m59re7qx636870txmfhj6x8",
+                "ContentItemId": "48qwhvm7qc04zy9ettxh2fxkxe",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "99.9999% guaranteed uptime",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
+                "ModifiedUtc": "2018-10-11T11:01:41.3206753Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Bla bla"
+                  "Title": "99.9999% guaranteed uptime"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3793,19 +3847,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
+                "ContentItemId": "4vfzz6ec3p2hy3gxt9aa6p29mz",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "24/7 support",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
+                "ModifiedUtc": "2018-10-11T11:01:41.3237116Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "foo"
+                  "Title": "24/7 support"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3817,18 +3872,22 @@
         },
         {
           "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
-          "ContentItemVersionId": "4a03sp6vq03dw73v8w835m6fwp",
+          "ContentItemVersionId": "4qpv1g0exmrnzrrkpesdarek4c",
           "ContentType": "PricePlan",
+          "DisplayText": "Plus",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-09-14T17:22:29.406972Z",
-          "PublishedUtc": "2018-09-14T17:22:29.4191243Z",
+          "ModifiedUtc": "2018-10-11T11:02:32.2092065Z",
+          "PublishedUtc": "2018-10-11T11:02:32.2307071Z",
           "CreatedUtc": "2018-09-14T16:44:27.3145451Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
             "Price": {
               "Text": "$39.99"
+            },
+            "Recommended": {
+              "Value": true
             }
           },
           "ListPart": {
@@ -3846,19 +3905,20 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4nqfwj6zkzefh35jg8yy6xfcxy",
+                "ContentItemId": "4t8nznx79r5b22rans21x48mnq",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "Redundant, 2 nodes",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:29.4121293Z",
+                "ModifiedUtc": "2018-10-11T11:02:32.2196018Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "wow"
+                  "Title": "Redundant, 2 nodes"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3867,19 +3927,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "42gtcfqswcnc829z0bq313bj5k",
+                "ContentItemId": "4nzxbc7y83dmkr8xpywfqs58xr",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "High uptime",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:29.4140812Z",
+                "ModifiedUtc": "2018-10-11T11:02:32.2220786Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "amazing"
+                  "Title": "High uptime"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3888,19 +3949,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4gnckn7vhnky6t14jqrqc4174h",
+                "ContentItemId": "4crvnndp6dnn54fvx130ew0m54",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "Priority support",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:29.4161238Z",
+                "ModifiedUtc": "2018-10-11T11:02:32.2245446Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "wee"
+                  "Title": "Priority support"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3911,14 +3973,15 @@
           }
         },
         {
-          "ContentItemId": "4qekbssfy72f1scwk5jz5dkymx",
-          "ContentItemVersionId": "4j72cc0j1fe1w2vj8917h8hrx0",
+          "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+          "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
           "ContentType": "PricePlan",
+          "DisplayName": "Basic",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-09-14T17:30:38.9627564Z",
-          "PublishedUtc": "2018-09-14T17:30:38.9741722Z",
-          "CreatedUtc": "2018-09-14T16:42:55.2876489Z",
+          "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
+          "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
+          "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
@@ -3941,19 +4004,19 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4haed1cn6fq9c686493v00jbn3",
+                "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:30:38.9673719Z",
+                "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Feature 1"
+                  "Title": "Single node instance"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3962,19 +4025,19 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4y1k71s9pfaqd0dta8agwhhgcq",
+                "ContentItemId": "440m59re7qx636870txmfhj6x8",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:30:38.9694275Z",
+                "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Feature 2"
+                  "Title": "Best for light workloads"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3983,19 +4046,19 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "48hezb5vkxcf4rkrwehmxzxedm",
+                "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:30:38.9710097Z",
+                "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Feature 3"
+                  "Title": "Standard office hours support"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4121,8 +4184,7 @@
           "Author": "admin",
           "Blog": {},
           "AutoroutePart": {
-            "Path": "blog-home",
-            "SetHomepage": false
+            "Path": "blog-home"
           },
           "ListPart": {
             "FeedProxyUrl": null,
@@ -4158,8 +4220,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/blogpost-4",
-            "SetHomepage": false
+            "Path": "blog/blogpost-4"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4180,6 +4241,10 @@
           },
           "HtmlBodyPart": {
             "Html": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>\r\n\r\n          <blockquote class=\"blockquote\">\r\n            <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n            <footer class=\"blockquote-footer\">Someone famous in\r\n              <cite title=\"Source Title\">Source Title</cite>\r\n            </footer>\r\n          </blockquote>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>\r\n\r\n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>\r\n\r\n          <hr>"
+          },
+          "TestTagPartPart": {
+            "Show": true,
+            "Tags": "show,another"
           }
         },
         {
@@ -4202,8 +4267,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/blog-3",
-            "SetHomepage": false
+            "Path": "blog/blog-3"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4246,8 +4310,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/Blogpost-2",
-            "SetHomepage": false
+            "Path": "blog/Blogpost-2"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4290,8 +4353,7 @@
             }
           },
           "AutoroutePart": {
-            "Path": "blog/Blogpost-1",
-            "SetHomepage": false
+            "Path": "blog/Blogpost-1"
           },
           "MarkdownBodyPart": {
             "Markdown": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!\r\n\r\n> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.\r\n> Someone famous in *Source Title*\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!"
@@ -4470,6 +4532,64 @@
           "MarkdownBodyPart": { "Markdown": "## Ready for your next awesome app?\r\n" },
           "SubtitlePart": { "Subtitle": { "Text": "Get in touch with us!" } },
           "TitlePart": { "Title": "Call To Action Homepage" },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ypv1memvn21vrab9hrf19penk",
+          "ContentItemVersionId": "48s438dhkd503zgv0qb3dsfdmy",
+          "ContentType": "RawContent",
+          "DisplayText": "Full width page",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-03T12:55:22.1657273Z",
+          "PublishedUtc": "2018-10-03T12:55:22.1903799Z",
+          "CreatedUtc": "2018-10-03T10:43:33.7566572Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": { "Paths": [] },
+            "Link": {
+              "Url": "http://startbootstrap.com/template-categories/unstyled",
+              "Text": "http://startbootstrap.com/template-categories/unstyled"
+            }
+          },
+          "AliasPart": { "Alias": "fullwidth" },
+          "HtmlBodyPart": { "Html": "Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at" },
+          "MarkdownBodyPart": { "Markdown": null },
+          "SubtitlePart": { "Subtitle": { "Text": "Pages examples" } },
+          "TitlePart": { "Title": "Full width page" },
+          "ContainedPart": {
+            "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "4ypv1mfmvn21vrab9hrf19penk",
+          "ContentItemVersionId": "48s438dhkd513zgv0qb3dsfdmy",
+          "ContentType": "RawContent",
+          "DisplayText": "Sidebar page",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2018-10-03T12:55:22.1657273Z",
+          "PublishedUtc": "2018-10-03T12:55:22.1903799Z",
+          "CreatedUtc": "2018-10-03T10:43:33.7566572Z",
+          "Owner": "admin",
+          "Author": "admin",
+          "RawContent": {
+            "Images": { "Paths": [] },
+            "Link": {
+              "Url": null,
+              "Text": null
+            }
+          },
+          "AliasPart": { "Alias": "sidebar" },
+          "HtmlBodyPart": { "Html": "<h2>Section Heading</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>" },
+          "MarkdownBodyPart": { "Markdown": null },
+          "SubtitlePart": { "Subtitle": { "Text": "Pages examples" } },
+          "TitlePart": { "Title": "Sidebar Page" },
           "ContainedPart": {
             "ListContentItemId": "4ndyhp3h9a5ka161rr5zyvd7nz",
             "Order": 0

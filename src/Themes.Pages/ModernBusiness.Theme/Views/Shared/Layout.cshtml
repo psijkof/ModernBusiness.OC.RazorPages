@@ -1,4 +1,8 @@
 ﻿@* Based on https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/ *@
+@using OrchardCore.DisplayManagement.Shapes;
+@{
+    var cacheDuration = new TimeSpan(0, 1, 0);
+}
 <!DOCTYPE html>
 <html lang="@Orchard.CultureName()">
 <head>
@@ -13,20 +17,16 @@
     <resources type="HeadLink" />
     <resources type="Stylesheet" />
     <resources type="HeadScript" />
-
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS and Vue -->
     <link href="/ModernBusiness.Theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="/ModernBusiness.Theme/css/modern-business.css" rel="stylesheet">
 </head>
-
 <body dir="@Orchard.CultureDir()">
-    
-    <menu alias="alias:main-menu"></menu>
-
+    <cache expires-after="@cacheDuration">
+        <menu alias="alias:main-menu"></menu>
+    </cache>
     @RenderSection("Nav", required: false)
-
     <header>
         @RenderSection("Header", required: false)
     </header>
@@ -35,10 +35,13 @@
         @RenderBody()
     </main>
     <footer class="py-5 bg-dark">
-        @{
-            var footerContent = await Orchard.GetContentItemByAliasAsync("alias:footer");
-        }
-        @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
+        <cache expires-after="@cacheDuration">
+            @{
+                var footerContent = await Orchard.GetContentItemByAliasAsync("alias:footer");
+            }
+            @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
+        </cache>
+        <shape Type="languageselection" />
 
         <resources type="FootScript" />
         <!-- Bootstrap core JavaScript from theme layout-->

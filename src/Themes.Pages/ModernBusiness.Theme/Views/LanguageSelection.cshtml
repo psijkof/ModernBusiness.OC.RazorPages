@@ -1,0 +1,22 @@
+﻿@inject OrchardCore.Settings.ISiteService SiteService
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+@using System.Globalization
+
+@{
+    var settings = await SiteService.GetSiteSettingsAsync();
+}
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = settings.SupportedCultures.Select(i => new SelectListItem { Value = i, Text = CultureInfo.GetCultureInfo(i).NativeName }).ToList();
+}
+
+<div class="container ">
+    <form class="text-center" id="selectLanguage" asp-area="ModernBusiness.Theme" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post">
+        <select name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems" onchange="this.form.submit();"></select>
+    </form>
+</div>

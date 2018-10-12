@@ -4,7 +4,7 @@
 
     <!-- Post Content Column -->
     <div class="col-lg-8">
-
+        
         <!-- Preview Image -->
         <img class="img-fluid rounded" asset-src="@Model.Content.BlogPost.Image.Paths[0]" alt=""/>
 
@@ -12,7 +12,7 @@
 
         <!-- Date/Time -->
         <p>Posted on @Model.PublishedUtc</p>
-
+        
         <hr>
 
         <!-- Post Content -->
@@ -37,40 +37,8 @@
             </div>
         </div>
 
-        <!-- Categories Widget -->
-        <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#">Web Design</a>
-                            </li>
-                            <li>
-                                <a href="#">HTML</a>
-                            </li>
-                            <li>
-                                <a href="#">Freebies</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#">JavaScript</a>
-                            </li>
-                            <li>
-                                <a href="#">CSS</a>
-                            </li>
-                            <li>
-                                <a href="#">Tutorials</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/Categories.cshtml" />
+
 
         <!-- Side Widget -->
         <div class="card my-4">

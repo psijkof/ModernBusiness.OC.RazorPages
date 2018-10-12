@@ -1,0 +1,43 @@
+﻿@page
+@model Price_PlanModel
+@{
+}
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    @section Header  {
+        <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.Pricing" />
+    }
+    @{
+        // project to list with index
+        //var pairsIndexVal = Model.PriceList.Select((Value, Index) => new { Value, Index });
+    }
+    <!-- Content Row -->
+    <div class="row">
+        @foreach (var pricing in Model.PriceList)
+        {
+            //var index = pairsIndexVal.Single(e => e.Value.ContentItemId == pricing.ContentItemId).Index;
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h3 class="card-header @(pricing.Content.PricePlan.Recommended?.Value != null && (bool)pricing.Content.PricePlan.Recommended?.Value ? "bg-primary text-white" : "") ">@pricing.Content.TitlePart.Title</h3>
+                    <div class="card-body">
+                        <div class="display-4">@pricing.Content.PricePlan.Price.Text</div>
+                        <div class="font-italic">@T["per month"]</div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach (var feature in pricing.Content.BagPart.ContentItems)
+                        {
+                            <li class="list-group-item">@feature.TitlePart.Title</li>
+                        }
+                        <li class="list-group-item">
+                            <a href="~/Contact" class="btn btn-primary">@T["Sign Up!"]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->

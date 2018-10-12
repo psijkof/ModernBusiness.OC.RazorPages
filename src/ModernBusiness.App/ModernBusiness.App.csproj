@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68776" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68776" />
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68776" />
+    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68792" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68792" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68792" />
   </ItemGroup>
   
   <ItemGroup>
@@ -24,10 +24,14 @@
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.About\ModernBusiness.Pages.About.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Blog\ModernBusiness.Pages.Blog.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Service\ModernBusiness.Pages.Service.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj" />
+    <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
+    <ProjectReference Include="..\testpart\TestTagPart.OrchardCore.csproj" />
     <ProjectReference Include="..\Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj" />
   </ItemGroup>
 

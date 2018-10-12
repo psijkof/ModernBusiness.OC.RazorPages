@@ -41,7 +41,7 @@ namespace ModernBusiness.Pages.Blog.Pages
 			PagerInfo.CurrentPage = pageIndex ?? 1;
 			if (!string.IsNullOrEmpty(BlogPostTitle))
 			{
-				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle))).SingleOrDefault();
+				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle && c.Published))).SingleOrDefault();
 			}
 
 		}
