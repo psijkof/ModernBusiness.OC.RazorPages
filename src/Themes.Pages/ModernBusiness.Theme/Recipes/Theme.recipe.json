@@ -7,7 +7,7 @@
   "version": "2.0",
   "issetuprecipe": true,
   "categories": [ "default" ],
-  "tags": [ "blog" ],
+  "tags": [ "modularapp" ],
 
   // The variables are evaluated the first time they are accessed, and reused across steps
   "variables": {
@@ -22,10 +22,9 @@
       "disable": [],
       "enable": [
         // SaaS
-        "OrchardCore.Mvc",
-        "OrchardCore.HomeRoute",
-        "OrchardCore.Admin",
         "OrchardCore.Commons",
+        "OrchardCore.Mvc",
+        "OrchardCore.Admin",
         "OrchardCore.Diagnostics",
         "OrchardCore.DynamicCache",
         "OrchardCore.Features",
@@ -88,13 +87,14 @@
         "SafeMode"
       ]
     },
-    //{
-    //  "name": "Settings",
-    //  "SupportedCultures": [
-    //    "en",
-    //    "pt"
-    //  ]
-    //},
+    {
+      "name": "Settings",
+      "HomeRoute": {}
+      //"SupportedCultures": [
+      //  "en",
+      //  "pt"
+      //]
+    },
     {
       "name": "themes",
       "Admin": "TheAdmin",
