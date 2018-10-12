@@ -1127,6 +1127,13 @@
           },
           "ContentTypePartDefinitionRecords": [
             {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
               "PartName": "Pricing",
               "Name": "Pricing",
               "Settings": {
@@ -1153,13 +1160,6 @@
               "Name": "SubtitlePart",
               "Settings": {
                 "Position": "2"
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "Position": "0"
               }
             },
             {
