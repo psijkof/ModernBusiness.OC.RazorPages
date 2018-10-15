@@ -40,6 +40,7 @@ namespace ModernBusiness.Pages.Pages
             PagerInfo.CurrentItemsOnPage =
                 PagerInfo.CurrentItemsOnPage = _orchard.QueryContentItemsAsync(
                     q => q.Where(c => c.ContentType == "Project" && c.Published)
+                        //.OrderByDescending(o=>o.PublishedUtc)
                         .Skip(((pageIndex ?? 1) - 1) * PagerInfo.PageSize)
                         .Take(PagerInfo.PageSize)).GetAwaiter().GetResult();
 

@@ -15,7 +15,9 @@ namespace ModernBusiness.Pages.Shared.ViewModels
         public int CurrentPage { get; set; }
         public int PageSize { get; set; }
         public IEnumerable<ContentItem> CurrentItemsOnPage { get; set; }
-		public bool ShowPages { get; set; } = true;
+        public bool ShowPages { get; set; } = true;
+        public string ItemsContentType { get; set; }
+
         public bool HasPreviousPage
         {
             get { return CurrentPage > 1; }

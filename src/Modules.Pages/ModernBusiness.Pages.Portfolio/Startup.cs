@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
+using ModernBusiness.Pages.Shared.Services;
 using OrchardCore.Modules;
 
 namespace ModernBusiness.Pages.Portfolio
@@ -17,6 +18,7 @@ namespace ModernBusiness.Pages.Portfolio
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public override void ConfigureServices(IServiceCollection services)
         {
+
             services.Configure<RazorPagesOptions>(options =>
             {
                 options.Conventions.AddAreaFolderRoute("ModernBusiness.Pages.Portfolio", "/", "");

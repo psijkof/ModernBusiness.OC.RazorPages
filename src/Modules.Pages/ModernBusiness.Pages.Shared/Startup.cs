@@ -5,19 +5,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
+using ModernBusiness.Pages.Shared.Services;
 using OrchardCore.Modules;
 
 namespace ModernBusiness.Pages.Shared
 {
     public class Startup : StartupBase
     {
-        //public override void ConfigureServices(IServiceCollection services)
-        //{
-        //    //services.Configure<RazorPagesOptions>(options =>
-        //    //{
-        //    //    options.Conventions.AddAreaFolderRoute("ModernBusiness.Pages.Shared", "/", "");
-        //    //});
-        //    //services.AddTransient<HelperService.QueryHelper>();
-        //}
+
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddScoped<DataRetriever>();
+        }
     }
 }
