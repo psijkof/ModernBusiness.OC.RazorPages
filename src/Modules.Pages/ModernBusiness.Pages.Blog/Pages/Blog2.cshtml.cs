@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using ModernBusiness.Pages.Shared.Services;
 using ModernBusiness.Pages.Shared.ViewModels;
 using OrchardCore;
 using OrchardCore.ContentManagement;
@@ -13,32 +14,26 @@ namespace ModernBusiness.Pages.Blog.Pages
     public class Blog2Model : PageModel
     {
 		private readonly IOrchardHelper _orchard;
-		public readonly PagerInfo PagerInfo;
+		public PagerInfo PagerInfo;
 		public ContentItem Blog;
 		public dynamic BlogPostTitle { get; private set; }
 		public dynamic BlogPost;
+		private readonly DataRetriever _dataRetriever;
 
-		public Blog2Model(IOrchardHelper orchard)
+		public Blog2Model(IOrchardHelper orchard, DataRetriever dataRetriever)
 		{
 			_orchard = orchard;
-			Blog = _orchard.GetRecentContentItemsByContentTypeAsync("Blog").GetAwaiter().GetResult().SingleOrDefault();
-			PagerInfo = new PagerInfo
-			{
-				PageSize = 4,
-				ShowPages = false,
-				PageBaseUrl = "/blog2"
-			};
-
-			PagerInfo.TotalPages = (int)Math.Ceiling(_orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published))
-				.GetAwaiter().GetResult().Count() / (double)PagerInfo.PageSize);
+			_dataRetriever = dataRetriever;
 		}
 
 		public async Task OnGetAsync(int? pageIndex, string BlogPostTitle)
 		{
-			PagerInfo.CurrentItemsOnPage = await _orchard.QueryContentItemsAsync(q => q.Where(b => b.ContentType == "BlogPost" && b.Published)
-				.Skip(((pageIndex ?? 1) - 1) * PagerInfo.PageSize).Take(PagerInfo.PageSize));
 
+			Blog = await _dataRetriever.InitializeContainer("Blog");
+			PagerInfo = await _dataRetriever.InitializePager(4, "/blog2", "BlogPost", false);
 			PagerInfo.CurrentPage = pageIndex ?? 1;
+			PagerInfo.CurrentItemsOnPage = await _dataRetriever.GetCurrentPage();
+
 			if (!string.IsNullOrEmpty(BlogPostTitle))
 			{
 				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle && c.Published))).SingleOrDefault();
