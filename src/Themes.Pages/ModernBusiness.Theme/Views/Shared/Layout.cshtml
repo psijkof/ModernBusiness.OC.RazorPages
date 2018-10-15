@@ -42,7 +42,8 @@
             @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
         </cache>
         <shape Type="languageselection" />
-
+        <div class="container alert-light"><p class="text-center">User: @User.Identity.Name</p></div>
+        
         <resources type="FootScript" />
         <!-- Bootstrap core JavaScript from theme layout-->
         <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
