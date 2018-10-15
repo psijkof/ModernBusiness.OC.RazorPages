@@ -7,8 +7,14 @@
 <div class="container">
     <h1 class="mt-4 mb-3">
         @Model.DisplayText
-        
-        <small>@(Model.Content?.SubtitlePart?.Subtitle.Text ?? Model.SubTitle ?? "")</small>
+        @if (Model.Content != null)
+        {
+            <small>@(Model.Content?.SubtitlePart?.Subtitle.Text ?? "")</small>
+        }
+        else
+        {
+            <small>@(Model.SubTitle ?? "")</small>
+        }
     </h1>
     <ol class="breadcrumb">
         <li class="">
