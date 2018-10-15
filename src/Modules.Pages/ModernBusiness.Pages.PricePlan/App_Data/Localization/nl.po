@@ -1,7 +1,10 @@
-﻿msgctxt "ModernBusiness.Pages.PricePlan.Pages.Price-Plan"
+﻿msgctxt "ModernBusiness.Pages.PricePlan.Price_PlanModel"
 msgid "Prices"
 msgstr "Prijzen"
+msgid "Subheading pricing"
+msgstr "Onze huidige prijsplannen"
 
+msgctxt "ModernBusiness.Pages.PricePlan.Pages.Price-Plan"
 msgid "per month"
 msgstr "per maand"
 msgid "Sign Up!"
