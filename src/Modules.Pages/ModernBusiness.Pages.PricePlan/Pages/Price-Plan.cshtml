@@ -22,7 +22,7 @@
                 <div class="card h-100">
                     <h3 class="card-header @(pricing.Content.PricePlan.Recommended?.Value != null && (bool)pricing.Content.PricePlan.Recommended?.Value ? "bg-primary text-white" : "") ">@pricing.Content.TitlePart.Title</h3>
                     <div class="card-body">
-                        <div class="display-4">@pricing.Content.PricePlan.Price.Text</div>
+                        <div class="display-4">@($"{(pricing.Content.PricePlan.Price.Value / 100):C}")</div>
                         <div class="font-italic">@T["per month"]</div>
                     </div>
                     <ul class="list-group list-group-flush">

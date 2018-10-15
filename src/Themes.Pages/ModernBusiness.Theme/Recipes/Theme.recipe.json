@@ -2132,24 +2132,6 @@
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
-              "FieldName": "TextField",
-              "Name": "Price",
-              "Settings": {
-                "DisplayName": "Price",
-                "Editor": null,
-                "Hint": "Price for this plan",
-                "ContentIndexSettings": {
-                  "Included": true,
-                  "Stored": true,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "0"
-              }
-            },
-            {
               "FieldName": "BooleanField",
               "Name": "Recommended",
               "Settings": {
@@ -2166,6 +2148,30 @@
                   "Template": null
                 },
                 "Position": "1"
+              }
+            },
+            {
+              "FieldName": "NumericField",
+              "Name": "Price",
+              "Settings": {
+                "DisplayName": "Price",
+                "Editor": null,
+                "Hint": "The price of the plan",
+                "Required": true,
+                "Scale": 0,
+                "Minimum": null,
+                "Maximum": null,
+                "Placeholder": null,
+                "DefaultValue": null,
+                "ContentIndexSettings": {
+                  "Included": true,
+                  "Stored": true,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "0"
               }
             }
           ]
@@ -3770,19 +3776,19 @@
         },
         {
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-          "ContentItemVersionId": "4g5g5dk7re5np6k1ehw857w5mn",
+          "ContentItemVersionId": "41zrdp5zf1gbe453sz7a45694e",
           "ContentType": "PricePlan",
-          "DisplayText": "Ultra",
+          "DisplayText": "Basic",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-10-11T11:01:41.3050236Z",
-          "PublishedUtc": "2018-10-11T11:01:41.3344359Z",
+          "ModifiedUtc": "2018-10-15T11:31:30.7493576Z",
+          "PublishedUtc": "2018-10-15T11:31:30.7779717Z",
           "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
             "Price": {
-              "Text": "$159.99"
+              "Value": 1999.0
             },
             "Recommended": {
               "Value": false
@@ -3793,7 +3799,7 @@
             "FeedItemsCount": 20
           },
           "TitlePart": {
-            "Title": "Ultra"
+            "Title": "Basic"
           },
           "ContainedPart": {
             "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3803,20 +3809,20 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4d704sj8yym2m4rc07bh0annwr",
+                "ContentItemId": "45c9tgzjbzfbs3nf2yjh2f2a46",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Fully redundant",
+                "DisplayText": "Single node instance",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-10-11T11:01:41.3171109Z",
+                "ModifiedUtc": "2018-10-15T11:31:30.7669945Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Fully redundant"
+                  "Title": "Single node instance"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3825,20 +3831,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "48qwhvm7qc04zy9ettxh2fxkxe",
+                "ContentItemId": "4fqwtgzh80pk74xd7x0bt4tpdr",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "99.9999% guaranteed uptime",
+                "DisplayText": "Best for light workloads",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-10-11T11:01:41.3206753Z",
+                "ModifiedUtc": "2018-10-15T11:31:30.7705471Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "99.9999% guaranteed uptime"
+                  "Title": "Best for light workloads"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3847,20 +3853,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4vfzz6ec3p2hy3gxt9aa6p29mz",
+                "ContentItemId": "4wy4bn9qa4ag7xrcp518gcf7dh",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "24/7 support",
+                "DisplayText": "Standard office hours support",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-10-11T11:01:41.3237116Z",
+                "ModifiedUtc": "2018-10-15T11:31:30.773658Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "24/7 support"
+                  "Title": "Standard office hours support"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -3872,19 +3878,19 @@
         },
         {
           "ContentItemId": "4jjxmqpch15rmwcpgtct6rhdc3",
-          "ContentItemVersionId": "4qpv1g0exmrnzrrkpesdarek4c",
+          "ContentItemVersionId": "46584hqs0s586tj9hcfrvj3xx6",
           "ContentType": "PricePlan",
           "DisplayText": "Plus",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-10-11T11:02:32.2092065Z",
-          "PublishedUtc": "2018-10-11T11:02:32.2307071Z",
+          "ModifiedUtc": "2018-10-15T11:31:53.4781037Z",
+          "PublishedUtc": "2018-10-15T11:31:53.4985377Z",
           "CreatedUtc": "2018-09-14T16:44:27.3145451Z",
           "Owner": "admin",
           "Author": "admin",
           "PricePlan": {
             "Price": {
-              "Text": "$39.99"
+              "Value": 3999.0
             },
             "Recommended": {
               "Value": true
@@ -3905,13 +3911,13 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4t8nznx79r5b22rans21x48mnq",
+                "ContentItemId": "4rcheh6m982792e551851903md",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "DisplayText": "Redundant, 2 nodes",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-10-11T11:02:32.2196018Z",
+                "ModifiedUtc": "2018-10-15T11:31:53.4887688Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
@@ -3927,13 +3933,13 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4nzxbc7y83dmkr8xpywfqs58xr",
+                "ContentItemId": "4ws0kwk7nnd6nykkcz9653s7w9",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "DisplayText": "High uptime",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-10-11T11:02:32.2220786Z",
+                "ModifiedUtc": "2018-10-15T11:31:53.4913141Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
@@ -3949,13 +3955,13 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4crvnndp6dnn54fvx130ew0m54",
+                "ContentItemId": "4bmnqejphdx036dx3fxm1xysmd",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
                 "DisplayText": "Priority support",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-10-11T11:02:32.2245446Z",
+                "ModifiedUtc": "2018-10-15T11:31:53.4940969Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
@@ -3974,19 +3980,23 @@
         },
         {
           "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
-          "ContentItemVersionId": "4tmm3trnjtvsnyymas87mkdz4n",
+          "ContentItemVersionId": "4zhp33vcm097b75q414jy2szn2",
           "ContentType": "PricePlan",
-          "DisplayName": "Basic",
+          "DisplayText": "Ultra",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2018-09-14T17:22:10.7045749Z",
-          "PublishedUtc": "2018-09-14T17:22:10.7240989Z",
+          "ModifiedUtc": "2018-10-15T11:32:29.8973397Z",
+          "PublishedUtc": "2018-10-15T11:32:29.9224246Z",
           "CreatedUtc": "2018-09-14T16:45:29.9102742Z",
           "Owner": "admin",
           "Author": "admin",
+          "DisplayName": "Basic",
           "PricePlan": {
             "Price": {
-              "Text": "$19.99"
+              "Value": 15999.0
+            },
+            "Recommended": {
+              "Value": false
             }
           },
           "ListPart": {
@@ -3994,7 +4004,7 @@
             "FeedItemsCount": 20
           },
           "TitlePart": {
-            "Title": "Basic"
+            "Title": "Ultra"
           },
           "ContainedPart": {
             "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4004,19 +4014,20 @@
             "ContentItems": [
               {
                 "Id": 0,
-                "ContentItemId": "4s0j4vh411fdd1tz0dnebh1ccd",
+                "ContentItemId": "4yc1e7924s77y1nhz68ssnp1np",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "Fully redundant",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7181985Z",
+                "ModifiedUtc": "2018-10-15T11:32:29.9084512Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Single node instance"
+                  "Title": "Fully redundant"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4025,19 +4036,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "440m59re7qx636870txmfhj6x8",
+                "ContentItemId": "46xh0ek8ftybt4sram5pxqap41",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "99.9999% uptime guaranteed",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7197264Z",
+                "ModifiedUtc": "2018-10-15T11:32:29.911571Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Best for light workloads"
+                  "Title": "99.9999% uptime guaranteed"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
@@ -4046,19 +4058,20 @@
               },
               {
                 "Id": 0,
-                "ContentItemId": "4f2s7hrymwjx557dd7ekh15mxx",
+                "ContentItemId": "4w3pt92pgxm6kw0pc8xrxq3s4r",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
+                "DisplayText": "24/7 support",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2018-09-14T17:22:10.7212808Z",
+                "ModifiedUtc": "2018-10-15T11:32:29.9149562Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
                 "TitlePart": {
-                  "Title": "Standard office hours support"
+                  "Title": "24/7 support"
                 },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
