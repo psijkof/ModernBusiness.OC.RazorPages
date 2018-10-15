@@ -1,11 +1,11 @@
 ﻿@page
 
 @{
-    var welcomeText = Orchard.GetContentItemByAliasAsync("alias:aboutbusiness").GetAwaiter().GetResult();
-    var team = Orchard.GetRecentContentItemsByContentTypeAsync("Team").GetAwaiter().GetResult().SingleOrDefault();
-    var teamMembers = Orchard.GetRecentContentItemsByContentTypeAsync("TeamMember").GetAwaiter().GetResult();
-    var customers = Orchard.GetRecentContentItemsByContentTypeAsync("Customers").GetAwaiter().GetResult().SingleOrDefault();
-    var customerList = Orchard.GetRecentContentItemsByContentTypeAsync("Customer").GetAwaiter().GetResult();
+    var welcomeText = await Orchard.GetContentItemByAliasAsync("alias:aboutbusiness");
+    var team = (await Orchard.GetRecentContentItemsByContentTypeAsync("Team")).SingleOrDefault();
+    var teamMembers = await Orchard.GetRecentContentItemsByContentTypeAsync("TeamMember");
+    var customers = (await Orchard.GetRecentContentItemsByContentTypeAsync("Customers")).SingleOrDefault();
+    var customerList = await Orchard.GetRecentContentItemsByContentTypeAsync("Customer");
 }
 
 @section Header {

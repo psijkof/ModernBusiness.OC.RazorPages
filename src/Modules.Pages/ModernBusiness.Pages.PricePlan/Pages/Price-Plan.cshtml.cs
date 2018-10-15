@@ -24,8 +24,7 @@ namespace ModernBusiness.Pages.PricePlan
         public async void OnGet()
         {
             Pricing = (await _orchard.GetRecentContentItemsByContentTypeAsync("Pricing")).SingleOrDefault();
-            // order by id, because, depending on the order of creation, the id get increased, so we get the order we specified in the recipe
-            PriceList = (await _orchard.GetRecentContentItemsByContentTypeAsync("PricePlan")).OrderBy(p => p.Id);
+            PriceList = await _orchard.GetRecentContentItemsByContentTypeAsync("PricePlan");
         }
     }
 }

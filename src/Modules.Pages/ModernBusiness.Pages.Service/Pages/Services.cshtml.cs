@@ -18,12 +18,12 @@ namespace ModernBusiness.Pages.Service
         public ServicesModel(IOrchardHelper orchardHelper)
         {
             _orchardHelper = orchardHelper;
-            ServicesContainer = orchardHelper.GetRecentContentItemsByContentTypeAsync("Services").GetAwaiter().GetResult().SingleOrDefault();
-            ServicesList = orchardHelper.GetRecentContentItemsByContentTypeAsync("Service").GetAwaiter().GetResult().OrderByDescending(c => c.CreatedUtc).Take(3);
         }
 
         public void OnGet()
         {
+            ServicesContainer = _orchardHelper.GetRecentContentItemsByContentTypeAsync("Services").GetAwaiter().GetResult().SingleOrDefault();
+            ServicesList = _orchardHelper.GetRecentContentItemsByContentTypeAsync("Service").GetAwaiter().GetResult().OrderByDescending(c => c.CreatedUtc).Take(3);
         }
     }
 }

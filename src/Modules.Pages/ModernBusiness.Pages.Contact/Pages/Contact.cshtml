@@ -1,7 +1,7 @@
 ﻿@page "{ThankYou?}"
 @inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager DisplayManager
 @{
-    var form = Orchard.GetRecentContentItemsByContentTypeAsync("Form").GetAwaiter().GetResult().Where(c => c.DisplayText == "Contact").SingleOrDefault();
+    var form = (await Orchard.GetRecentContentItemsByContentTypeAsync("Form")).Where(c => c.DisplayText == "Contact").SingleOrDefault();
 }
 
 @functions {
@@ -13,7 +13,6 @@ public string ThankYou { get; set; }
 
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@form"/>
 }
-
 
 @if (!string.IsNullOrEmpty(ThankYou))
 {
