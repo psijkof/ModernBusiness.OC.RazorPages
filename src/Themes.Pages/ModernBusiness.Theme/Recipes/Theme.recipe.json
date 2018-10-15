@@ -3775,7 +3775,7 @@
           }
         },
         {
-          "ContentItemId": "4cvdjnbks07sjtd0jmhb1fqn5f",
+          "ContentItemId": "4cvdjnbks17sjtd0jmhb1fqn5f",
           "ContentItemVersionId": "41zrdp5zf1gbe453sz7a45694e",
           "ContentType": "PricePlan",
           "DisplayText": "Basic",
@@ -3812,7 +3812,7 @@
                 "ContentItemId": "45c9tgzjbzfbs3nf2yjh2f2a46",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Single node instance",
+                "DisplayText": "Single-node",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:31:30.7669945Z",
@@ -3821,9 +3821,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "Single node instance"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -3834,7 +3831,7 @@
                 "ContentItemId": "4fqwtgzh80pk74xd7x0bt4tpdr",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Best for light workloads",
+                "DisplayText": "Light-workloads",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:31:30.7705471Z",
@@ -3843,9 +3840,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "Best for light workloads"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -3856,7 +3850,7 @@
                 "ContentItemId": "4wy4bn9qa4ag7xrcp518gcf7dh",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Standard office hours support",
+                "DisplayText": "Standard-support",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:31:30.773658Z",
@@ -3865,9 +3859,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "Standard office hours support"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -3914,7 +3905,7 @@
                 "ContentItemId": "4rcheh6m982792e551851903md",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Redundant, 2 nodes",
+                "DisplayText": "Redundant-dual",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:31:53.4887688Z",
@@ -3923,9 +3914,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "Redundant, 2 nodes"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -3936,7 +3924,7 @@
                 "ContentItemId": "4ws0kwk7nnd6nykkcz9653s7w9",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "High uptime",
+                "DisplayText": "High-uptime",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:31:53.4913141Z",
@@ -3945,9 +3933,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "High uptime"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -3958,7 +3943,7 @@
                 "ContentItemId": "4bmnqejphdx036dx3fxm1xysmd",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Priority support",
+                "DisplayText": "Priority-support",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:31:53.4940969Z",
@@ -3967,9 +3952,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "Priority support"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -4017,7 +3999,7 @@
                 "ContentItemId": "4yc1e7924s77y1nhz68ssnp1np",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "Fully redundant",
+                "DisplayText": "Fully-redundant",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:32:29.9084512Z",
@@ -4026,9 +4008,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "Fully redundant"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -4039,7 +4018,7 @@
                 "ContentItemId": "46xh0ek8ftybt4sram5pxqap41",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "99.9999% uptime guaranteed",
+                "DisplayText": "Highest-uptime",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:32:29.911571Z",
@@ -4048,9 +4027,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "99.9999% uptime guaranteed"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0
@@ -4061,7 +4037,7 @@
                 "ContentItemId": "4w3pt92pgxm6kw0pc8xrxq3s4r",
                 "ContentItemVersionId": null,
                 "ContentType": "Features",
-                "DisplayText": "24/7 support",
+                "DisplayText": "247-support",
                 "Latest": false,
                 "Published": false,
                 "ModifiedUtc": "2018-10-15T11:32:29.9149562Z",
@@ -4070,9 +4046,6 @@
                 "Owner": null,
                 "Author": "admin",
                 "Features": {},
-                "TitlePart": {
-                  "Title": "24/7 support"
-                },
                 "ContainedPart": {
                   "ListContentItemId": "4tmyvyfpbw9g4wg104551485wa",
                   "Order": 0

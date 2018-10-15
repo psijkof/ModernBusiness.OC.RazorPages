@@ -28,7 +28,7 @@
                     <ul class="list-group list-group-flush">
                         @foreach (var feature in pricing.Content.BagPart.ContentItems)
                         {
-                            <li class="list-group-item">@feature.TitlePart.Title</li>
+                            <li class="list-group-item">@T[(string)feature.DisplayText]</li>
                         }
                         <li class="list-group-item">
                             <a href="~/Contact" class="btn btn-primary">@T["Sign Up!"]</a>
