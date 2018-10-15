@@ -7,33 +7,33 @@ using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.ContentManagement.Handlers;
 using OrchardCore.ContentTypes.Editors;
 using OrchardCore.Data.Migration;
-using TestTagPart.OrchardCore.Drivers;
-using TestTagPart.OrchardCore.Handlers;
-using TestTagPart.OrchardCore.Models;
-using TestTagPart.OrchardCore.Settings;
+using Tags.OrchardCore.Drivers;
+using Tags.OrchardCore.Handlers;
+using Tags.OrchardCore.Models;
+using Tags.OrchardCore.Settings;
 using OrchardCore.Modules;
 using OrchardCore.Indexing;
-using TestTagPart.OrchardCore.Indexing;
+using Tags.OrchardCore.Indexing;
 
-namespace TestTagPart.OrchardCore
+namespace Tags.OrchardCore
 {
     public class Startup : StartupBase
     {
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IContentPartDisplayDriver, TestTagPartPartDisplayDriver>();
-            services.AddSingleton<ContentPart, TestTagPartPart>();
-            services.AddScoped<IContentPartDefinitionDisplayDriver, TestTagPartPartSettingsDisplayDriver>();
-			services.AddScoped<IContentPartIndexHandler, TestTagPartIndexHandler>();
+            services.AddScoped<IContentPartDisplayDriver, TagsPartDisplayDriver>();
+            services.AddSingleton<ContentPart, TagsPart>();
+            services.AddScoped<IContentPartDefinitionDisplayDriver, TagsPartSettingsDisplayDriver>();
+			services.AddScoped<IContentPartIndexHandler, TagsIndexHandler>();
             services.AddScoped<IDataMigration, Migrations>();
-            services.AddScoped<IContentPartHandler, TestTagPartPartHandler>();
+            services.AddScoped<IContentPartHandler, TagsPartHandler>();
         }
 
         public override void Configure(IApplicationBuilder builder, IRouteBuilder routes, IServiceProvider serviceProvider)
         {
             routes.MapAreaRoute(
                 name: "Home",
-                areaName: "TestTagPart.OrchardCore",
+                areaName: "Tags.OrchardCore",
                 template: "Home/Index",
                 defaults: new { controller = "Home", action = "Index" }
             );

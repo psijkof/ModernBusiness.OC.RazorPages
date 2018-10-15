@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestTagPart.OrchardCore.Controllers
+namespace Tags.OrchardCore.Controllers
 {
     public class HomeController : Controller
     {

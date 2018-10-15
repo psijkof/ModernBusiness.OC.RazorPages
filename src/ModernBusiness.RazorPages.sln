@@ -21,13 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.About"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Blog", "Modules.Pages\ModernBusiness.Pages.Blog\ModernBusiness.Pages.Blog.csproj", "{2D25D2ED-4520-417B-8043-12B3D3C816BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTagPart.OrchardCore", "testpart\TestTagPart.OrchardCore.csproj", "{AB4D8D86-D532-4115-B7A6-616569DA125D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tags.OrchardCore", "testpart\Tags.OrchardCore.csproj", "{AB4D8D86-D532-4115-B7A6-616569DA125D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Faq", "Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj", "{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.PricePlan", "Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj", "{A10F8E12-743D-4B73-AE39-CA98FD17337A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Static", "Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj", "{0916D910-0DBA-4189-B440-73AB6E75BA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Static", "Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj", "{0916D910-0DBA-4189-B440-73AB6E75BA41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

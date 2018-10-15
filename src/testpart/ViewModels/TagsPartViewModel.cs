@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OrchardCore.ContentManagement;
-using TestTagPart.OrchardCore.Models;
-using TestTagPart.OrchardCore.Settings;
+using Tags.OrchardCore.Models;
+using Tags.OrchardCore.Settings;
 
-namespace TestTagPart.OrchardCore.ViewModels
+namespace Tags.OrchardCore.ViewModels
 {
-    public class TestTagPartPartViewModel
+    public class TagsPartViewModel
     {
         public string MySetting { get; set; }
 
@@ -17,9 +17,9 @@ namespace TestTagPart.OrchardCore.ViewModels
         public ContentItem ContentItem { get; set; }
 
         [BindNever]
-        public TestTagPartPart TestTagPartPart { get; set; }
+        public TagsPart TagsPart { get; set; }
 
         [BindNever]
-        public TestTagPartPartSettings Settings { get; set; }
+        public TagsPartSettings Settings { get; set; }
     }
 }

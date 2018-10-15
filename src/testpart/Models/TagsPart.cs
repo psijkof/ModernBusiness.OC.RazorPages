@@ -1,8 +1,8 @@
 ﻿using OrchardCore.ContentManagement;
 
-namespace TestTagPart.OrchardCore.Models
+namespace Tags.OrchardCore.Models
 {
-    public class TestTagPartPart : ContentPart
+    public class TagsPart : ContentPart
     {
         public bool Show { get; set; }
 

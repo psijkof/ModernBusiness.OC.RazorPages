@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace TestTagPart.OrchardCore.Settings
+namespace Tags.OrchardCore.Settings
 {
-    public class TestTagPartPartSettingsViewModel
+    public class TagsPartSettingsViewModel
     {
         public string MySetting { get; set; }
 		public bool Required { get; set; }
 		public bool Multiple { get; set; }
 
 		[BindNever]
-        public TestTagPartPartSettings TestTagPartPartSettings { get; set; }
+        public TagsPartSettings TagsPartSettings { get; set; }
     }
 }

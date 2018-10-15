@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using OrchardCore.Indexing;
-using TestTagPart.OrchardCore.Models;
+using Tags.OrchardCore.Models;
 
-namespace TestTagPart.OrchardCore.Indexing
+namespace Tags.OrchardCore.Indexing
 {
-	public class TestTagPartIndexHandler : ContentPartIndexHandler<TestTagPartPart>
+	public class TagsIndexHandler : ContentPartIndexHandler<TagsPart>
 	{
-		public override Task BuildIndexAsync(TestTagPartPart part, BuildPartIndexContext context)
+		public override Task BuildIndexAsync(TagsPart part, BuildPartIndexContext context)
 		{
 			var options = DocumentIndexOptions.Store;
 

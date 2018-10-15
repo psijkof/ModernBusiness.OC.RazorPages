@@ -3,27 +3,27 @@ using System.Threading.Tasks;
 using OrchardCore.ContentManagement.Metadata.Models;
 using OrchardCore.ContentTypes.Editors;
 using OrchardCore.DisplayManagement.Views;
-using TestTagPart.OrchardCore.Models;
+using Tags.OrchardCore.Models;
 
-namespace TestTagPart.OrchardCore.Settings
+namespace Tags.OrchardCore.Settings
 {
-    public class TestTagPartPartSettingsDisplayDriver : ContentPartDefinitionDisplayDriver
+    public class TagsPartSettingsDisplayDriver : ContentPartDefinitionDisplayDriver
     {
         public override IDisplayResult Edit(ContentPartDefinition contentPartDefinition)
         {
-            if (!String.Equals(nameof(TestTagPartPart), contentPartDefinition.Name, StringComparison.Ordinal))
+            if (!String.Equals(nameof(TagsPart), contentPartDefinition.Name, StringComparison.Ordinal))
             {
                 return null;
             }
 
-            return Initialize<TestTagPartPartSettingsViewModel>("TestTagPartPartSettings_Edit", model =>
+            return Initialize<TagsPartSettingsViewModel>("TagsPartSettings_Edit", model =>
             {
-                var settings = contentPartDefinition.GetSettings<TestTagPartPartSettings>();
+                var settings = contentPartDefinition.GetSettings<TagsPartSettings>();
 
                 model.MySetting = settings.MySetting;
 				model.Required = settings.Required;
 				model.Multiple = settings.Multiple;
-                model.TestTagPartPartSettings = settings;
+                model.TagsPartSettings = settings;
 
                 return Task.CompletedTask;
             }).Location("Content");
@@ -31,16 +31,16 @@ namespace TestTagPart.OrchardCore.Settings
 
         public override async Task<IDisplayResult> UpdateAsync(ContentPartDefinition contentPartDefinition, UpdatePartEditorContext context)
         {
-            if (!String.Equals(nameof(TestTagPartPart), contentPartDefinition.Name, StringComparison.Ordinal))
+            if (!String.Equals(nameof(TagsPart), contentPartDefinition.Name, StringComparison.Ordinal))
             {
                 return null;
             }
 
-            var model = new TestTagPartPartSettingsViewModel();
+            var model = new TagsPartSettingsViewModel();
 
             if (await context.Updater.TryUpdateModelAsync(model, Prefix, m => m.MySetting, m => m.Multiple, m => m.Required ))
             {
-                context.Builder.WithSettings(new TestTagPartPartSettings
+                context.Builder.WithSettings(new TagsPartSettings
 				{
 					MySetting = model.MySetting,
 					Required = model.Required,

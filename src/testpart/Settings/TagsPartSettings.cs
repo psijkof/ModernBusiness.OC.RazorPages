@@ -1,6 +1,6 @@
-﻿namespace TestTagPart.OrchardCore.Settings
+﻿namespace Tags.OrchardCore.Settings
 {
-    public class TestTagPartPartSettings
+    public class TagsPartSettings
     {
         public string MySetting { get; set; }
 		public bool Required { get; set; }

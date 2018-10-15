@@ -2,7 +2,7 @@
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.Data.Migration;
 
-namespace TestTagPart.OrchardCore
+namespace Tags.OrchardCore
 {
     public class Migrations : DataMigration
     {
@@ -15,9 +15,9 @@ namespace TestTagPart.OrchardCore
 
         public int Create()
         {
-            _contentDefinitionManager.AlterPartDefinition("TestTagPartPart", builder => builder
+            _contentDefinitionManager.AlterPartDefinition("TagsPart", builder => builder
                 .Attachable()
-                .WithDescription("Provides a TestTagPart part for your content item."));
+                .WithDescription("Provides a Tags part for your content item."));
 
             return 1;
         }
