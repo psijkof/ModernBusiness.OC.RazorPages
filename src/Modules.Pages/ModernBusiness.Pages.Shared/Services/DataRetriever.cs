@@ -19,13 +19,14 @@ namespace ModernBusiness.Pages.Shared.Services
             _orchard = orchard;
         }
 
-        public async Task<PagerInfo> InitializePager(int pageSize, string baseUrl, string listItemsContentType)
+        public async Task<PagerInfo> InitializePager(int pageSize, string baseUrl, string listItemsContentType, bool showPages = true)
         {
             _pagerInfo = new PagerInfo
             {
                 PageSize = pageSize,
                 PageBaseUrl = baseUrl,
-                ItemsContentType = listItemsContentType
+                ItemsContentType = listItemsContentType,
+                ShowPages = showPages
             };
 
             var itemsCount = await _orchard.QueryContentItemsAsync(q => q.Where(c => c.ContentType == listItemsContentType && c.Published));
