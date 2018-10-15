@@ -28,17 +28,17 @@ namespace ModernBusiness.Pages.Blog.Pages
 
 		public async Task OnGetAsync(int? pageIndex, string BlogPostTitle)
 		{
-
-			Blog = await _dataRetriever.InitializeContainer("Blog");
-			PagerInfo = await _dataRetriever.InitializePager(4, "/blog2", "BlogPost", false);
-			PagerInfo.CurrentPage = pageIndex ?? 1;
-			PagerInfo.CurrentItemsOnPage = await _dataRetriever.GetCurrentPage();
-
 			if (!string.IsNullOrEmpty(BlogPostTitle))
 			{
 				BlogPost = (await _orchard.QueryContentItemsAsync(q => q.Where(c => c.DisplayText == BlogPostTitle && c.Published))).SingleOrDefault();
 			}
-
+			else
+			{
+				Blog = await _dataRetriever.InitializeContainer("Blog");
+				PagerInfo = await _dataRetriever.InitializePager(4, "/blog2", "BlogPost", false);
+				PagerInfo.CurrentPage = pageIndex ?? 1;
+				PagerInfo.CurrentItemsOnPage = await _dataRetriever.GetCurrentPage();
+			}
 		}
 	}
 }
