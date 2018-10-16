@@ -15,7 +15,7 @@ namespace ModernBusiness.Pages.Users.Pages
 
 		public RegisterModel()
 		{
-
+			// Next thing to do
 		}
 
         public void OnGet()
