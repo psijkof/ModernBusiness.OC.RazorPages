@@ -89,11 +89,11 @@
     },
     {
       "name": "Settings",
-      "HomeRoute": {}
-      //"SupportedCultures": [
-      //  "en",
-      //  "pt"
-      //]
+      "HomeRoute": {},
+      "SupportedCultures": [
+        "pt-PT",
+        "nl-NL"
+      ]
     },
     {
       "name": "themes",

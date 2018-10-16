@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.PriceP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Static", "Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj", "{0916D910-0DBA-4189-B440-73AB6E75BA41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Pages.Users", "Modules.Pages\ModernBusiness.Pages.User\ModernBusiness.Pages.Users.csproj", "{CFF0439D-57F3-4B78-A385-3CDAF194A879}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Users", "Modules.Pages\ModernBusiness.Pages.Users\ModernBusiness.Pages.Users.csproj", "{CFF0439D-57F3-4B78-A385-3CDAF194A879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
