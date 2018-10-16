@@ -79,6 +79,7 @@
         "ModernBusiness.Pages.Faq",
         "ModernBusiness.Pages.PricePlan",
         "ModernBusiness.Pages.Static",
+        "ModernBusiness.Pages.Users",
         "Tags.OrchardCore",
 
         // Themes
@@ -89,11 +90,11 @@
     },
     {
       "name": "Settings",
-      "HomeRoute": {},
-      "SupportedCultures": [
-        "pt-PT",
-        "nl-NL"
-      ]
+      "HomeRoute": {}
+      //"SupportedCultures": [
+      //  "pt-PT",
+      //  "nl-NL"
+      //]
     },
     {
       "name": "themes",
