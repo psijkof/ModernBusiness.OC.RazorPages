@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-
+using OrchardCore.Logging;
 
 namespace ModernBusiness.App
 {
@@ -20,7 +20,7 @@ namespace ModernBusiness.App
             }
             
             app.UseStaticFiles();
-            app.UseOrchardCore();
+            app.UseOrchardCore(c => c.UseSerilogTenantNameLoggingMiddleware());
         }
     }
 } 

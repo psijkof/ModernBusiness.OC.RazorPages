@@ -18,6 +18,7 @@
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="OrchardCore.Logging.Serilog" Version="1.0.0-beta3-68918" />
   </ItemGroup>
   
   <ItemGroup>
