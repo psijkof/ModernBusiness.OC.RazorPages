@@ -6,36 +6,36 @@
 @*still to do*@
 Welcome to register page!
 <h2>@T["Register"]</h2>
-@*<form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+<form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
     <h4>@T["Create a new account."]</h4>
     <hr />
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
-        <label asp-for="Model.Name" class="col-md-3 control-label">@T["Username"]</label>
+        <label asp-for="RegisterVM.Name" class="col-md-3 control-label">@T["Username"]</label>
         <div class="col-md-9">
-            <input asp-for="Model.Name" class="form-control" autofocus />
-            <span asp-validation-for="Model.Name" class="text-danger"></span>
+            <input asp-for="RegisterVM.Name" class="form-control" autofocus />
+            <span asp-validation-for="RegisterVM.Name" class="text-danger"></span>
         </div>
     </div>
     <div class="form-group">
-        <label asp-for="Model.Email" class="col-md-3 control-label">@T["Email"]</label>
+        <label asp-for="RegisterVM.Email" class="col-md-3 control-label">@T["Email"]</label>
         <div class="col-md-9">
-            <input asp-for="Model.Email" class="form-control" />
-            <span asp-validation-for="Model.Email" class="text-danger"></span>
+            <input asp-for="RegisterVM.Email" class="form-control" />
+            <span asp-validation-for="RegisterVM.Email" class="text-danger"></span>
         </div>
     </div>
     <div class="form-group">
-        <label asp-for="Model.Password" class="col-md-3 control-label">@T["Password"]</label>
+        <label asp-for="RegisterVM.Password" class="col-md-3 control-label">@T["Password"]</label>
         <div class="col-md-9">
-            <input asp-for="Model.Password" class="form-control" />
-            <span asp-validation-for="Model.Password" class="text-danger"></span>
+            <input asp-for="RegisterVM.Password" class="form-control" />
+            <span asp-validation-for="RegisterVM.Password" class="text-danger"></span>
         </div>
     </div>
     <div class="form-group">
-        <label asp-for="Model.ConfirmPassword" class="col-md-3 control-label">@T["Confirm password"]</label>
+        <label asp-for="RegisterVM.ConfirmPassword" class="col-md-3 control-label">@T["Confirm password"]</label>
         <div class="col-md-9">
-            <input asp-for="Model.ConfirmPassword" class="form-control" />
-            <span asp-validation-for="Model.ConfirmPassword" class="text-danger"></span>
+            <input asp-for="RegisterVM.ConfirmPassword" class="form-control" />
+            <span asp-validation-for="RegisterVM.ConfirmPassword" class="text-danger"></span>
         </div>
     </div>
     <div class="form-group">
@@ -43,4 +43,4 @@ Welcome to register page!
             <button type="submit" class="btn btn-default">@T["Register"]</button>
         </div>
     </div>
-</form>*@
+</form>
