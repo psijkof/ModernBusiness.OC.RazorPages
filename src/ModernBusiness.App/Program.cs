@@ -14,7 +14,7 @@ namespace ModernBusiness.App
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseNLogWeb()
+                .UseSerilogWeb()
                 .UseStartup<Startup>()
                 .Build();
     }
