@@ -15,11 +15,20 @@ namespace ModernBusiness.Pages.Users.Pages
 
 		public RegisterModel()
 		{
-			// Next thing to do
+			// 
 		}
 
-        public void OnGet()
+        public async Task<IActionResult> OnGetAsync(string returnUrl)
         {
+			ViewData["ReturnUrl"] = returnUrl;
+
+			return Page();
         }
+
+		//public async Taks<IActionResult> OnPostAsync()
+		//{
+
+		//}
+		
     }
 }
