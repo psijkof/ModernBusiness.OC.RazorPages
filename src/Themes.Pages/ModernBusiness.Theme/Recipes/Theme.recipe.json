@@ -90,11 +90,12 @@
     },
     {
       "name": "Settings",
-      "HomeRoute": {}
-      //"SupportedCultures": [
-      //  "pt-PT",
-      //  "nl-NL"
-      //]
+      "HomeRoute": {},
+      "SupportedCultures": [
+        "en-US",
+        "pt-PT",
+        "nl-NL"
+      ]
     },
     {
       "name": "themes",
