@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Indexing" Version="1.0.0-beta3-68918" />
-    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68918" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68934" />
     <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68918" />
