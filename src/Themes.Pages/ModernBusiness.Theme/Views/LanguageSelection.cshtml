@@ -21,15 +21,15 @@
                 <select class="dropdown" name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems" onchange="this.form.submit();"></select>
             </form>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                Welcome @User.Identity.Name<i class="pl-1 fas fa-user-tie"></i>
-            </a>
-        </li>
         @if (User.Identity.IsAuthenticated)
         {
             <li class="nav-item">
                 <a class="nav-link" href="#">
+                    Welcome @User.Identity.Name<i class="pl-1 fas fa-user-tie"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/Logout">
                     Logout<i class="pl-1 fas fa-power-off"></i>
                 </a>
             </li>
