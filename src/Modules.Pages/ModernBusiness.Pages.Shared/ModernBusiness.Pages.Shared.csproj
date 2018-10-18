@@ -11,7 +11,7 @@
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.Markdown" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.Media" Version="1.0.0-beta3-68918" />
-    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68918" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-beta3-68934" />
     <PackageReference Include="OrchardCore.Mvc.Core" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.Queries" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-68918" />
