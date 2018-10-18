@@ -9,7 +9,6 @@ pool:
 variables:
   buildConfiguration: 'Release'
   
-
 steps:
 - task: DotNetCoreCLI@2
   inputs:
@@ -18,11 +17,10 @@ steps:
     feedsToUse: config
     nugetConfigPath: NuGet.config    # Relative to root of the repository
 
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-  
-- task: PublishBuildArtifacts@1
-
+- script: 
+    dotnet build --configuration $(buildConfiguration)
+    dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
+    
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
