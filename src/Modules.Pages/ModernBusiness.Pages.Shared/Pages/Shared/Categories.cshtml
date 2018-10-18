@@ -5,7 +5,7 @@
 
     foreach (var item in blogPosts)
     {
-        tags += item.Content.TagsPart.Tags + ',';
+        tags += item.Content.TagsPart.Tags + ",";
     }
 
     var tagArray = tags.Split(',').Select(s => s.Trim());
