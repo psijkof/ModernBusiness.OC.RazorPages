@@ -27,3 +27,13 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+.login {
+	z-index: 100;
+}
+
+.lang-drop * {
+	background-color: #343a40;
+	color: rgba(255, 255, 255, 0.75);
+	border-style:none;
+}

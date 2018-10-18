@@ -26,6 +26,12 @@
     <cache expires-after="@cacheDuration">
         <menu alias="alias:main-menu"></menu>
     </cache>
+    <div class="login container-fluid position-fixed navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <shape Type="LanguageSelection" />
+        </div>
+    </div>
+
     @RenderSection("Nav", required: false)
     <header>
         @RenderSection("Header", required: false)
@@ -42,7 +48,7 @@
             @Html.Raw(footerContent.Content.HtmlBodyPart.Html)
         </cache>
         <div class="container alert-light"><p class="text-center">User: @User.Identity.Name</p></div>
-        
+
         <resources type="FootScript" />
         <!-- Bootstrap core JavaScript from theme layout-->
         <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
