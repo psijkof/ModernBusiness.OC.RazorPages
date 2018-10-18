@@ -3,33 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.App", "ModernBusiness.App\ModernBusiness.App.csproj", "{DE2B870F-07AF-4901-8FC5-C9953FDFF968}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.App", "src/ModernBusiness.App\ModernBusiness.App.csproj", "{DE2B870F-07AF-4901-8FC5-C9953FDFF968}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Theme", "Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj", "{F5B96975-4E46-469D-829A-128343A87356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Theme", "src/Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj", "{F5B96975-4E46-469D-829A-128343A87356}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages", "Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj", "{A74D35BD-4960-4EC6-B631-EC3D281AF12B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages", "src/Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj", "{A74D35BD-4960-4EC6-B631-EC3D281AF12B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Portfolio", "Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj", "{736861F6-42A0-4FB0-BB3B-D781888D65C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Portfolio", "src/Modules.Pages\ModernBusiness.Pages.Portfolio\ModernBusiness.Pages.Portfolio.csproj", "{736861F6-42A0-4FB0-BB3B-D781888D65C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Shared", "Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj", "{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Shared", "src/Modules.Pages\ModernBusiness.Pages.Shared\ModernBusiness.Pages.Shared.csproj", "{5C87EA67-E8CF-4CE8-8C69-CD2BD3224971}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Contact", "Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj", "{7024170E-FF78-44D9-8422-B10107F903E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Contact", "src/Modules.Pages\ModernBusiness.Pages.Contact\ModernBusiness.Pages.Contact.csproj", "{7024170E-FF78-44D9-8422-B10107F903E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Service", "Modules.Pages\ModernBusiness.Pages.Service\ModernBusiness.Pages.Service.csproj", "{BE0969BD-E730-48B6-8923-FE26F0843EC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Service", "src/Modules.Pages\ModernBusiness.Pages.Service\ModernBusiness.Pages.Service.csproj", "{BE0969BD-E730-48B6-8923-FE26F0843EC4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.About", "Modules.Pages\ModernBusiness.Pages.About\ModernBusiness.Pages.About.csproj", "{11978C55-CBC4-459B-A6DD-A9268C01A1D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.About", "src/Modules.Pages\ModernBusiness.Pages.About\ModernBusiness.Pages.About.csproj", "{11978C55-CBC4-459B-A6DD-A9268C01A1D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Blog", "Modules.Pages\ModernBusiness.Pages.Blog\ModernBusiness.Pages.Blog.csproj", "{2D25D2ED-4520-417B-8043-12B3D3C816BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Blog", "src/Modules.Pages\ModernBusiness.Pages.Blog\ModernBusiness.Pages.Blog.csproj", "{2D25D2ED-4520-417B-8043-12B3D3C816BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Faq", "Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj", "{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Faq", "src/Modules.Pages\ModernBusiness.Pages.Faq\ModernBusiness.Pages.Faq.csproj", "{69F0A7FB-16CD-44BB-AD40-F0F6E83D4BAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.PricePlan", "Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj", "{A10F8E12-743D-4B73-AE39-CA98FD17337A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.PricePlan", "src/Modules.Pages\ModernBusiness.Pages.PricePlan\ModernBusiness.Pages.PricePlan.csproj", "{A10F8E12-743D-4B73-AE39-CA98FD17337A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Static", "Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj", "{0916D910-0DBA-4189-B440-73AB6E75BA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Static", "src/Modules.Pages\ModernBusiness.Pages.Static\ModernBusiness.Pages.Static.csproj", "{0916D910-0DBA-4189-B440-73AB6E75BA41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Users", "Modules.Pages\ModernBusiness.Pages.Users\ModernBusiness.Pages.Users.csproj", "{CFF0439D-57F3-4B78-A385-3CDAF194A879}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Pages.Users", "src/Modules.Pages\ModernBusiness.Pages.Users\ModernBusiness.Pages.Users.csproj", "{CFF0439D-57F3-4B78-A385-3CDAF194A879}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tags.OrchardCore", "OrchardCore.Parts\TagPart\Tags.OrchardCore.csproj", "{A9687000-7F9F-488C-913D-7328827B69E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tags.OrchardCore", "src/OrchardCore.Parts\TagPart\Tags.OrchardCore.csproj", "{A9687000-7F9F-488C-913D-7328827B69E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
