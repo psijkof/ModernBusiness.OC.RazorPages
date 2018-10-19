@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\OrchardCoreBeta2-dev - Web Deploy.pubxml.user" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-68918" />
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-68934" />
