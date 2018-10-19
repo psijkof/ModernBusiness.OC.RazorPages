@@ -9,6 +9,7 @@ using ModernBusiness.Pages.Users.ViewModels;
 using OrchardCore.Users.Services;
 using OrchardCore.Users.Models;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
 
 namespace ModernBusiness.Pages.Users.Pages
 {
@@ -20,11 +21,13 @@ namespace ModernBusiness.Pages.Users.Pages
 		ILogger _logger;
 
 		private readonly IUserService _userService;
+		private readonly SignInManager<IUser> _signInManager;
 
-		public RegisterModel(IUserService userService, ILogger<RegisterModel> logger)
+		public RegisterModel(IUserService userService, ILogger<RegisterModel> logger, SignInManager<IUser> signInManager)
 		{
 			_userService = userService;
 			_logger = logger;
+			_signInManager = signInManager;
 		}
 
         public async Task<IActionResult> OnGetAsync(string returnUrl)
@@ -53,6 +56,9 @@ namespace ModernBusiness.Pages.Users.Pages
 				{
 					_logger.LogDebug("Hello{0}!!!", user.UserName);
 					_logger.LogInformation(3, "User created!");
+
+					await _signInManager.SignInAsync(user, false);
+
 					return LocalRedirect(returnUrl);
 				}
 			}
