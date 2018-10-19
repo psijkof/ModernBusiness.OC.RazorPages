@@ -20,3 +20,9 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - The _ViewStart of each module points to "Layout". The Layout will be resolved from the .Theme module, from `Views\Shared`. 
 - For the `NotFound.cshtml` (for 404 status cases), the Layout will be resolved from `Views`, as this is OC's default Layout location.
  
+## Known issues and things to do
+- Contact form submission when used in a tenant (i.e. not the Default OC instance), does not work.
+- Search is currently not functional
+- Tags are saved with a blog post, but no look up or tag cloud is currently implemented
+- Tags do not link to posts with that tag yet
+- Registering will not automatically log you in currently
