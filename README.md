@@ -20,3 +20,15 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - The _ViewStart of each module points to "Layout". The Layout will be resolved from the .Theme module, from `Views\Shared`. 
 - For the `NotFound.cshtml` (for 404 status cases), the Layout will be resolved from `Views`, as this is OC's default Layout location.
  
+## Known issues and things to do
+- Contact form submission when used in a tenant (i.e. not the Default OC instance), does not work.
+- Search is currently not functional
+- Tags are saved with a blog post, but no look up or tag cloud is currently implemented
+- Tags do not link to posts with that tag yet
+- Registering will not automatically log you in currently
+
+## What to check out
+- Multilingual pages, currently the Pricing Table is fully translated in Dutch, Portuguese and English
+- The Full Width Page allows a user to be signed in
+- Requesting a non existing page will result in a 404, themed accordingly
+- Live version here: https://orchardcorebeta2-dev.azurewebsites.net/tenant
