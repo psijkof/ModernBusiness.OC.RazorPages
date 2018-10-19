@@ -18,5 +18,5 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
     });
 ```
 - The _ViewStart of each module points to "Layout". The Layout will be resolved from the .Theme module, from `Views\Shared`. 
-- The NotFound.cshtml (for 404 status cases), the Layout will be resolved from `Views`, as this is OC's default Layout location.
+- For the NotFound.cshtml (for 404 status cases), the Layout will be resolved from `Views`, as this is OC's default Layout location.
  
