@@ -1,12 +1,15 @@
 ﻿@inherits OrchardCore.DisplayManagement.RazorPages.Page
-@using OrchardCore.Media
-@using OrchardCore.Lists.Drivers
-@using OrchardCore.ContentManagement.Display
-@using OrchardCore.Navigation
+@using OrchardCore.Media;
+@using OrchardCore.ContentManagement.Display;
+@using OrchardCore.Navigation;
+@using OrchardCore.Mvc.Utilities;
+@using ModernBusiness.Pages.About
+@using ModernBusiness.Pages.Shared.ViewModels;
+@using OrchardCore.Queries;
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, OrchardCore.DisplayManagement
 @addTagHelper *, OrchardCore.ResourceManagement
 @addTagHelper *, OrchardCore.Contents
-@addTagHelper *, OrchardCore.Menu
-@addTagHelper *, OrchardCore.Lists
+@addTagHelper *, OrchardCore.Media
+@addTagHelper *, OrchardCore.Queries
