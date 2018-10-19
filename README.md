@@ -26,3 +26,9 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - Tags are saved with a blog post, but no look up or tag cloud is currently implemented
 - Tags do not link to posts with that tag yet
 - Registering will not automatically log you in currently
+
+## What to check out
+- Multilingual pages, currently the Pricing Table is fully translated in Dutch, Portuguese and English
+- The Full Width Page allows a user to be signed in
+- Requesting a non existing page will result in a 404, themed accordingly
+- Live version here: https://orchardcorebeta2-dev.azurewebsites.net/tenant
