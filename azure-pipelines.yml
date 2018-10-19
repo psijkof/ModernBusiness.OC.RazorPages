@@ -20,11 +20,4 @@ steps:
 - script: 
     dotnet build --configuration $(buildConfiguration)
     
-- task: DotNetCoreCLI@2
-  inputs:
-    command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output  $BUILD_ARTIFACTSTAGINGDIRECTORY'
-    zipAfterPublish: True
-
 - task: PublishBuildArtifacts@1
