@@ -14,9 +14,12 @@ body {
   }
 }
 
-.top {
-	margin-top:40px;
+.top-lang {
+	z-index: 100;
+	position: absolute;
+	right: 0px;
 }
+
 
 .carousel-item {
   height: 65vh;

@@ -23,16 +23,33 @@
     <link href="/ModernBusiness.Theme/css/modern-business.css" rel="stylesheet">
 </head>
 <body dir="@Orchard.CultureDir()">
-    <cache expires-after="@cacheDuration">
-        <menu alias="alias:main-menu"></menu>
-    </cache>
-    <div class="login container-fluid position-fixed navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <shape Type="LanguageSelection" />
+            <a class="navbar-brand" href="~/">@Site.SiteName</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <cache expires-after="@cacheDuration">
+                    <menu alias="alias:main-menu"></menu>
+                </cache>
+                <partial name="UserLogin" />
+            </div>
         </div>
+    </nav>
+    <div class="top-lang navbar-dark bg-danger bg-dark float-right">
+        <shape Type="LanguageSelection" />
     </div>
+
+
+    @*<div class="login container-fluid position-fixed navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+
+            </div>
+        </div>*@
     @RenderSection("Nav", required: false)
-    <header class="top">
+    <header>
         @RenderSection("Header", required: false)
     </header>
     <main role="main" class="container">
