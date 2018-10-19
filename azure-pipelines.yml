@@ -11,7 +11,7 @@ variables:
   
 steps:
 - task: DotNetCoreCLI@2
-    inputs:
+  inputs:
     command: restore
     projects: '**/*.csproj'
     feedsToUse: config
@@ -22,8 +22,8 @@ steps:
     
 - task: PublishBuildArtifacts@1
     inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'drop' 
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+      artifactName: 'drop' 
     #publishLocation: 'Container' # Options: container, filePath
     #targetPath: # Required when publishLocation == FilePath
     #parallel: false # Optional
