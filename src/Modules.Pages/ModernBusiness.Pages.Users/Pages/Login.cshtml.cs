@@ -31,7 +31,12 @@ namespace ModernBusiness.Pages.Users.Pages
 
         public async Task<IActionResult> OnGetAsync(string returnUrl = null)
         {
-            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+			await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+			if (User.Identity.IsAuthenticated)
+			{
+				return LocalRedirect("~/warning");
+			}
 
             ViewData["ReturnUrl"] = returnUrl;
 
