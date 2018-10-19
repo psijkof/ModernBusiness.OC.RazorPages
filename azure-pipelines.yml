@@ -24,5 +24,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(System.DefaultWorkingDirectory)'
+    arguments: '--configuration $(BuildConfiguration) --output  $BUILD_ARTIFACTSTAGINGDIRECTORY'
     zipAfterPublish: True
+
+- task: PublishBuildArtifacts@1
