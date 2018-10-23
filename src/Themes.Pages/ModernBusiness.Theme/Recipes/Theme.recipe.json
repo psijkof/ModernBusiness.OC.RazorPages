@@ -2374,7 +2374,7 @@
                   "Title": "Display Form Errors"
                 },
                 "Location": {
-                  "Expression": "/contact"
+                  "Expression": "/thankyou"
                 },
                 "Permanent": false
               }

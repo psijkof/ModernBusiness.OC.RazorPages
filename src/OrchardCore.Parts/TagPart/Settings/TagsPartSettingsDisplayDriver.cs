@@ -20,7 +20,6 @@ namespace Tags.OrchardCore.Settings
             {
                 var settings = contentPartDefinition.GetSettings<TagsPartSettings>();
 
-                model.MySetting = settings.MySetting;
 				model.Required = settings.Required;
 				model.Multiple = settings.Multiple;
                 model.TagsPartSettings = settings;
@@ -38,11 +37,10 @@ namespace Tags.OrchardCore.Settings
 
             var model = new TagsPartSettingsViewModel();
 
-            if (await context.Updater.TryUpdateModelAsync(model, Prefix, m => m.MySetting, m => m.Multiple, m => m.Required ))
+            if (await context.Updater.TryUpdateModelAsync(model, Prefix, m => m.Multiple, m => m.Required ))
             {
                 context.Builder.WithSettings(new TagsPartSettings
 				{
-					MySetting = model.MySetting,
 					Required = model.Required,
 					Multiple = model.Multiple
 				});

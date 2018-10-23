@@ -56,8 +56,7 @@ namespace Tags.OrchardCore.Drivers
         {
             var settings = GetTagsPartSettings(part);
 
-            model.ContentItem = part.ContentItem;
-            model.MySetting = settings.MySetting;
+			model.ContentItem = part.ContentItem;
             model.Show = part.Show;
 			model.Tags = part.Tags;
             model.TagsPart = part;

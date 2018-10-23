@@ -14,6 +14,9 @@ public string ThankYou { get; set; }
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@form"/>
 }
 
+<input type="text" id="copyClipboard"/>
+<button onclick="copyClipB()">Click to Ccopy</button>
+
 @if (!string.IsNullOrEmpty(ThankYou))
 {
     <div class="container">
