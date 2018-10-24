@@ -15,14 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-69069" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-69069" />
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-69069" />
+    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-69124" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-69124" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-69124" />
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="OrchardCore.Logging.Serilog" Version="1.0.0-beta3-69069" />
+    <PackageReference Include="OrchardCore.Logging.Serilog" Version="1.0.0-beta3-69124" />
   </ItemGroup>
   
   <ItemGroup>
