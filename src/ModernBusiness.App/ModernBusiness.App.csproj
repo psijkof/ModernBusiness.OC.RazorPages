@@ -38,6 +38,7 @@
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages.Users\ModernBusiness.Pages.Users.csproj" />
     <ProjectReference Include="..\Modules.Pages\ModernBusiness.Pages\ModernBusiness.Pages.csproj" />
     <ProjectReference Include="..\OrchardCore.Parts\TagPart\Tags.OrchardCore.csproj" />
+    <ProjectReference Include="..\Themes.Pages\ModernBusiness.Theme2\ModernBusiness.Theme2.csproj" />
     <ProjectReference Include="..\Themes.Pages\ModernBusiness.Theme\ModernBusiness.Theme.csproj" />
   </ItemGroup>
 

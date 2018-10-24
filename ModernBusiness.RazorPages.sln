@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{FE7FFD8F
 		NuGet.config = NuGet.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Theme2", "src\Themes.Pages\ModernBusiness.Theme2\ModernBusiness.Theme2.csproj", "{72973CCE-D6AA-4B78-B620-0C7241FB93BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +221,18 @@ Global
 		{A9687000-7F9F-488C-913D-7328827B69E4}.Release|x64.Build.0 = Release|Any CPU
 		{A9687000-7F9F-488C-913D-7328827B69E4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A9687000-7F9F-488C-913D-7328827B69E4}.Release|x86.Build.0 = Release|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Debug|x64.Build.0 = Debug|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Release|x64.ActiveCfg = Release|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Release|x64.Build.0 = Release|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{72973CCE-D6AA-4B78-B620-0C7241FB93BE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

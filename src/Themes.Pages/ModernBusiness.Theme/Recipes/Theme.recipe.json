@@ -84,6 +84,7 @@
 
         // Themes
         "ModernBusiness.Theme",
+        "ModernBusiness.Theme2",
         "TheAdmin",
         "SafeMode"
       ]
