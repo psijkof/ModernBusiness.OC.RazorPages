@@ -38,19 +38,21 @@
 </div>
 <!-- /.row -->
 
-<h2 class="servicesTitle">@servicesContainer.Content?.Services.Subheading.Text</h2>
+<h2 class="Title">@servicesContainer.Content?.Services.Subheading.Text</h2>
 
 <div class="row">
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ServiceCards.cshtml" model="servicesList" />
 </div>
+
+<h2 class="Title">@welcomeContent.Content.SubtitlePart.Subtitle.Text</h2>
 <!-- Features Section -->
-<div class="row">
-    <div class="col-lg-6">
-        @Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
-    </div>
-    <div class="col-lg-6">
-        <img class="img-fluid rounded" asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="700" img-height="400" img-resize-mode="Crop" />
-    </div>
+<div class="row features">
+        <div class="col-lg-6 indexBoxL">
+            @Html.Raw(welcomeContent.Content.HtmlBodyPart.Html)
+        </div>
+        <div class="col-lg-6 indexBoxR">
+            <img class="img-fluid rounded" asset-src="@welcomeContent.Content.RawContent.Images.Paths[0]" img-width="700" img-height="400" img-resize-mode="Crop" />
+        </div>
 </div>
 <!-- /.row -->
 
