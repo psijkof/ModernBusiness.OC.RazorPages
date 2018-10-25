@@ -31,7 +31,7 @@
     @foreach (var item in customerList)
     {
         <div class="col-lg-2 col-sm-4 mb-4">
-            <img class="img-fluid" asset-src="@((string)item.Content.Customer.Logo.Paths[0])" alt="" />
+            <img class="img-fluid" asset-src="@((string)item.Content.Customer.Logo.Paths[0])" img-width="500" img-height="300" img-resize-mode="Stretch" alt="" />
         </div>
     }
 </div>

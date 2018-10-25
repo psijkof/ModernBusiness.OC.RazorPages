@@ -2856,7 +2856,7 @@
           "Owner": null,
           "Author": "admin",
           "Project": {
-            "Image": { "Paths": [ "700x400.png" ] },
+            "Image": { "Paths": [ "799380-unsplash.jpg" ] },
             "Link": {
               "Url": null,
               "Text": null
@@ -2887,7 +2887,7 @@
           "Owner": null,
           "Author": null,
           "Project": {
-            "Image": { "Paths": [ "700x400.png" ] },
+            "Image": { "Paths": [ "737030-unsplash.jpg" ] },
             "Link": {
               "Url": null,
               "Text": null
@@ -2917,7 +2917,7 @@
           "Project": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "668353-unsplash.jpg"
               ]
             },
             "Link": {
@@ -2953,7 +2953,7 @@
           "Project": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "654527-unsplash.jpg"
               ]
             },
             "Link": {
@@ -2989,7 +2989,7 @@
           "Project": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "422398-unsplash.jpg"
               ]
             },
             "Link": {
@@ -3026,7 +3026,11 @@
           "Owner": null,
           "Author": "admin",
           "Project": {
-            "Image": { "Paths": [ "700x400.png" ] },
+            "Image": {
+              "Paths": [
+                "678089-unsplash.jpg" 
+              ] 
+            },
             "Link": {
               "Url": null,
               "Text": null
@@ -3063,7 +3067,7 @@
           "Services": {
             "Image": {
               "Paths": [
-                "1200x300.png"
+                "408744-unsplash.jpg"
               ]
             },
             "Subheading": {
@@ -3110,6 +3114,7 @@
           "ContentItemId": "4rgzvfzn50f6vvvstyfpgyj852",
           "ContentItemVersionId": "4gxgdn56s69g037g21knxwn650",
           "ContentType": "Service",
+          "DisplayText": "Service 2",
           "Latest": true,
           "Published": true,
           "Owner": "admin",
@@ -3121,10 +3126,7 @@
             }
           },
           "HtmlBodyPart": {
-            "Html": "iuupii!"
-          },
-          "TitlePart": {
-            "Title": "Some service"
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec finibus mauris. Donec consequat, justo a cursus convallis, dui diam finibus nisl, sed molestie quam est vel dolor."
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('servicesContentItemId')]",
@@ -3135,6 +3137,7 @@
           "ContentItemId": "4exzswmzx27qr4fc4r18qqd5d4",
           "ContentItemVersionId": "4kp2yswp4vgh500nwz69jr7pcc",
           "ContentType": "Service",
+          "DisplayText": "Service 3",
           "Latest": true,
           "Published": true,
           "Owner": "admin",
@@ -3146,10 +3149,7 @@
             }
           },
           "HtmlBodyPart": {
-            "Html": "yes!"
-          },
-          "TitlePart": {
-            "Title": "One more"
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec finibus mauris. Donec consequat, justo a cursus convallis, dui diam finibus nisl, sed molestie quam est vel dolor."
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('servicesContentItemId')]",
@@ -3160,6 +3160,7 @@
           "ContentItemId": "4sh49dn2q77xq0s8xtkwhbvhcx",
           "ContentItemVersionId": "4dhssbftvzah657f3kj3npp1xx",
           "ContentType": "Service",
+          "DisplayText": "Service 1",
           "Latest": true,
           "Published": true,
           "Owner": "admin",
@@ -3171,10 +3172,7 @@
             }
           },
           "HtmlBodyPart": {
-            "Html": "wow!"
-          },
-          "TitlePart": {
-            "Title": "Another Service"
+            "Html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec finibus mauris. Donec consequat, justo a cursus convallis, dui diam finibus nisl, sed molestie quam est vel dolor."
           },
           "ContainedPart": {
             "ListContentItemId": "[js: variables('servicesContentItemId')]",
@@ -3193,38 +3191,32 @@
                 "Id": 0,
                 "ContentItemId": "[js: uuid()]",
                 "ContentType": "Slide",
-                "DisplayText": "Look at this Moon!",
+                "DisplayText": "No limits",
                 "Slide": {
                   "Description": {
-                    "Text": "Moon"
+                    "Text": "One finds limits by pushing them."
                   },
                   "Image": {
                     "Paths": [
-                      "b0e9f9c8-eaa3-4f44-a87b-a49edc06837d.jpg"
+                      "572004-unsplash.jpg"
                     ]
                   }
-                },
-                "TitlePart": {
-                  "Title": "Look at this Moon!"
                 }
               },
               {
                 "Id": 0,
                 "ContentItemId": "[js: uuid()]",
                 "ContentType": "Slide",
-                "DisplayText": "Look it works!",
+                "DisplayText": "Just try",
                 "Slide": {
                   "Description": {
-                    "Text": "Business"
+                    "Text": "Every accomplishment starts with a decision to try."
                   },
                   "Image": {
                     "Paths": [
                       "modern.jpg"
                     ]
                   }
-                },
-                "TitlePart": {
-                  "Title": "Look it works!"
                 }
               }
             ]
@@ -3234,6 +3226,7 @@
           "ContentItemId": "42chwzdcjdteg5n18grf8g1nwd",
           "ContentItemVersionId": "4d55vq15am4966wwjjndrzz1dm",
           "ContentType": "TeamMember",
+          "DisplayText": "Team Member 1",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:11:31.3595342Z",
@@ -3250,15 +3243,12 @@
             },
             "Photo": {
               "Paths": [
-                "700x450.png"
+                "252131-unsplash.jpg"
               ]
             }
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
-          },
-          "TitlePart": {
-            "Title": "Team Member"
           },
           "ContainedPart": {
             "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
@@ -3269,6 +3259,7 @@
           "ContentItemId": "45yycck3nac60xzfcp303jv0d3",
           "ContentItemVersionId": "4y5adg9bqy88r6mp0v59y6w7dc",
           "ContentType": "TeamMember",
+          "DisplayText": "Team Member 2",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:12:24.4558303Z",
@@ -3285,15 +3276,12 @@
             },
             "Photo": {
               "Paths": [
-                "700x450.png"
+                "1080866-unsplash.jpg"
               ]
             }
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
-          },
-          "TitlePart": {
-            "Title": "Team Member 2"
           },
           "ContainedPart": {
             "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
@@ -3304,6 +3292,7 @@
           "ContentItemId": "4tgsszveajv7zw8c8s7te64gc8",
           "ContentItemVersionId": "4vs6mk4rnga7mtkzj92x182bx7",
           "ContentType": "TeamMember",
+          "DisplayText": "Team Member 3",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:12:55.889782Z",
@@ -3320,15 +3309,12 @@
             },
             "Photo": {
               "Paths": [
-                "700x450.png"
+                "632455-unsplash.jpg"
               ]
             }
           },
           "HtmlBodyPart": {
             "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit."
-          },
-          "TitlePart": {
-            "Title": "Team Member"
           },
           "ContainedPart": {
             "ListContentItemId": "4nbabchxd4q3pzs2e8027sx6x4",
@@ -3363,6 +3349,7 @@
           "ContentItemId": "4gj7z1dcqypsnr1fnnnx0j7fmx",
           "ContentItemVersionId": "4vz9egxf843e7s3t6nenwbexmy",
           "ContentType": "Customer",
+          "DisplayText": "Customer One",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:14:34.2066904Z",
@@ -3373,12 +3360,9 @@
           "Customer": {
             "Logo": {
               "Paths": [
-                "500x300.png"
+                "378338-unsplash.jpg"
               ]
             }
-          },
-          "TitlePart": {
-            "Title": "Customer One"
           },
           "ContainedPart": {
             "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
@@ -3389,6 +3373,7 @@
           "ContentItemId": "4jqn9g5teavrg2tbzh32cn42d2",
           "ContentItemVersionId": "4640xkwazkvx50nxr9xav63emh",
           "ContentType": "Customer",
+          "DisplayText": "Customer Two",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:14:50.254898Z",
@@ -3399,12 +3384,9 @@
           "Customer": {
             "Logo": {
               "Paths": [
-                "500x300.png"
+                "381967-unsplash.jpg"
               ]
             }
-          },
-          "TitlePart": {
-            "Title": "Customer Two"
           },
           "ContainedPart": {
             "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
@@ -3415,6 +3397,7 @@
           "ContentItemId": "4rmdnk7cg1t4bxzan3gadn9ydk",
           "ContentItemVersionId": "48vnas3cw40rxywd33shga6wn9",
           "ContentType": "Customer",
+          "DisplayText":  "Customer Three",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:15:04.0224225Z",
@@ -3425,12 +3408,9 @@
           "Customer": {
             "Logo": {
               "Paths": [
-                "500x300.png"
+                "708664-unsplash.jpg"
               ]
             }
-          },
-          "TitlePart": {
-            "Title": "Customer Three"
           },
           "ContainedPart": {
             "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
@@ -3441,6 +3421,7 @@
           "ContentItemId": "4n3ag53mn2kaasjy7pbk3xaxm9",
           "ContentItemVersionId": "4rxa2wv7x07fe2batkvh0rbede",
           "ContentType": "Customer",
+          "DisplayText":  "Customer Four",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:15:15.0872294Z",
@@ -3451,12 +3432,9 @@
           "Customer": {
             "Logo": {
               "Paths": [
-                "500x300.png"
+                "607576-unsplash.jpg"
               ]
             }
-          },
-          "TitlePart": {
-            "Title": "Customer Four"
           },
           "ContainedPart": {
             "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
@@ -3467,6 +3445,7 @@
           "ContentItemId": "44cw9gp3y5ny06zg31hm06gemd",
           "ContentItemVersionId": "4jbgtzwdqyhq551h5z0p58fsdt",
           "ContentType": "Customer",
+          "DisplayText": "Customer Five",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:15:26.823744Z",
@@ -3477,13 +3456,10 @@
           "Customer": {
             "Logo": {
               "Paths": [
-                "500x300.png"
+                "707761-unsplash.jpg"
               ]
             }
-          },
-          "TitlePart": {
-            "Title": "Customer Five"
-          },
+          },         
           "ContainedPart": {
             "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
             "Order": 0
@@ -3493,6 +3469,7 @@
           "ContentItemId": "4d4n06hgb5r5t3ewkfymyyfgx1",
           "ContentItemVersionId": "4v61z7x224nd5wqkbpbvhdxdcn",
           "ContentType": "Customer",
+          "DisplayText": "Customer Six",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2018-09-10T10:15:37.6449151Z",
@@ -3503,12 +3480,9 @@
           "Customer": {
             "Logo": {
               "Paths": [
-                "500x300.png"
+                "911414-unsplash.jpg"
               ]
             }
-          },
-          "TitlePart": {
-            "Title": "Customer Six"
           },
           "ContainedPart": {
             "ListContentItemId": "41jndpyg7x6c03qvxn2hp3spc0",
@@ -4204,7 +4178,7 @@
           "BlogPost": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "570369-unsplash.jpg"
               ]
             }
           },
@@ -4251,7 +4225,7 @@
           "BlogPost": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "684713-unsplash.jpg"
               ]
             }
           },
@@ -4294,7 +4268,7 @@
           "BlogPost": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "701109-unsplash.jpg"
               ]
             }
           },
@@ -4337,7 +4311,7 @@
           "BlogPost": {
             "Image": {
               "Paths": [
-                "700x400.png"
+                "755045-unsplash.jpg"
               ]
             }
           },
@@ -4398,7 +4372,7 @@
           "RawContent": {
             "Images": {
               "Paths": [
-                "700x400.png"
+                "275638-unsplash.jpg"
               ]
             }
           },
@@ -4474,7 +4448,7 @@
           "RawContent": {
             "Images": {
               "Paths": [
-                "750x450.png"
+                "133380-unsplash.jpg"
               ]
             }
           },
@@ -4979,6 +4953,114 @@
         {
           "Path": "4ColumnPortfolio.jpg",
           "Base64": "[file:base64('../wwwroot/img/4ColumnPortfolio.jpg')]"
+        },
+        {
+          "Path": "1080866-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/1080866-unsplash.jpg')]"
+        },
+        {
+          "Path": "252131-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/252131-unsplash.jpg')]"
+        },
+        {
+          "Path": "378-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/378-unsplash.jpg')]"
+        },
+        {
+          "Path": "408744-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/408744-unsplash.jpg')]"
+        },
+        {
+          "Path": "623946-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/623946-unsplash.jpg')]"
+        },
+        {
+          "Path": "632455-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/632455-unsplash.jpg')]"
+        },
+        {
+          "Path": "668353-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/668353-unsplash.jpg')]"
+        },
+        {
+          "Path": "632455-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/632455-unsplash.jpg')]"
+        },
+        {
+          "Path": "678089-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/678089-unsplash.jpg')]"
+        },
+        {
+          "Path": "737030-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/737030-unsplash.jpg')]"
+        },
+        {
+          "Path": "799380-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/799380-unsplash.jpg')]"
+        },
+        {
+          "Path": "983657-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/983657-unsplash.jpg')]"
+        },
+        {
+          "Path": "133380-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/133380-unsplash.jpg')]"
+        },
+        {
+          "Path": "378338-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/378338-unsplash.jpg')]"
+        },
+        {
+          "Path": "381967-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/381967-unsplash.jpg')]"
+        },
+        {
+          "Path": "422398-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/422398-unsplash.jpg')]"
+        },
+        {
+          "Path": "572004-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/572004-unsplash.jpg')]"
+        },
+        {
+          "Path": "607576-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/607576-unsplash.jpg')]"
+        },
+        {
+          "Path": "654527-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/654527-unsplash.jpg')]"
+        },
+        {
+          "Path": "707761-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/707761-unsplash.jpg')]"
+        },
+        {
+          "Path": "708664-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/708664-unsplash.jpg')]"
+        },
+        {
+          "Path": "755045-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/755045-unsplash.jpg')]"
+        },
+        {
+          "Path": "911414-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/911414-unsplash.jpg')]"
+        },
+        {
+          "Path": "275638-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/275638-unsplash.jpg')]"
+        },
+        {
+          "Path": "570369-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/570369-unsplash.jpg')]"
+        },
+        {
+          "Path": "684713-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/684713-unsplash.jpg')]"
+        },
+        {
+          "Path": "701109-unsplash.jpg",
+          "Base64": "[file:base64('../wwwroot/img/701109-unsplash.jpg')]"
         }
       ]
     }

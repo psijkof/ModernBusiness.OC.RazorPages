@@ -55,3 +55,34 @@ body {
 		color: white;
 		
 	}
+
+.carousel-caption {
+	background-color: rgba(206, 206, 206, 0.17);
+}
+
+#carousel-title {
+	color: white;
+	font-size: 70px;
+}
+
+#carousel-desc {
+	color: white;
+	font-size: 25px;
+}
+
+.card-footer .btn {
+	background-color: white;
+	color: #007bff;
+}
+
+.card-footer .btn:hover {
+	background-color: #e5e3e3;
+}
+
+.nav-link {
+	color:white !important;
+}
+
+.nav-link:hover {
+	color:rgba(255, 255, 255, 0.75) !important;
+}
