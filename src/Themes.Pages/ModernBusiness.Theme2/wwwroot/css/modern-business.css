@@ -92,10 +92,6 @@ body {
 		color: rgba(255, 255, 255, 0.75) !important;
 	}
 
-.text-muted {
-	color: white !important;
-}
-
 .btn-block {
 	background-color: #007bff !important;
 	border-color: #007bff !important;
