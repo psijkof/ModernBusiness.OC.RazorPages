@@ -1,18 +1,12 @@
-/*!
- * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
- */
-
 body {
-  padding-top: 54px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding-top: 54px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+	body {
+		padding-top: 56px;
+	}
 }
 
 .top-lang {
@@ -23,17 +17,17 @@ body {
 
 
 .carousel-item {
-  height: 65vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 65vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .portfolio-item {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .login {
@@ -43,22 +37,32 @@ body {
 .lang-drop * {
 	background-color: #343a40;
 	color: rgba(255, 255, 255, 0.75);
-	border-style:none;
+	border-style: none;
 }
 
 
 .card-footer {
-	background-color: #007bff;
+	background-color: white;
 }
 
 	.card-footer a {
 		color: white;
-		
 	}
 
 .carousel-caption {
-	background-color: rgba(206, 206, 206, 0.17);
+	background: linear-gradient(rgba(255,255,255,0.1),rgba(0, 0, 0,0.2));
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	bottom: 70px;
+	z-index: 10;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: -70px;
 }
+
 
 #carousel-title {
 	color: white;
@@ -70,19 +74,33 @@ body {
 	font-size: 25px;
 }
 
-.card-footer .btn {
-	background-color: white;
-	color: #007bff;
-}
-
-.card-footer .btn:hover {
-	background-color: #e5e3e3;
+.card-header {
+	color: #007bff !important;
 }
 
 .nav-link {
-	color:white !important;
+	color: white !important;
 }
 
-.nav-link:hover {
-	color:rgba(255, 255, 255, 0.75) !important;
+	.nav-link:hover {
+		color: rgba(255, 255, 255, 0.75) !important;
+	}
+
+.text-muted {
+	color: white !important;
+}
+
+.btn-block {
+	background-color: #007bff !important;
+	border-color: #007bff !important;
+}
+
+.my-4 {
+	margin-top: 3rem !important;
+	margin-bottom: 3rem !important;
+}
+
+.servicesTitle {
+	margin-top: 1.1rem;
+	margin-bottom: 3rem;
 }

@@ -5,8 +5,8 @@
     var servicesList = Orchard.GetRecentContentItemsByContentTypeAsync("Service", 3).GetAwaiter().GetResult().OrderBy(s => s.PublishedUtc);
 
     var portfolioContainer = Orchard.GetRecentContentItemsByContentTypeAsync("Portfolio").GetAwaiter().GetResult().SingleOrDefault();
-    var projectsList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 6).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
-    var portfolioPager = new PagerInfo() { CurrentItemsOnPage = projectsList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 6, TotalPages = 1 };
+    var projectsList = Orchard.GetRecentContentItemsByContentTypeAsync("Project", 3).GetAwaiter().GetResult().OrderBy(p => p.PublishedUtc);
+    var portfolioPager = new PagerInfo() { CurrentItemsOnPage = projectsList, CurrentPage = 1, PageBaseUrl = "/index", PageSize = 3, TotalPages = 1 };
 
     var welcomeContent = await Orchard.GetContentItemByAliasAsync("alias:welcome");
     var ctaHomePage = await Orchard.GetContentItemByAliasAsync("alias:ctaHomePage");
@@ -26,18 +26,23 @@
 }
 
 <h1 class="my-4">@servicesContainer?.Content?.TitlePart.Title</h1>
+
 <!-- Marketing Icons Section -->
-<div class="row">
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ServiceCards.cshtml" model="servicesList" />
-</div>
+
 <!-- /.row -->
 <!-- Portfolio Section -->
-<h2>@portfolioContainer?.Content?.TitlePart.Title</h2>
+
 
 <div class="row">
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards3.cshtml" model="portfolioPager" />
 </div>
 <!-- /.row -->
+
+<h2 class="servicesTitle">@servicesContainer.Content?.Services.Subheading.Text</h2>
+
+<div class="row">
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ServiceCards.cshtml" model="servicesList" />
+</div>
 <!-- Features Section -->
 <div class="row">
     <div class="col-lg-6">
