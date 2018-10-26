@@ -2803,7 +2803,7 @@
                       "Author": "admin",
                       "LinkMenuItemPart": {
                         "Name": "404",
-                        "Url": null
+                        "Url": "~/doesnotexist"
                       }
                     },
                     {
