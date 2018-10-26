@@ -1,0 +1,24 @@
+﻿@using OrchardCore.ContentManagement
+
+@{
+    ContentItem contentItem = Model.ContentItem;
+    var link = contentItem.Content["LinkMenuItemPart"];
+    var dropLink = contentItem.Content.MenuItemsListPart?.MenuItems;
+}
+
+@if (dropLink != null)
+{
+    <a class="nav-link dropdown-toggle" href="@Url.Content((string)link.Url)" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @link.Name
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        @foreach (var item in dropLink)
+        {
+            <a class="dropdown-item" href="@Url.Content((string)item.LinkMenuItemPart.Url)">@item.LinkMenuItemPart.Name</a>
+        }
+    </div>
+}
+else
+{
+    <a href="@Url.Content((string)link.Url)" class="nav-link">@link.Name</a>
+}

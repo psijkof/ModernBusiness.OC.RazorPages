@@ -1,0 +1,17 @@
+﻿@{
+    TagBuilder liTag = Tag(Model, "li");
+    liTag.AddCssClass("nav-item");
+
+    if ((bool)(Model.HasItems))
+    {
+        liTag.AddCssClass("dropdown");
+    }
+
+    Model.Metadata.Alternates.Clear();
+    Model.Metadata.Type = "MenuItemLink";
+
+    liTag.InnerHtml.AppendHtml(await DisplayAsync(Model));
+}
+
+@liTag
+

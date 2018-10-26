@@ -1,0 +1,28 @@
+﻿<ul class="navbar-nav menu">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                Welcome @User.Identity.Name<i class="pl-1 fas fa-user-tie"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="~/Logout">
+                Logout<i class="pl-1 fas fa-power-off"></i>
+            </a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link" href="~/Login">
+                Login<i class="pl-1 fas fa-power-off"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="~/Register">
+                Register<i class="pl-1 fas fa-user-plus"></i>
+            </a>
+        </li>
+    }
+</ul>

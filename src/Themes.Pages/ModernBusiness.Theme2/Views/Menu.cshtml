@@ -1,0 +1,12 @@
+﻿@{
+    TagBuilder ulTag = Tag(Model, "ul");
+    ulTag.AddCssClass("navbar-nav ml-auto");
+
+    foreach (var item in Model.Items)
+    {
+        ulTag.InnerHtml.AppendHtml(await DisplayAsync(item));
+    }
+}
+
+@ulTag
+

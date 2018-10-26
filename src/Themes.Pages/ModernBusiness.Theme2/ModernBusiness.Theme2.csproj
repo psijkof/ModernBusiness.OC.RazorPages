@@ -20,16 +20,4 @@
         <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-69124" />
     </ItemGroup>
 
-    <ItemGroup>
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\LanguageSelection.cshtml" Link="Views\LanguageSelection.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\Layout.cshtml" Link="Views\Layout.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\Menu.cshtml" Link="Views\Menu.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\MenuItem.cshtml" Link="Views\MenuItem.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\MenuItemLink-LinkMenuItem.cshtml" Link="Views\MenuItemLink-LinkMenuItem.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\_ViewImports.cshtml" Link="Views\_ViewImports.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\Shared\NotFound.cshtml" Link="Views\Shared\NotFound.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\Shared\sitemap.cshtml" Link="Views\Shared\sitemap.cshtml" />
-        <EmbeddedResource Include="..\ModernBusiness.Theme\Views\Shared\UserLogin.cshtml" Link="Views\Shared\UserLogin.cshtml" />
-    </ItemGroup>
-
 </Project>

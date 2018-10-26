@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <PackageId>ModernBusiness.Theme</PackageId>
+    <PackageId>ModernBusiness.Theme2</PackageId>
     <Title>Start Bootstrap's Modern Business Theme for Orchard Core as a decoupled Razor Pages Module</Title>
     <Description>Orchard Core Theme and Modules based on the Modern Business template from StartBootstrap build in a decoupled fashion with ASP.NET Core Razor Pages.</Description>
     <PackageTags>Modern;Business;OrchardCore</PackageTags>
