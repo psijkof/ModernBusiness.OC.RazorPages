@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     var mainMenu = await Orchard.GetContentItemByAliasAsync("alias:main-menu");
 }
 <!DOCTYPE html>
@@ -16,7 +16,19 @@
 </head>
 <body>
     <!-- Navigation -->
-    <menu alias="alias:main-menu"/>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="~/">@Site.SiteName</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <menu alias="alias:main-menu"></menu>
+                <partial name="UserLogin" />
+            </div>
+        </div>
+    </nav>
     <!-- Page Content -->
     <div class="container">
 
@@ -41,7 +53,7 @@
     </div>
     <!-- /.container -->
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-primary">
         @Html.Raw((await Orchard.GetContentItemByAliasAsync("alias:footer")).Content.HtmlBodyPart.Html)
         <!-- /.container -->
     </footer>
