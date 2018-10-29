@@ -4,14 +4,14 @@
         .GetAwaiter()
         .GetResult()
         .Single()?.Content.BagPart.ContentItems;
-    
+
     var state = "active";
 }
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         @{
-            for (var i=0; i < ((IEnumerable<object>)slides).Count(); i++)
+            for (var i = 0; i < ((IEnumerable<object>)slides).Count(); i++)
             {
                 if (i != 0)
                 {
@@ -32,7 +32,7 @@
                 {
                     state = "";
                 }
-                <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0])')">
+                <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0],1900,1080,OrchardCore.Media.Processing.ResizeMode.Stretch)')">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 id="carousel-title">@T[(string)item.DisplayText]</h1>
                         <p id="carousel-desc">@T[(string)item.Slide.Description.Text]</p>

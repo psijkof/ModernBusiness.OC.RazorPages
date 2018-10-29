@@ -14,7 +14,7 @@
 
 <div class="row">
     <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" asset-src="@((string)welcomeText.Content.RawContent.Images.Paths[0])" alt="" />
+        <img class="img-fluid rounded mb-4" asset-src="@((string)welcomeText.Content.RawContent.Images.Paths[0])" img-width="750" img-height="450" img-resize-mode="Stretch" alt="" />
     </div>
     <div class="col-lg-6">
         <h2>@T["About Modern Business"]</h2>
@@ -31,7 +31,7 @@
     @foreach (var item in customerList)
     {
         <div class="col-lg-2 col-sm-4 mb-4">
-            <img class="img-fluid" asset-src="@((string)item.Content.Customer.Logo.Paths[0])" img-width="500" img-height="300" img-resize-mode="Stretch" alt="" />
+            <img class="img-fluid" asset-src="@((string)item.Content.Customer.Logo.Paths[0])" img-width="160" img-height="100" img-resize-mode="Stretch" alt="" />
         </div>
     }
 </div>

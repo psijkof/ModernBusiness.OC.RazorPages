@@ -13,7 +13,7 @@
     <div class="row">
 
         <div class="col-md-8">
-            <img class="img-fluid" src="@Orchard.AssetUrl((string)Model.Project.Content.Project.Image.Paths[0])" alt="">
+            <img class="img-fluid" asset-src="@((string)Model.Project.Content.Project.Image.Paths[0]))" img-width="750" img-height="500" img-resize-mode="Stretch" alt="" />
         </div>
 
         <div class="col-md-4">
@@ -34,7 +34,7 @@
             {
                 <div class="col-md-3 col-sm-6 mb-4">
                     <a href="@relProj.DisplayText">
-                        <img class="img-fluid" asset-src="@relProj.Content.Project.Image.Paths[0]" img-width="500" img-height="300" img-resize-mode="Max" alt="" />
+                        <img class="img-fluid" asset-src="@relProj.Content.Project.Image.Paths[0]" img-width="500" img-height="300" img-resize-mode="Stretch" alt="" />
                     </a>
                 </div>
             }
