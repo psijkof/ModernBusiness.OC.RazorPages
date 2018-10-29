@@ -1,64 +1,22 @@
 ﻿@{
+    Layout = "Layout.cshtml";
     var mainMenu = await Orchard.GetContentItemByAliasAsync("alias:main-menu");
 }
-<!DOCTYPE html>
-<html lang="@Orchard.CultureName()">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
-    <!-- Bootstrap core CSS -->
-    <link href="/ModernBusiness.Theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="/ModernBusiness.Theme/css/modern-business.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="~/">@Site.SiteName</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <menu alias="alias:main-menu"></menu>
-                <partial name="UserLogin" />
-            </div>
-        </div>
-    </nav>
-    <!-- Page Content -->
-    <div class="container">
+<h1 class="mt-4 mb-3">
+    404
+    <small>@T["Page Not Found"]</small>
+</h1>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="~/">Home</a>
+    </li>
+    <li class="breadcrumb-item active">404</li>
+</ol>
+<div class="jumbotron">
+    <h1 class="display-1">404</h1>
+    <p>@T["The page you're looking for could not be found. Here are some helpful links to get you back on track:"]</p>
+    <partial name="sitemap" model="mainMenu.Content.MenuItemsListPart.MenuItems" />
 
-        <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">
-            404
-            <small>@T["Page Not Found"]</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="~/">Home</a>
-            </li>
-            <li class="breadcrumb-item active">404</li>
-        </ol>
-        <div class="jumbotron">
-            <h1 class="display-1">404</h1>
-            <p>@T["The page you're looking for could not be found. Here are some helpful links to get you back on track:"]</p>
-            <partial name="sitemap" model="mainMenu.Content.MenuItemsListPart.MenuItems" />
+</div>
 
-        </div>
-        <!-- /.jumbotron -->
-    </div>
-    <!-- /.container -->
-    <!-- Footer -->
-    <footer class="py-5 bg-primary">
-        @Html.Raw((await Orchard.GetContentItemByAliasAsync("alias:footer")).Content.HtmlBodyPart.Html)
-        <!-- /.container -->
-    </footer>
-    <!-- Bootstrap core JavaScript -->
-    <script src="/ModernBusiness.Theme/vendor/jquery/jquery.min.js"></script>
-    <script src="/ModernBusiness.Theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
