@@ -30,5 +30,5 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - The Full Width Page allows a user to be signed in
 - Requesting a non existing page will result in a 404, themed accordingly
 - Live version here: 
-  - default theme: modernbusiness.azurewebsites.net/tenant1
-  - enhanced theme: modernbusiness.azurewebsites.net/tenant2
+  - default theme: https://modernbusiness.azurewebsites.net/tenant1
+  - enhanced theme: https://modernbusiness.azurewebsites.net/tenant2
