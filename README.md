@@ -29,4 +29,6 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - Multilingual pages, currently the Pricing Table is fully translated in Dutch, Portuguese and English
 - The Full Width Page allows a user to be signed in
 - Requesting a non existing page will result in a 404, themed accordingly
-- Live version here: https://orchardcorebeta2-dev.azurewebsites.net/tenant
+- Live version here: 
+  - default theme: modernbusiness.azurewebsites.net/tenant1
+  - enhanced theme: modernbusiness.azurewebsites.net/tenant2
