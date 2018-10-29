@@ -42,7 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{FE7FFD8F
 		NuGet.config = NuGet.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBusiness.Theme2", "src\Themes.Pages\ModernBusiness.Theme2\ModernBusiness.Theme2.csproj", "{72973CCE-D6AA-4B78-B620-0C7241FB93BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness.Theme2", "src\Themes.Pages\ModernBusiness.Theme2\ModernBusiness.Theme2.csproj", "{72973CCE-D6AA-4B78-B620-0C7241FB93BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
