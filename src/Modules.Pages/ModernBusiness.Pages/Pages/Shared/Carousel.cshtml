@@ -32,7 +32,7 @@
                 {
                     state = "";
                 }
-                <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0],1900,1080,OrchardCore.Media.Processing.ResizeMode.Stretch)')">
+                <div class="carousel-item @state" style="background-image: url('@Orchard.AssetUrl((string)item.Slide.Image.Paths[0],1900,1080,OrchardCore.Media.Processing.ResizeMode.Crop)')">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 id="carousel-title">@T[(string)item.DisplayText]</h1>
                         <p id="carousel-desc">@T[(string)item.Slide.Description.Text]</p>

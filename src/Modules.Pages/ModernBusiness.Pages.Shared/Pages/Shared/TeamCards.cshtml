@@ -8,7 +8,7 @@
     {
         <div class="col-lg-4 mb-4">
             <div class="card h-100 text-center">
-                <img class="card-img-top" asset-src="@((string)item.Content.TeamMember.Photo.Paths[0])" img-width="350" img-height="231" img-resize-mode="Stretch" alt="" />
+                <img class="card-img-top" asset-src="@((string)item.Content.TeamMember.Photo.Paths[0])" img-width="350" img-height="231" img-resize-mode="Crop" alt="" />
                 <div class="card-body">
                     <h4 class="card-title">@item.Content.TitlePart.Title</h4>
                     <h6 class="card-subtitle mb-2 text-muted">@item.Content.TeamMember.Position.Text</h6>
