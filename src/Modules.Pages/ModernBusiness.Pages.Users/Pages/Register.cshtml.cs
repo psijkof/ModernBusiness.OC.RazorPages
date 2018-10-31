@@ -30,7 +30,7 @@ namespace ModernBusiness.Pages.Users.Pages
 			_signInManager = signInManager;
 		}
 
-        public async Task<IActionResult> OnGetAsync(string returnUrl)
+        public IActionResult OnGet(string returnUrl)
         {
 			ViewData["ReturnUrl"] = returnUrl;
 

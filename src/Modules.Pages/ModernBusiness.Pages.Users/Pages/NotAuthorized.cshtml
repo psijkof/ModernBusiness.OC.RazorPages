@@ -1,0 +1,23 @@
+﻿@page
+@model NotAuthorizedModel
+@{
+    var mainMenu = await Orchard.GetContentItemByAliasAsync("alias:main-menu");
+}
+
+@section Header  {
+    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.UnauthorizedCI" />
+}
+
+
+<div class="row">
+    <div class="col-lg-9 mb-4">
+        <h3>You are not authorized to access this page.</h3>
+        <h5>Please use this menu to navigate to other pages.</h5>
+    </div>
+    <div class="col-lg-3 mb-4">
+        <div class="list-group">
+            <a class="list-group-item" href="@Url.Content("~/")">Home</a>
+            <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/LinkList.cshtml" model="mainMenu.Content.MenuItemsListPart.MenuItems" />
+        </div>
+    </div>
+</div>

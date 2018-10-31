@@ -11,7 +11,7 @@ using OrchardCore.Contents;
 
 namespace ModernBusiness.Pages.Static
 {
-    [Authorize()]
+    [Authorize(Roles = "Developer")]
     public class Full_WidthModel : PageModel
     {
         private readonly IOrchardHelper _orchardCore;

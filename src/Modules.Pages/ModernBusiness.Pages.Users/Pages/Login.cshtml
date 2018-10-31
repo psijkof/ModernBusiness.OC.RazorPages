@@ -40,17 +40,17 @@
                 </div>
             </div>
             @*@if (userCanRegister)
-            {
-                <p>
-                    <a asp-controller="Registration" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@T["Register as a new user"]</a>
-                </p>
-            }
-            @if (allowResetPassword)
+        {
+            <p>
+                <a asp-controller="Registration" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@T["Register as a new user"]</a>
+            </p>
+        }*@
+            @if (Model.allowResetPassword)
             {
                 <p>
                     <a asp-controller="ResetPassword" asp-action="ForgotPassword">@T["Forgot your password?"]</a>
                 </p>
-            }*@
+            }
         </form>
     </div>
 </div>

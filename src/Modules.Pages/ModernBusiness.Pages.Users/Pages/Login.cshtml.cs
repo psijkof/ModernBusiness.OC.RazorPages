@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ModernBusiness.Pages.Users.ViewModels;
 using Microsoft.Extensions.Logging;
+using OrchardCore.Settings;
+using ModernBusiness.Pages.Users.Model;
+using OrchardCore.Entities;
 
 namespace ModernBusiness.Pages.Users.Pages
 {
@@ -18,25 +21,35 @@ namespace ModernBusiness.Pages.Users.Pages
         [BindProperty]
         public LoginViewModel LoginVM { get; set; }
 
+		public bool allowResetPassword { get; set; }
+
         private readonly SignInManager<IUser> _signInManager;
         private readonly UserManager<IUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
+		private readonly ISiteService _site;
 
-        public LoginModel(UserManager<IUser> userManager, SignInManager<IUser> signInManager, ILogger<LoginModel> logger)
+		public LoginModel(UserManager<IUser> userManager, SignInManager<IUser> signInManager, ISiteService site, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
-        }
+			_site = site;
+		}
 
         public async Task<IActionResult> OnGetAsync(string returnUrl = null)
         {
 			await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
-			if (User.Identity.IsAuthenticated)
+			if (User.Identity.IsAuthenticated && returnUrl != null)
+			{
+				return LocalRedirect("~/notauthorized");
+			}
+			else if (User.Identity.IsAuthenticated)
 			{
 				return LocalRedirect("~/warning");
 			}
+
+			allowResetPassword = (await _site.GetSiteSettingsAsync()).As<ResetPasswordSettings>().AllowResetPassword;
 
             ViewData["ReturnUrl"] = returnUrl;
 
