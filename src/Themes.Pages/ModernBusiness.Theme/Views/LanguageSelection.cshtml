@@ -15,7 +15,6 @@
     var cultureItems = settings.SupportedCultures.Select(i => new SelectListItem { Value = i, Text = CultureInfo.GetCultureInfo(i).NativeName }).ToList();
 }
 
-
 <form class="lang-drop pt-2" id="selectLanguage" asp-area="ModernBusiness.Theme" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post">
     <select class="dropdown" name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems" onchange="this.form.submit();"></select>
 </form>

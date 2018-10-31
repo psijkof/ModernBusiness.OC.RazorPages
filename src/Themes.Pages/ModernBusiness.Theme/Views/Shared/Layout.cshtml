@@ -48,6 +48,7 @@
     <main role="main" class="container">
         @RenderSection("Messages", required: false)
         @RenderBody()
+        @RenderSection("Content", required: false)
     </main>
     <footer class="py-5 bg-dark">
         <cache expires-after="@cacheDuration">
