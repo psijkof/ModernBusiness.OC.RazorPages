@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/SijmenKoffeman/ModernBusiness.OC.RazorPages/_apis/build/status/ModernBusinessRazorPages-dev-as%20-%20CI?branchName=master)](https://dev.azure.com/SijmenKoffeman/ModernBusiness.OC.RazorPages/_build/latest?definitionId=5&branchName=master)
+
 # ModernBusiness.OC.RazorPages
 Start Bootstrap's Modern Business Theme for Orchard Core as a decoupled Razor Pages Module
 
