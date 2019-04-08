@@ -5,9 +5,9 @@
 }
 
 <!-- Page Heading/Breadcrumbs -->
-@section Header  {
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.SideBarInfo" />
-}
+    <zone name="Header">
+        <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.SideBarInfo" />
+    </zone>
 
 <!-- Content Row -->
 <div class="row">

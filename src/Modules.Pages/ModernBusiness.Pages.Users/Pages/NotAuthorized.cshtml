@@ -4,9 +4,9 @@
     var mainMenu = await Orchard.GetContentItemByAliasAsync("alias:main-menu");
 }
 
-@section Header  {
-    <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.UnauthorizedCI" />
-}
+    <zone name="Header">
+        <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.UnauthorizedCI" />
+    </zone>
 
 
 <div class="row">

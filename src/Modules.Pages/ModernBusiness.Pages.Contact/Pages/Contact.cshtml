@@ -9,11 +9,9 @@
 public string ThankYou { get; set; }
 }
 
-@section Header {
-
+<zone name="Header">
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@form"/>
-}
-
+</zone>
 @if (!string.IsNullOrEmpty(ThankYou))
 {
     <div class="container">
@@ -65,7 +63,7 @@ else
     </div>
 }
 
-@section Footer {
+<zone name="Header">
     <script src="/ModernBusiness.Theme/js/contact_me.js"></script>
     <script src="/ModernBusiness.Theme/js/jqBootstrapValidation.js"></script>
-}
+</zone>

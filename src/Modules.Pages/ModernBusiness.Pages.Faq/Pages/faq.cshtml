@@ -3,9 +3,9 @@
  <!-- Page Content -->
 <div class="container">
     <!-- Page Heading/Breadcrumbs -->
-    @section Header  {
+    <zone name="Header">
         <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.Faq" />
-    }
+    </zone>
     @{
         // project to list with index
         var pairsIndexVal = Model.FaqList.Select((Value, Index) => new { Value, Index });

@@ -5,17 +5,20 @@
 }
 
 <div class="container">
-    <h1 class="mt-4 mb-3">
-        @Model.DisplayText
-        @if (Model.Content != null)
-        {
-            <small>@(Model.Content?.SubtitlePart?.Subtitle.Text ?? "")</small>
-        }
-        else
-        {
-            <small>@(Model.SubTitle ?? "")</small>
-        }
-    </h1>
+    @if (Model != null)
+    {
+        <h1 class="mt-4 mb-3">
+            @Model.DisplayText
+            @if (Model.Content != null)
+            {
+                <small>@(Model.Content?.SubtitlePart?.Subtitle.Text ?? "")</small>
+            }
+            else
+            {
+                <small>@(Model.SubTitle ?? "")</small>
+            }
+        </h1>
+    }
     <ol class="breadcrumb">
         <li class="">
             <a href="~/">@T["Home"]</a>

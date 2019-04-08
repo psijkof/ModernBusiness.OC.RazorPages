@@ -8,9 +8,9 @@
     var customerList = await Orchard.GetRecentContentItemsByContentTypeAsync("Customer");
 }
 
-@section Header {
+<zone name="Header">
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@welcomeText" />
-}
+</zone>
 
 <div class="row">
     <div class="col-lg-6">

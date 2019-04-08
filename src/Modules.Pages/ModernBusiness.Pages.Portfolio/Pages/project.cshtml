@@ -5,9 +5,9 @@
 
 @if (Model.Project != null)
 {
-    @section Header {
+    <zone name="Header">
         <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="Model.Project" />
-    }
+    </zone>
 
     <!-- Portfolio Item Row -->
     <div class="row">

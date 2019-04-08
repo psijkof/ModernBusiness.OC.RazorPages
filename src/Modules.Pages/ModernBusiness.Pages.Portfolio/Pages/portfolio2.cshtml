@@ -4,15 +4,12 @@
 
 @inject IContentItemDisplayManager DisplayManager
 
-@section Nav {
-}
-@section Header {
+<zone name="Nav"></zone>
+<zone name="Header">
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="Model.Portfolio" />
-}
-@section Messages {
-}
-@section Footer {
-}
+</zone>
+<zone name="Messages"></zone>
+<zone name="Footer"></zone>
 
 <div class="row">
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/ProjectCards2.cshtml" model="Model.PagerInfo" />

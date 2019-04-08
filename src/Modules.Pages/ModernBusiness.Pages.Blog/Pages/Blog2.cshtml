@@ -4,17 +4,17 @@
 
 @if (Model.BlogPost != null)
 {
-    @section Header  {
+    <zone name="Header">
         <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.BlogPost" />
-    }
+    </zone>
 
     <partial name="BlogPost" model="@Model.BlogPost" />
 }
 else
 {
-    @section Header  {
+    <zone name="Header">
         <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BreadcrumbHeader.cshtml" model="@Model.Blog" />
-    }
+    </zone>
 
     <partial name="/Areas/ModernBusiness.Pages.Shared/Pages/Shared/BlogPostCard2.cshtml" model="@Model.PagerInfo" />
 
