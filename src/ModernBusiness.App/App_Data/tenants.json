@@ -1,0 +1,9 @@
+{
+  "Default": {
+    "State": "Running"
+  },
+  "mb1": {
+    "RequestUrlPrefix": "mb1",
+    "State": "Running"
+  }
+}

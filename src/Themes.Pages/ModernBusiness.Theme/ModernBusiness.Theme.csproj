@@ -14,14 +14,14 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.1.3" />
-        <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-69230" />
-        <PackageReference Include="OrchardCore.Menu" Version="1.0.0-beta3-69230" />
-        <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta3-69230" />
-        <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-69230" />
-        <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-69230" />
-        <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-69230" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+        <PackageReference Include="OrchardCore.Contents" Version="1.0.0-beta3-71077" />
+        <PackageReference Include="OrchardCore.Menu" Version="1.0.0-beta3-71077" />
+        <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta3-71077" />
+        <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta3-71077" />
+        <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta3-71077" />
+        <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta3-71077" />
     </ItemGroup>
 
     <!--<ItemGroup>

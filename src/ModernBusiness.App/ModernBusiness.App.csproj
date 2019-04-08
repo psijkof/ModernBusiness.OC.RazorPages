@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <TieredCompilation>true</TieredCompilation>
     <UserSecretsId>15f28c54-5804-428f-8de5-e273da215282</UserSecretsId>
   </PropertyGroup>
@@ -15,14 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-69230" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-69230" />
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-69230" />
+    <PackageReference Include="OrchardCore.Hosting.Console" Version="1.0.0-beta3-71077" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.0.0-beta3-71077" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-beta3-71077" />
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="OrchardCore.Logging.Serilog" Version="1.0.0-beta3-69230" />
+    <PackageReference Include="OrchardCore.Logging.Serilog" Version="1.0.0-beta3-71077" />
   </ItemGroup>
   
   <ItemGroup>
