@@ -1,0 +1,7 @@
+The build pipeline setup for Azure DevOps Project ModernBusiness.OC.RazorPages completed successfully. Builds are now automatically generated and deployed to App Service ModernBusinessRazorPages-dev-as upon code updates.
+Details:
+  Azure Resource Group: https://ms.portal.azure.com/#resource/subscriptions/ba89784e-9687-4b6d-99c2-209fa243c91e/resourceGroups/ModernBusiness.RazorPages-dev-rg/overview
+  Azure App Service: http://ModernBusinessRazorPages-dev-as.azurewebsites.net
+  Azure DevOps Project: ModernBusiness.OC.RazorPages (https://dev.azure.com/SijmenKoffeman/ModernBusiness.OC.RazorPages)
+  Azure DevOps build pipeline: https://dev.azure.com/SijmenKoffeman/9dc973ad-71b3-41d1-8b2c-5d14c92c2063/_build/definition?definitionId=5
+  Azure DevOps release pipeline: https://dev.azure.com/SijmenKoffeman/9dc973ad-71b3-41d1-8b2c-5d14c92c2063/_release?definitionId=1

@@ -33,6 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tags.OrchardCore", "src\Orc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B5D2829-0FDD-4436-9822-9E567845D9DB}"
 	ProjectSection(SolutionItems) = preProject
+		azureinfo.txt = azureinfo.txt
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
