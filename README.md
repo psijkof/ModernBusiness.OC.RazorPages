@@ -34,5 +34,5 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - Live version here: 
   - default theme: https://modernbusiness.azurewebsites.net/tenant1
   - enhanced theme: https://modernbusiness.azurewebsites.net/tenant2
-- This repo is setup to Continuesly Integrate and Deploy to
-(none)
+- This repo is setup to Continuesly Integrate and Deploy to:
+http://modernbusinessrazorpages-dev-as.azurewebsites.net/mb1/ (demo tenant with the theme and modules from this repo)
