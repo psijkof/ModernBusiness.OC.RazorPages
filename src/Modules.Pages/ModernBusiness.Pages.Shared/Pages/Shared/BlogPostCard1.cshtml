@@ -4,7 +4,7 @@
 {
     var blogLink = $"blog1/{post.DisplayText}";
     <div class="card mb-4">
-        <img class="card-img-top" asset-src="@((string)post.Content.BlogPost.Image.Paths[0])" img-width="750" img-height="300" img-resize-mode="Crop"  alt="Card image cap" />
+        <img class="card-img-top" asset-src="@((string)post.Content.BlogPost.Image.Paths[0])" img-width="600" img-height="240" img-resize-mode="Crop"  alt="Card image cap" />
         <div class="card-body">
             <h2 class="card-title">@post.Content.TitlePart.Title</h2>
             <p class="card-text">@(Orchard.MarkdownToHtml(((string)post.Content.MarkdownBodyPart.Markdown).Ellipsize(200)))</p>
