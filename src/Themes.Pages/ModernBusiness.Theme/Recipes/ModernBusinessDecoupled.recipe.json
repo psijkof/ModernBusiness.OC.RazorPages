@@ -4418,7 +4418,7 @@
             "Alias": "footer"
           },
           "HtmlBodyPart": {
-            "Html": "<div class=\"container\">\r\n        <p class=\"m-0 text-center text-white\">Copyright &copy; The Orchard Team 2018</p>\r\n</div>"
+            "Html": "<div class=\"container\">\r\n        <p class=\"m-0 text-center text-white\">Copyright &copy; The Orchard Team 2019</p>\r\n</div>"
           },
           "MarkdownBodyPart": {
             "Markdown": null
