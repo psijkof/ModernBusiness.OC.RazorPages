@@ -31,8 +31,5 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - Multilingual pages, currently the Pricing Table is fully translated in Dutch, Portuguese and English
 - The Full Width Page allows a user to be signed in
 - Requesting a non existing page will result in a 404, themed accordingly
-- Live version here: 
-  - default theme: https://modernbusiness.azurewebsites.net/tenant1
-  - enhanced theme: https://modernbusiness.azurewebsites.net/tenant2
 - This repo is setup to Continuesly Integrate and Deploy to:
 http://modernbusinessrazorpages-dev-as.azurewebsites.net/mb1/ (demo tenant with the theme and modules from this repo)
