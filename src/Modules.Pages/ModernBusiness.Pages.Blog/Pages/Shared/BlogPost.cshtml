@@ -17,7 +17,7 @@
 
         <!-- Post Content -->
         <div>
-            @Html.Raw(Model.Content.HtmlBodyPart.Html)
+            @Orchard.MarkdownToHtml((string)Model.Content.MarkdownBodyPart.Markdown)
         </div>
         
         <hr>

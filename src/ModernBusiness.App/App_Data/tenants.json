@@ -5,5 +5,9 @@
   "mb1": {
     "RequestUrlPrefix": "mb1",
     "State": "Running"
+  },
+  "ModernBusiness2": {
+    "RequestUrlPrefix": "mb2",
+    "State": "Running"
   }
 }
