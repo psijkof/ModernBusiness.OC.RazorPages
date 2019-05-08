@@ -33,3 +33,6 @@ Need to git clone https://github.com/BlackrockDigital/startbootstrap-modern-busi
 - Requesting a non existing page will result in a 404, themed accordingly
 - This repo is setup to Continuesly Integrate and Deploy to:
 http://modernbusinessrazorpages-dev-as.azurewebsites.net/mb1/ (demo tenant with the theme and modules from this repo)
+or behind Azure Front Door:
+https://modernbusinessrazorpages.azurefd.net/
+
